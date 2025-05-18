@@ -1,9 +1,21 @@
 import React from 'react';
-import './Navbar.css';
+import './Hero.css';
+import NavBar from '../../Navbar/Navbar';
 
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <div id="hero">
+      <div className='hero-image-container'>
+        <div className="hero-container">
+          <NavBar />
+          <p className="greeting">Hi! I'm</p>
+          <h1>JAY.</h1>
+          <span className="name"><strong>J</strong>ohn <strong>A</strong>ndre <strong>Y</strong>ap</span>
+          <p>Fullstack Developer - Data Scientist</p>
+          <p>Student - Scholar - Developer</p>
+        </div>
+      </div>
+    </div>
   )
 }
 

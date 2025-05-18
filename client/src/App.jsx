@@ -1,9 +1,10 @@
 import './App.css'
+import Hero from './components/sections/Hero/Hero'
 
 function App() {
   return (
     <>
-    Hello world!
+    <Hero />
     </>
   )
 }
