@@ -1,0 +1,15 @@
+#hero {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.hero-image-container {
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../../../assets/vaporwave_background.png");
+    background-size: cover;
+    height: inherit;
+    width: inherit;
+}

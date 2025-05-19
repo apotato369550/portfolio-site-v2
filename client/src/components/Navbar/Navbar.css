@@ -1,0 +1,24 @@
+#navbar {
+    margin: 0px;
+    padding: 0px;
+    width: inherit;
+}
+
+.navbar-items {
+    margin: 0px auto;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.navbar-item {
+    margin-top: 75px;
+    font-size: 22px;
+    justify-content: space-between;
+}
+
+.navbar-item a {
+    color: #efefef;
+    text-decoration: none;
+}
