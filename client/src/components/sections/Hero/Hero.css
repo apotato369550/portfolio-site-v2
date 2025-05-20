@@ -13,3 +13,17 @@
     height: inherit;
     width: inherit;
 }
+
+.name-and-titles-container {
+    width: inherit;
+    margin-top: 100px;
+}
+
+.name-and-titles {
+    margin: auto;
+    width: 65vw;
+}
+
+.greeting {
+    font-size: 48px;
+}

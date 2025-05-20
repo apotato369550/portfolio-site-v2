@@ -10,12 +10,13 @@
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    justify-content: space-between;
+    margin: 0px 300px; 
 }
 
 .navbar-item {
     margin-top: 75px;
     font-size: 22px;
-    justify-content: space-between;
 }
 
 .navbar-item a {
