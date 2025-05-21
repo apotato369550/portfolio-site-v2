@@ -11,10 +11,10 @@ const Hero = () => {
           <div className="name-and-titles-container">
             <div className="name-and-titles">
               <p className="greeting">Hi! I'm</p>
-              <h1>JAY.</h1>
+              <h1 className="jay">JAY.</h1>
               <span className="name"><strong>J</strong>ohn <strong>A</strong>ndre <strong>Y</strong>ap</span>
-              <p>Fullstack Developer - Data Scientist</p>
-              <p>Student - Scholar - Developer</p>
+              <p className='roles'>Fullstack Developer - Data Scientist</p>
+              <p className='roles'>Student - Scholar - Developer</p>
             </div>
           </div>
         </div>

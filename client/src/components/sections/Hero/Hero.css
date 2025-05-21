@@ -17,6 +17,7 @@
 .name-and-titles-container {
     width: inherit;
     margin-top: 100px;
+    text-align: center;
 }
 
 .name-and-titles {
@@ -26,4 +27,22 @@
 
 .greeting {
     font-size: 48px;
+    margin: 0px 0px 0px 10vw;
+    padding: 0px;
+    text-align: left;
+}
+
+.jay {
+    font-size: 350px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1;
+}
+
+.name {
+    font-size: 32px;
+}
+
+.roles {
+    font-size: 32px;
 }
