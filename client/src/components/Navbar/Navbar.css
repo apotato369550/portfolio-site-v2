@@ -23,3 +23,28 @@
     color: #efefef;
     text-decoration: none;
 }
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .navbar-container {
+      margin: 0 100px;
+    }
+  
+    .navbar-item {
+      font-size: 18px;
+      margin-top: 60px;
+    }
+  
+    .navbar-items {
+      gap: 15px;
+    }
+  }
+  
+  /* Phone Styles */
+  @media (max-width: 768px) {
+  
+    .navbar-item {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+  }
