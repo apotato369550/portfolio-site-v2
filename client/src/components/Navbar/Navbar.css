@@ -24,27 +24,26 @@
     text-decoration: none;
 }
 
-/* Tablet Styles */
-@media (max-width: 1024px) {
-    .navbar-container {
-      margin: 0 100px;
+@media only screen and (min-width: 850px) {
+    #navbar {
+        overflow: hidden;
     }
-  
+    
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+        width: 75%;
+
+    }
+    
     .navbar-item {
-      font-size: 18px;
-      margin-top: 60px;
+        display: block;
+        font-size: 1em;
     }
-  
-    .navbar-items {
-      gap: 15px;
-    }
-  }
-  
-  /* Phone Styles */
-  @media (max-width: 768px) {
-  
-    .navbar-item {
-      margin: 10px 0;
-      font-size: 18px;
-    }
-  }
+}

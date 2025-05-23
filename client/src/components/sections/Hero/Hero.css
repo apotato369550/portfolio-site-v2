@@ -9,6 +9,8 @@
     margin: 0px;
     padding: 0px;
     background-image: url("../../../assets/vaporwave_background.png");
+    background-position: center center; 
+    background-repeat:no-repeat;
     background-size: cover;
     height: inherit;
     width: inherit;
