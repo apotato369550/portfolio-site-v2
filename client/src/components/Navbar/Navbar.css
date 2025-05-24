@@ -4,6 +4,25 @@
     width: inherit;
 }
 
+.nav-toggle {
+    position: absolute;
+    cursor: pointer;
+}
+
+.nav-toggle img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.hamburger {
+  margin-top: 0.2rem;
+}
+
+.close {
+    opacity: 0;
+}
+
+
 .navbar-items {
     margin: 0px auto;
     padding: 0px;
@@ -17,12 +36,26 @@
 .navbar-item {
     margin-top: 75px;
     font-size: 22px;
+    display: none;
 }
 
 .navbar-item a {
     color: #efefef;
     text-decoration: none;
 }
+
+#nav-checkbox:checked ~ .navbar-items .navbar-item {
+  display: block;
+}
+
+#nav-checkbox:checked ~ .nav-toggle .close {
+  opacity: 1;
+}
+
+#nav-checkbox:checked ~ .nav-toggle .hamburger {
+  opacity: 0;
+}
+
 
 @media only screen and (min-width: 850px) {
     #navbar {

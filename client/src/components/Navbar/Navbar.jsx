@@ -8,7 +8,7 @@ const Navbar = () => {
     <header>
       <nav id="navbar">
         <input
-          type="check-box"
+          type="checkbox"
           id="nav-checkbox"
           className="nav-checkbox"
           style={{ position: "absolute", top: "-9999px", left: "-9999px" }}
