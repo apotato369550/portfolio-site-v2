@@ -7,28 +7,6 @@ const Navbar = () => {
   return (
     <header>
       <nav id="navbar">
-        <input
-          type="checkbox"
-          id="nav-checkbox"
-          className="nav-checkbox"
-          style={{ position: "absolute", top: "-9999px", left: "-9999px" }}
-        />
-        <label htmlFor="nav-checkbox" className="nav-toggle">
-          <img
-            src={hamburger}
-            width="100"
-            height="100"
-            className="hamburger"
-            title="hamburger"
-          />
-          <img
-            src={close}
-            width="100"
-            height="100"
-            className="close"
-            title="close"
-          />
-        </label>
         <ul className="navbar-items">
           <li class="navbar-item">
             <a href="#hero">Home</a>
