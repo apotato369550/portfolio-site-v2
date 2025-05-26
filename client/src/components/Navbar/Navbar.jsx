@@ -1,7 +1,5 @@
 import React from 'react'
 import './Navbar.css';
-import hamburger from "../../assets/hamburger.png";
-import close from "../../assets/close.png";
 
 const Navbar = () => {
   return (
