@@ -7,4 +7,9 @@ body {
     padding: 0px;
     font-family: "Poppins", sans-serif;
     color: #efefef;
+    overflow-x: hidden;
+}
+#root {
+    margin: 0px;
+    padding: 0px;
 }
