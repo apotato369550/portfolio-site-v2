@@ -10,11 +10,45 @@
     padding: 0px;
     height: inherit;
     width: inherit;
-
     background: linear-gradient(#2B063B, #3D5CF8); 
 
 }
 
 .identity-container {
+    margin: 0px;
+    padding: 0px;
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+}
 
+.statue-container {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+}
+
+.statue {
+    margin: 0px;
+    padding: 0px;
+    width: 75vw;
+}
+
+@media only screen and (min-width: 850px) {
+    .identity-container {
+        flex-direction: row;
+    }
+    .statue-container {
+        width: 50vw;
+    }
+    .statue {
+        width: 50vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .statue {
+        width: 30vw;
+    }
 }

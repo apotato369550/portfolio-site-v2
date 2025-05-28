@@ -1,5 +1,7 @@
 html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -8,8 +10,11 @@ body {
     font-family: "Poppins", sans-serif;
     color: #efefef;
     overflow-x: hidden;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 #root {
     margin: 0px;
     padding: 0px;
+    width: 100vw;
 }
