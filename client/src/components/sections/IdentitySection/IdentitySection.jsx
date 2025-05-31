@@ -9,12 +9,13 @@ const IdentitySection = () => {
         <div className="identity-gradient-container">
             <div className="identity-container">
                 <div className="statue-container">
-                  <img className="statue" src={statueImage} alt="vaporwave statue image" />
-                  <div className="statue-ellipse-1"></div>
-                  <div className="statue-ellipse-2"></div>
+                  <div className="statue-wrapper">
+                    <div className="statue-ellipse statue-ellipse-1"></div>
+                    <div className="statue-ellipse statue-ellipse-2"></div>
+                    <img className="statue" src={statueImage} alt="vaporwave statue image" />
+                  </div>
                 </div>
                 <div className="pillars-container">
-
                 </div>
             </div>
         </div>

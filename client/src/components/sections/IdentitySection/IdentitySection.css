@@ -23,17 +23,50 @@
     flex-direction: column;
 }
 
+
 .statue-container {
     margin: 0px;
     padding: 0px;
     width: 100vw;
 }
 
+.statue-wrapper {
+    position: relative;
+    margin: 10vw;
+}
+
 .statue {
     margin: 0px;
     padding: 0px;
     width: 75vw;
+    /* z-index works, just remember to set position to something else like relative */
+    z-index: 2;
+    position: relative;
 }
+
+
+.statue-ellipse {
+  position: absolute;
+  border-radius: 50%;
+  margin-top: 39vh;
+  z-index: 1;
+}
+
+.statue-ellipse-1 {
+  background-color: rgba(57, 217, 253, 0.5);
+  width: 75vw;
+  height: 14vh;
+  transform: rotate(30deg);
+
+}
+
+.statue-ellipse-2 {
+  background-color: rgba(216, 73, 238, 0.5);
+  width: 80vw;
+  height: 16vh;
+  transform: rotate(160deg);
+}
+
 
 @media only screen and (min-width: 850px) {
     .identity-container {
