@@ -1,7 +1,7 @@
 #identity-section {
     margin: 0px;
     padding: 0px;
-    height: 100vh;
+    height: 175vh;
     width: 100%;
 }
 
@@ -24,7 +24,7 @@
 }
 
 
-.statue-container {
+.statue-container, .pillars-container {
     margin: 0px;
     padding: 0px;
     width: 100vw;
@@ -32,23 +32,23 @@
 
 .statue-wrapper {
     position: relative;
-    margin: 10vw;
+    width: 75vw;
+    margin: 5vh auto 0 auto;
 }
 
 .statue {
     margin: 0px;
     padding: 0px;
-    width: 75vw;
+    width: 70vw;
     /* z-index works, just remember to set position to something else like relative */
     z-index: 2;
     position: relative;
 }
 
-
 .statue-ellipse {
   position: absolute;
   border-radius: 50%;
-  margin-top: 39vh;
+  margin-top: 40vh;
   z-index: 1;
 }
 
@@ -68,20 +68,90 @@
 }
 
 
+.pillar {
+    margin: 3vh 5vw;
+    padding: 0px;
+}
+
+.title, .information {
+    padding: 3vh 3vw;
+    background-color: rgba(216, 73, 238, 0.5);
+    border-radius: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+/* fix pillar positionings */
+
+.pillar-image {
+    width: 30vw;
+    position: absolute;
+    z-index: 1;
+}
+
+.pillar-right {
+    text-align: right;
+}
+
+.pillar-left {
+    text-align: left;
+}
+
+
 @media only screen and (min-width: 850px) {
+    #identity-section {
+        height: 115vh;
+    }
     .identity-container {
         flex-direction: row;
     }
-    .statue-container {
+    .statue-container, .pillars-container {
         width: 50vw;
     }
-    .statue {
+    .statue-container {
+        margin-top: 10vh;
+    }
+    .statue, .information-pillar {
+        width: 45vw;
+    }
+    .statue-ellipse {
+        margin-top: 50vh;
         width: 50vw;
+    }
+    .statue-ellipse-1 {
+        height: 14vh;
+    }
+
+    .statue-ellipse-2 {
+        height: 16vh;
+    }
+    .pillar-image {
+        width: 20vw;
     }
 }
 
 @media only screen and (min-width: 1200px) {
+    #identity-section {
+        height: 100vh;
+    }
+    .statue-container {
+        margin-top: 5vh;
+    }
     .statue {
-        width: 30vw;
+        max-width: 480px;
+        margin-left: 8vw;
+    }
+    .statue-ellipse {
+        margin-top: 50vh;
+        width: 47vw;
+    }
+    .statue-ellipse-1 {
+        height: 20vh;
+    }
+    .statue-ellipse-2 {
+        height: 22vh;
+    }
+    .pillar-image {
+        width: 12vw;
     }
 }
