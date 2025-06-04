@@ -25,7 +25,7 @@
 
 
 .statue-container, .pillars-container {
-    margin: 0px;
+    margin: 10vh 0 10vh 0;
     padding: 0px;
     width: 100vw;
 }
@@ -33,7 +33,7 @@
 .statue-wrapper {
     position: relative;
     width: 75vw;
-    margin: 5vh auto 0 auto;
+    margin: 0 auto 0 auto;
 }
 
 .statue {
@@ -73,30 +73,23 @@
     padding: 0px;
 }
 
-.title, .information {
-    padding: 3vh 3vw;
-    background-color: rgba(216, 73, 238, 0.5);
-    border-radius: 25px;
-    position: relative;
-    z-index: 2;
-}
-
-/* fix pillar positionings */
 
 .pillar-image {
     width: 30vw;
-    position: absolute;
     z-index: 1;
 }
 
-.pillar-right {
-    text-align: right;
+.pillar-left, .pillar-right {
+    text-align: center;
 }
 
-.pillar-left {
-    text-align: left;
+.title, .information {
+    padding: 1vh 3vw;
+    background-color: rgba(216, 73, 238, 0.5);
+    border-radius: 25px;
+    position: absolute;
+    z-index: 2;
 }
-
 
 @media only screen and (min-width: 850px) {
     #identity-section {
@@ -127,6 +120,13 @@
     }
     .pillar-image {
         width: 20vw;
+    }
+    .pillar-right {
+        text-align: right;
+    }
+
+    .pillar-left {
+        text-align: left;
     }
 }
 
