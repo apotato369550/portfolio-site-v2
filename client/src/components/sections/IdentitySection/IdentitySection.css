@@ -25,9 +25,13 @@
 
 
 .statue-container, .pillars-container {
-    margin: 10vh 0 10vh 0;
+    margin: 5vh 0 7vh 0;
     padding: 0px;
     width: 100vw;
+}
+
+.pillars-container {
+    margin-right: 3vw;
 }
 
 .statue-wrapper {
@@ -67,28 +71,32 @@
   transform: rotate(160deg);
 }
 
-
 .pillar {
-    margin: 3vh 5vw;
-    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5vh 5vw;
+    gap: 3vw;
+    font-size: 0.90em;
 }
-
 
 .pillar-image {
-    width: 30vw;
-    z-index: 1;
-}
-
-.pillar-left, .pillar-right {
-    text-align: center;
+    width: 35vw;
 }
 
 .title, .information {
     padding: 1vh 3vw;
     background-color: rgba(216, 73, 238, 0.5);
     border-radius: 25px;
-    position: absolute;
-    z-index: 2;
+}
+
+.information-1 {
+    background-color: rgba(216, 73, 238, 0.5);
+}
+
+.information-2 {
+    background-color: rgba(216, 73, 238, 0.5);
 }
 
 @media only screen and (min-width: 850px) {
@@ -114,19 +122,29 @@
     .statue-ellipse-1 {
         height: 14vh;
     }
-
     .statue-ellipse-2 {
         height: 16vh;
     }
-    .pillar-image {
-        width: 20vw;
+    .pillars-container {
+        display: flex;
+        flex-direction: column;
+        gap: 17vh;
+        margin: 15vh 3vw;
     }
     .pillar-right {
-        text-align: right;
+        margin-left: 15vw;
     }
-
     .pillar-left {
         text-align: left;
+    }
+    .pillar-image {
+        width: 20vw;
+        position: absolute;
+        z-index: 1;
+    }
+    .title, .information {
+        position: absolute;
+        z-index: 2;
     }
 }
 
