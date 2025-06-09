@@ -81,14 +81,28 @@
     font-size: 0.90em;
 }
 
+.title h1 {
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.question-emphasis {
+    font-weight: 200;
+    font-style: italic;
+}
+
 .pillar-image {
     width: 35vw;
 }
 
 .title, .information {
     padding: 1vh 3vw;
-    background-color: rgba(216, 73, 238, 0.5);
     border-radius: 25px;
+}
+
+.title {
+    /* change this to rgba, follow figma */
+    background: linear-gradient(to right, #2B063B, #3D5CF8); 
 }
 
 .information-1 {
@@ -99,7 +113,27 @@
     background-color: rgba(216, 73, 238, 0.5);
 }
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 550px) {
+    #identity-section {
+        height: 200vh;
+    }
+    .statue-container, .pillars-container {  
+        margin: 3vh 0 5vh 0;
+    }
+    .pillar {
+        margin: 2.5vh 5vw;
+        gap: 1.5vw;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    #identity-section {
+        height: 225vh;
+    }
+}
+
+
+@media only screen and (min-width: 772px) {
     #identity-section {
         height: 115vh;
     }
@@ -125,26 +159,22 @@
     .statue-ellipse-2 {
         height: 16vh;
     }
-    .pillars-container {
-        display: flex;
-        flex-direction: column;
-        gap: 17vh;
-        margin: 15vh 3vw;
-    }
-    .pillar-right {
-        margin-left: 15vw;
-    }
-    .pillar-left {
-        text-align: left;
+    .pillar {
+        margin-right: 100vw;
     }
     .pillar-image {
         width: 20vw;
-        position: absolute;
-        z-index: 1;
+    }
+    .pillar-right {
+        margin-left: 20vw;
     }
     .title, .information {
         position: absolute;
+        margin: auto 5vw auto auto;
         z-index: 2;
+    }
+    .information {
+        font-size: 17px;
     }
 }
 
@@ -171,5 +201,24 @@
     }
     .pillar-image {
         width: 12vw;
+    }
+    .pillar-left {
+        margin-left: 5vw;
+    }
+    .pillar-right {
+        margin-left: 25vw;
+    }
+}
+
+
+@media only screen and (min-width: 1358px) {
+    .title h1 {
+        font-size: 55px;
+    }
+    .information {
+        font-size: 22px;
+    }
+    .pillar-image {
+        width: 12.5vw;
     }
 }

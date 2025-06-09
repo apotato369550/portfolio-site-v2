@@ -18,12 +18,12 @@ const IdentitySection = () => {
                 <div className="pillars-container">
                   <div className="pillar">
                     <div className="title">
-                      <h1>Who am I, really?</h1>
+                      <h1><span className="question-emphasis">Who</span> am I, really?</h1>
                     </div>
-                    <img src={pillarImage} alt="pillar image" className="pillar-image" />
+                    <img src={pillarImage} alt="pillar image" className="pillar-image pillar-right" />
                   </div>
                   <div className="pillar">
-                    <img src={pillarImage} alt="pillar image" className="pillar-image" />
+                    <img src={pillarImage} alt="pillar image" className="pillar-image pillar-left" />
                     <div className="information information-1">
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, lorem ut molestie luctus, sapien orci suscipit neque, sed venenatis lorem</p>
                     </div>
@@ -32,7 +32,7 @@ const IdentitySection = () => {
                     <div className="information information-2">
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, lorem ut molestie luctus, sapien orci suscipit neque, sed venenatis lorem</p>
                     </div>
-                    <img src={pillarImage} alt="pillar image" className="pillar-image" />
+                    <img src={pillarImage} alt="pillar image" className="pillar-image pillar-right" />
                   </div>
                 </div>
             </div>
