@@ -102,15 +102,15 @@
 
 .title {
     /* change this to rgba, follow figma */
-    background: linear-gradient(to right, #2B063B, #3D5CF8); 
+    background: linear-gradient(to right, rgba(138, 81, 152, 0.5), rgba(45, 27, 50, 0.5)); 
 }
 
 .information-1 {
-    background-color: rgba(216, 73, 238, 0.5);
+    background: linear-gradient(to right, rgba(186, 64, 243, 0.5), rgba(108, 37, 141, 0.5)); 
 }
 
 .information-2 {
-    background-color: rgba(216, 73, 238, 0.5);
+    background: linear-gradient(to right, rgba(62, 186, 230, 0.5), rgba(35, 103, 128, 0.5)); 
 }
 
 @media only screen and (min-width: 550px) {
