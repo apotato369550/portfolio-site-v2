@@ -1,7 +1,7 @@
 #identity-section {
     margin: 0px;
     padding: 0px;
-    height: 175vh;
+    height: 155vh;
     width: 100%;
 }
 
@@ -11,7 +11,6 @@
     height: inherit;
     width: inherit;
     background: linear-gradient(#2B063B, #3D5CF8); 
-
 }
 
 .identity-container {
@@ -32,6 +31,8 @@
 
 .pillars-container {
     margin-right: 3vw;
+    /*change if this doesn't work*/
+    position: relative;
 }
 
 .statue-wrapper {
@@ -81,7 +82,7 @@
     font-size: 0.90em;
 }
 
-.title h1 {
+.identity-title h1 {
     font-weight: 400;
     font-size: 40px;
 }
@@ -95,27 +96,33 @@
     width: 35vw;
 }
 
-.title, .information {
+.identity-title, .identity-information {
     padding: 1vh 3vw;
     border-radius: 25px;
 }
 
-.title {
+.identity-title {
     /* change this to rgba, follow figma */
     background: linear-gradient(to right, rgba(138, 81, 152, 0.5), rgba(45, 27, 50, 0.5)); 
 }
 
-.information-1 {
+.identity-information-1 {
     background: linear-gradient(to right, rgba(186, 64, 243, 0.5), rgba(108, 37, 141, 0.5)); 
 }
 
-.information-2 {
+.identity-information-2 {
     background: linear-gradient(to right, rgba(62, 186, 230, 0.5), rgba(35, 103, 128, 0.5)); 
+}
+
+@media only screen and (min-width: 530px) {
+    #identity-section {
+        height: 170vh;
+    }
 }
 
 @media only screen and (min-width: 550px) {
     #identity-section {
-        height: 200vh;
+        height: 175vh;
     }
     .statue-container, .pillars-container {  
         margin: 3vh 0 5vh 0;
@@ -168,12 +175,12 @@
     .pillar-right {
         margin-left: 20vw;
     }
-    .title, .information {
+    .identity-title, .identity-information {
         position: absolute;
         margin: auto 5vw auto auto;
         z-index: 2;
     }
-    .information {
+    .identity-information {
         font-size: 17px;
     }
 }
@@ -212,10 +219,10 @@
 
 
 @media only screen and (min-width: 1358px) {
-    .title h1 {
+    .identity-title h1 {
         font-size: 55px;
     }
-    .information {
+    .identity-information {
         font-size: 22px;
     }
     .pillar-image {
