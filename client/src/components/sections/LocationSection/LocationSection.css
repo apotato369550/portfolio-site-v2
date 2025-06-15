@@ -38,6 +38,7 @@
 .cebu-container {
     display: flex;
     flex-direction: row;
+    width: 100vw;
 }
 
 .tree-container {
@@ -69,6 +70,7 @@
 .location-title {
     float: left;
     margin-left: 5vw;
+    margin-top: 5vh;
 }
 
 .location-information {
@@ -76,15 +78,27 @@
     margin-right: 5vw;
 }
 
-.cebu {
+.cebu-and-flag {
+    margin: auto;
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
 
+.cebu {
+    position: absolute;
+    z-index: 1;
+    width: 50vw;
 }
 
 .flag {
     position: relative;
+    z-index: 2;
     height: auto;
     display: block;
-    width: 30vw;
+    width: 60vw;
+    margin-left: 25vw;
 }
 
 

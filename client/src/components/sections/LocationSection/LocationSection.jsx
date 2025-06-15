@@ -11,8 +11,10 @@ const LocationSection = () => {
         <div className="location-gradient-container">
             <div className="location-container">
                 <div className="cebu-container">
-                    <img className="cebu" src={cebuImage} alt="cebu image" />
-                    <img className="flag" src={flagImage} alt="flag image" />
+                    <div className="cebu-and-flag">
+                        <img className="cebu" src={cebuImage} alt="cebu image" />
+                        <img className="flag" src={flagImage} alt="flag image" />
+                    </div>
                 </div>
                 <div className="tree-container">
                     <img className="tree" src={treeImage} alt="tree image" />
