@@ -1,7 +1,7 @@
 #location-section {
     margin: 0px;
     padding: 0px;
-    height: 150vh;
+    height: 175vh;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -102,11 +102,43 @@
 }
 
 
+@media only screen and (min-width: 500px) {
+    .cebu-and-flag {
+        margin-top: 40vh;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .cebu-and-flag {
+        margin-top: 50vh;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .cebu-and-flag {
+        margin-top: 60vh;
+    }
+}
+
 
 
 @media only screen and (min-width: 772px) {
     .location-container {
         flex-direction: row;
+    }
+    .cebu-and-flag {
+        margin-top: 45vh;
+    }
+    .cebu {
+        width: 35vw;
+    }
+    .flag {
+        width: 35vw;
+        margin-left: 10vw;
+    }
+    .tree {
+        width: 90vw;
+        margin-top: 0px;
     }
 }
 
