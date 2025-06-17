@@ -121,27 +121,45 @@
 }
 
 
-
 @media only screen and (min-width: 772px) {
     .location-container {
         flex-direction: row;
+        margin-top: 10vh;
     }
     .cebu-and-flag {
         margin-top: 45vh;
     }
     .cebu {
-        width: 35vw;
+        width: 30vw;
     }
     .flag {
-        width: 35vw;
+        width: 30vw;
         margin-left: 10vw;
     }
     .tree {
-        width: 90vw;
+        width: 70vw;
         margin-top: 0px;
+    }
+    .location-title, .location-information {
+        width: 35vw;
     }
 }
 
 @media only screen and (min-width: 1200px) {
-
+    .location-container {
+        margin-top: 20vh;
+    }
+    /* do title and info fonts and stuff */ 
+    .cebu-and-flag {
+        margin-top: 65vh;
+    }
+    .cebu {
+        width: 22.5vw;
+    }
+    .flag {
+        width: 20vw;
+    }
+    .tree {
+        width: 47.5vw;
+    }
 }
