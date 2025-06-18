@@ -25,7 +25,7 @@ const LocationSection = () => {
                         <p>Currently coding life away in sunny <i>Cebu</i>, at the center of <i>Visayas, Philippines</i></p>
                     </div>
                     <div className="location-title">
-                        <h1><span className="question-emphasis">Where</span> did I study?</h1>
+                        <h1><span className="question-emphasis">Where</span> am I studying?</h1>
                     </div>
                     <div className="location-information">
                         <p>Currently studying Computer Science at <i>The University of San Carlos</i></p>

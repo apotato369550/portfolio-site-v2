@@ -1,7 +1,7 @@
 #location-section {
     margin: 0px;
     padding: 0px;
-    height: 175vh;
+    height: 200vh;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -78,6 +78,16 @@
     margin-right: 5vw;
 }
 
+.location-title h1 {
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.location-information p {
+    font-size: 22px;
+}
+
+
 .cebu-and-flag {
     margin: auto;
     margin-top: 25vh;
@@ -146,10 +156,23 @@
 }
 
 @media only screen and (min-width: 1200px) {
+    #location-section {
+        height: 135vh;
+    }
+
     .location-container {
         margin-top: 20vh;
     }
+
     /* do title and info fonts and stuff */ 
+    .location-title h1 {
+        font-size: 55px;
+    }
+    
+    .location-information p {
+        font-size: 22px;
+    }
+
     .cebu-and-flag {
         margin-top: 65vh;
     }
