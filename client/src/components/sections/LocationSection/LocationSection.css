@@ -132,6 +132,9 @@
 
 
 @media only screen and (min-width: 772px) {
+    #location-section {
+        height: 125vh;
+    }
     .location-container {
         flex-direction: row;
         margin-top: 10vh;
