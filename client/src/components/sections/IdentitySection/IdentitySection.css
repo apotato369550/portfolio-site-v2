@@ -141,7 +141,7 @@
 
 @media only screen and (min-width: 772px) {
     #identity-section {
-        height: 115vh;
+        height: 95vh;
     }
     .identity-container {
         flex-direction: row;
