@@ -1,0 +1,17 @@
+#tech-stack-section {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.tech-stack-image-container {
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../../../assets/vaporwave_background_3.png");
+    background-position: center center; 
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: inherit;
+    width: inherit;
+}
