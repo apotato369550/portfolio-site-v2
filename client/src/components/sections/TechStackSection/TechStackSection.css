@@ -19,14 +19,55 @@
 .tech-stack-container {
     display: flex;
     flex-direction: column;
+    gap: 5vw;
+    margin: auto;
+}
+
+.left-container, .right-container {
+    width: 85vw;
+    margin-top: 7vh;
+}
+
+.left-container {
+    margin-left: 5vw;
+}
+
+.right-container {
+    margin-right: 5vw;
+}
+
+.tech-stack-title, .languages-and-frameworks, .tools-and-platforms, .currently-exploring {
+    padding: 1vh 3vw;
+    border-radius: 25px;
+    background: linear-gradient(to right, rgba(96, 5, 139, 0.5), rgba(25, 1, 37, 0.5)); 
+    position: relative;
+    z-index: 2;
+    margin-bottom: 5vh;
 }
 
 .tech-stack-title h1 {
     margin: 0px;
 }
 
+.tech-stack-icon {
+    height: 135px;
+}
+
+.html-css-js img {
+    height: 210px;
+}
+
 @media only screen and (min-width: 772px) {
     .tech-stack-container {
         flex-direction: row;
     }
+    
+    .left-container, .right-container {
+        width: 45vw;
+        height: 95vh;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
 }

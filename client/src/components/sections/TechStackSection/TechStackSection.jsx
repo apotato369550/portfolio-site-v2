@@ -17,6 +17,8 @@ import figmaImage from "../../../assets/figma.png";
 import gitImage from "../../../assets/git logo.png";
 
 // things i'm exploring
+import cImage from "../../../assets/c_logo.png";
+import scikitlearnImage from "../../../assets/scikitlearn logo.png";
 
 const TechStackSection = () => {
   return (
@@ -34,16 +36,16 @@ const TechStackSection = () => {
                 <h2>Languages and Frameworks</h2>
               </div>
               <div className="html-css-js">
-                <img src={htmlCssJsImage} alt="html css javascript image" />
+                <img className="tech-stack-icon" src={htmlCssJsImage} alt="html css javascript image" />
               </div>
               <div className="mongo-express-react">
-                <img src={mongodbImage} alt="mongodb image" />
-                <img src={expressJsImage} alt="expressjs image" />
-                <img src={reactImage} alt="react image" />
+                <img className="tech-stack-icon" src={mongodbImage} alt="mongodb image" />
+                <img className="tech-stack-icon" src={expressJsImage} alt="expressjs image" />
+                <img className="tech-stack-icon" src={reactImage} alt="react image" />
               </div>
               <div className="node-python">
-                <img src={nodeJsImage} alt="nodejs image" />
-                <img src={pythonImage} alt="python image" />
+                <img className="tech-stack-icon" src={nodeJsImage} alt="nodejs image" />
+                <img className="tech-stack-icon" src={pythonImage} alt="python image" />
               </div>
             </div>
           </div>
@@ -52,11 +54,27 @@ const TechStackSection = () => {
               <div className="subtitle">
                 <h2>Tools and Platforms</h2>
               </div>
-              
+              <div className="tools-and-platforms-icons">
+                <div className="github-and-firebase">
+                  <img className="tech-stack-icon" src={githubImage} alt="github logo" />
+                  <img className="tech-stack-icon" src={firebaseImage} alt="firebase logo" />
+                </div>
+                <div className="jupyter">
+                  <img className="tech-stack-icon" src={jupyterImage} alt="jupyter logo" />
+                </div>
+                <div className="figma-and-git">
+                  <img className="tech-stack-icon" src={figmaImage} alt="figma logo" />
+                  <img className="tech-stack-icon" src={gitImage} alt="git logo" />
+                </div>
+              </div>
             </div>
             <div className="currently-exploring">
               <div className="subtitle">
                 <h2>Currently Exploring</h2>
+              </div>
+              <div className="c-and-scikitlearn">
+                <img className="tech-stack-icon" src={cImage} alt="" />
+                <img className="tech-stack-icon" src={scikitlearnImage} alt="" />
               </div>
             </div>
           </div>
