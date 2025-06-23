@@ -1,8 +1,11 @@
 #tech-stack-section {
     margin: 0px;
     padding: 0px;
-    height: 100vh;
+    height: 215vh;
     width: 100vw;
+    /* Add these to ensure no gaps */
+    position: relative;
+    overflow: hidden;
 }
 
 .tech-stack-image-container {
@@ -12,8 +15,14 @@
     background-position: center center; 
     background-repeat:no-repeat;
     background-size: cover;
-    height: inherit;
-    width: inherit;
+    /* Change from inherit to 100% to ensure full coverage */
+    height: 100%;
+    width: 100%;
+    /* Add these to fix background positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 200vh; /* Ensure minimum height matches parent */
 }
 
 .tech-stack-container {
@@ -25,16 +34,9 @@
 
 .left-container, .right-container {
     width: 85vw;
-    margin-top: 7vh;
+    margin: 7vh auto 0vh auto;
 }
 
-.left-container {
-    margin-left: 5vw;
-}
-
-.right-container {
-    margin-right: 5vw;
-}
 
 .tech-stack-title, .languages-and-frameworks, .tools-and-platforms, .currently-exploring {
     padding: 1vh 3vw;
@@ -58,10 +60,21 @@
 }
 
 @media only screen and (min-width: 772px) {
+    #tech-stack-section {
+        height: 120vh;
+    }
+    
     .tech-stack-container {
         flex-direction: row;
     }
     
+    .left-container {
+        margin-left: 5vw;
+    }
+
+    .right-container {
+        margin-right: 5vw;
+    }
     .left-container, .right-container {
         width: 45vw;
         height: 95vh;
@@ -69,5 +82,8 @@
 }
 
 @media only screen and (min-width: 1200px) {
-
+    #tech-stack-section {
+        height: 100vh;
+    }
+    
 }
