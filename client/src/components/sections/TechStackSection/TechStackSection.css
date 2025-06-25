@@ -37,7 +37,6 @@
     margin: 7vh auto 0vh auto;
 }
 
-
 .tech-stack-title, .languages-and-frameworks, .tools-and-platforms, .currently-exploring {
     padding: 1vh 3vw;
     border-radius: 25px;
@@ -50,14 +49,35 @@
 .tech-stack-title h1 {
     margin: 0px;
 }
+.html-css-js, .mongo-express-react, .node-python, .tools-and-platforms-icons, .c-and-scikitlearn {
+    width: inherit;
+    display: flex;
+}
+
+.github-and-firebase, .jupyter, .figma-and-git {
+    margin: auto;
+}
+
+.github-and-firebase, .figma-and-git {
+    flex-direction: column;
+}
 
 .tech-stack-icon {
-    height: 135px;
+    height: 110px;
+    margin: auto;
 }
 
 .html-css-js img {
-    height: 210px;
+    height: 190px;
+    margin: auto;
 }
+
+.mongo-express-react {
+    display: flex;
+    flex-direction: row;
+}
+
+
 
 @media only screen and (min-width: 772px) {
     #tech-stack-section {
@@ -78,6 +98,10 @@
     .left-container, .right-container {
         width: 45vw;
         height: 95vh;
+    }
+    
+    .tech-stack-icon {
+        height: 135px;
     }
 }
 
