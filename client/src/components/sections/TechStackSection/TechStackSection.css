@@ -1,7 +1,7 @@
 #tech-stack-section {
     margin: 0px;
     padding: 0px;
-    height: 215vh;
+    height: 175vh;
     width: 100vw;
     /* Add these to ensure no gaps */
     position: relative;
@@ -28,13 +28,19 @@
 .tech-stack-container {
     display: flex;
     flex-direction: column;
-    gap: 5vw;
     margin: auto;
 }
 
 .left-container, .right-container {
     width: 85vw;
+}
+
+.left-container {
     margin: 7vh auto 0vh auto;
+}
+
+.right-container {
+    margin: 0vh auto 0vh auto;
 }
 
 .tech-stack-title, .languages-and-frameworks, .tools-and-platforms, .currently-exploring {
@@ -52,6 +58,7 @@
 .html-css-js, .mongo-express-react, .node-python, .tools-and-platforms-icons, .c-and-scikitlearn {
     width: inherit;
     display: flex;
+    margin-bottom: 2vh;
 }
 
 .github-and-firebase, .jupyter, .figma-and-git {
@@ -59,16 +66,12 @@
 }
 
 .github-and-firebase, .figma-and-git {
+    display: flex;
     flex-direction: column;
 }
 
 .tech-stack-icon {
-    height: 110px;
-    margin: auto;
-}
-
-.html-css-js img {
-    height: 190px;
+    height: 100px;
     margin: auto;
 }
 
@@ -81,7 +84,7 @@
 
 @media only screen and (min-width: 772px) {
     #tech-stack-section {
-        height: 120vh;
+        height: 100vh;
     }
     
     .tech-stack-container {
@@ -95,19 +98,26 @@
     .right-container {
         margin-right: 5vw;
     }
+
     .left-container, .right-container {
-        width: 45vw;
+        width: 40vw;
         height: 95vh;
+        margin: 7vh auto 0vh auto;
     }
     
     .tech-stack-icon {
-        height: 135px;
+        height: 11.5vw;
     }
 }
 
 @media only screen and (min-width: 1200px) {
     #tech-stack-section {
-        height: 100vh;
+        height: 115vh;
     }
-    
+    .github-and-firebase,.figma-and-git {
+        flex-direction: column;
+    }
+    .tech-stack-icon {
+        height: 10vw;
+    }
 }

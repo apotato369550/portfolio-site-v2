@@ -2,10 +2,14 @@ import React from 'react'
 import './TechStackSection.css';
 
 // languages and frameworks
-import htmlCssJsImage from "../../../assets/html_css_js.png";
+import htmlImage from "../../../assets/html_5_photo.png";
+import cssImage from "../../../assets/css_photo.png";
+import jsImage from "../../../assets/js_photo.png";
+
+
 import mongodbImage from "../../../assets/mongodb.png";
 import expressJsImage from "../../../assets/express.js.png";
-import reactImage from "../../../assets/react.png";
+import reactImage from "../../../assets/circle_react.png";
 import nodeJsImage from "../../../assets/node.js.png";
 import pythonImage from "../../../assets/python.png";
 
@@ -36,7 +40,9 @@ const TechStackSection = () => {
                 <h2>Languages and Frameworks</h2>
               </div>
               <div className="html-css-js">
-                <img className="tech-stack-icon" src={htmlCssJsImage} alt="html css javascript image" />
+                <img className="tech-stack-icon" src={htmlImage} alt="html image" />
+                <img className="tech-stack-icon" src={cssImage} alt="css image" />
+                <img className="tech-stack-icon" src={jsImage} alt="javascript image" />
               </div>
               <div className="mongo-express-react">
                 <img className="tech-stack-icon" src={mongodbImage} alt="mongodb image" />
