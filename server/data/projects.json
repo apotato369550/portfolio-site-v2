@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Cebu Best Value Trading",
+        "description": "Currently in the process of developing the website of CBVT (Cebu Best Value Trading)",
+        "image": "../public/projects/cbvt/cbvt.png",
+        "github_url": "https://github.com/apotato369550/im-2-project",
+        "tech_stack": [
+            {
+                "name": "React",
+                "icon": "../public/projects/cbvt/react.png"
+            },
+            {
+                "name": "Tailwind",
+                "icon": "../public/projects/cbvt/tailwind.png"
+            },
+            {
+                "name": "React",
+                "icon": "../public/projects/cbvt/php.png"
+            }
+        ]
+    },
+    {
+        "name": "Traveling Salesman Problem Heuristic",
+        "description": "Currently in the process of developing the website of CBVT (Cebu Best Value Trading)",
+        "image": "../public/projects/cbvt/cbvt.png",
+        "github_url": "https://github.com/apotato369550/im-2-project",
+        "tech_stack": [
+            {
+                "name": "React",
+                "icon": "../public/projects/cbvt/react.png"
+            },
+            {
+                "name": "Tailwind",
+                "icon": "../public/projects/cbvt/tailwind.png"
+            },
+            {
+                "name": "React",
+                "icon": "../public/projects/cbvt/php.png"
+            }
+        ]
+    },
+    {
+        "name": "Cebu Best Value Trading",
+        "description": "Currently in the process of developing the website of CBVT (Cebu Best Value Trading)",
+        "image": "../public/projects/cbvt/cbvt.png",
+        "github_url": "https://github.com/apotato369550/im-2-project",
+        "tech_stack": [
+            {
+                "name": "React",
+                "icon": "../public/projects/cbvt/react.png"
+            },
+            {
+                "name": "Tailwind",
+                "icon": "../public/projects/cbvt/tailwind.png"
+            },
+            {
+                "name": "React",
+                "icon": "../public/projects/cbvt/php.png"
+            }
+        ]
+    }
+]
