@@ -1,7 +1,12 @@
-const express = require("express");
-const cors = require("cors");
+import express from "express";
+import cors from "cors";
+import fetchGithubData from "./fetchGithubCommits.js";
+
 const app = express();
 const port = 5000;
+
+// Call the function to fetch GitHub data
+fetchGithubData();
 
 app.use(cors());
 
