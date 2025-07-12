@@ -117,5 +117,96 @@
     "last_commit_message": "Initial commit",
     "date": "2022-12-23T14:24:02Z",
     "url": "https://github.com/apotato369550/cfp-project-finals"
+  },
+  {
+    "name": "cis1102n-portfolio-site",
+    "description": "No description",
+    "last_commit_message": "Initial Commit",
+    "date": "2024-11-27T02:54:21Z",
+    "url": "https://github.com/apotato369550/cis1102n-portfolio-site"
+  },
+  {
+    "name": "coding-problems-solution",
+    "description": "No description",
+    "last_commit_message": "Create README.md",
+    "date": "2023-12-30T07:33:09Z",
+    "url": "https://github.com/apotato369550/coding-problems-solution"
+  },
+  {
+    "name": "console-based-login-system",
+    "description": "A simple login system I made while learning C++",
+    "last_commit_message": "Create LICENSE",
+    "date": "2021-03-09T11:11:18Z",
+    "url": "https://github.com/apotato369550/console-based-login-system"
+  },
+  {
+    "name": "console-based-student-enroll",
+    "description": "No description",
+    "last_commit_message": "Update README.md",
+    "date": "2021-02-23T12:20:01Z",
+    "url": "https://github.com/apotato369550/console-based-student-enroll"
+  },
+  {
+    "name": "crud-employee-management-app",
+    "description": "No description",
+    "last_commit_message": "Removed Comments",
+    "date": "2021-04-10T05:15:37Z",
+    "url": "https://github.com/apotato369550/crud-employee-management-app"
+  },
+  {
+    "name": "crypto-tracker-app",
+    "description": "No description",
+    "last_commit_message": "Update: Title",
+    "date": "2024-09-07T12:30:32Z",
+    "url": "https://github.com/apotato369550/crypto-tracker-app"
+  },
+  {
+    "name": "dsa-notes",
+    "description": "A repository full of my notes/programs implementing Data Structures and Algorithms in C",
+    "last_commit_message": "Started on adjacency matrix implementation of BFS",
+    "date": "2025-07-12T04:23:12Z",
+    "url": "https://github.com/apotato369550/dsa-notes"
+  },
+  {
+    "name": "fake-news-detection-app-tensorflow",
+    "description": "No description",
+    "last_commit_message": "Track large files with Git LFS",
+    "date": "2024-11-07T11:56:14Z",
+    "url": "https://github.com/apotato369550/fake-news-detection-app-tensorflow"
+  },
+  {
+    "name": "first-2d-pygame",
+    "description": "No description",
+    "last_commit_message": "first commit",
+    "date": "2024-07-28T12:40:42Z",
+    "url": "https://github.com/apotato369550/first-2d-pygame"
+  },
+  {
+    "name": "first-android-app",
+    "description": "No description",
+    "last_commit_message": "Initial commit",
+    "date": "2021-08-22T08:41:42Z",
+    "url": "https://github.com/apotato369550/first-android-app"
+  },
+  {
+    "name": "first-bootstrap-website",
+    "description": "My attempt at learning Bootstrap 4 by following a tutorial",
+    "last_commit_message": "Add files via upload",
+    "date": "2021-02-13T10:54:29Z",
+    "url": "https://github.com/apotato369550/first-bootstrap-website"
+  },
+  {
+    "name": "first-contributions",
+    "description": "🚀✨ Help beginners to contribute to open source projects",
+    "last_commit_message": "Merge pull request #41190 from eabalta/add-eabalta\n\nAdd Enes Alper Balta to Contributors list",
+    "date": "2021-07-25T20:56:50Z",
+    "url": "https://github.com/apotato369550/first-contributions"
+  },
+  {
+    "name": "first-git-demo",
+    "description": "No description",
+    "last_commit_message": "Add another line of text",
+    "date": "2021-02-21T07:50:41Z",
+    "url": "https://github.com/apotato369550/first-git-demo"
   }
 ]

@@ -53,8 +53,10 @@
 }
 
 .tech-stack-title h1 {
-    margin: 0px;
+    font-weight: 400;
+    font-size: 40px;
 }
+
 .html-css-js, .mongo-express-react, .node-python, .tools-and-platforms-icons, .c-and-scikitlearn {
     width: inherit;
     display: flex;
@@ -71,7 +73,7 @@
 }
 
 .tech-stack-icon {
-    height: 100px;
+    height: 20vw;
     margin: auto;
 }
 
@@ -105,6 +107,9 @@
         margin: 7vh auto 0vh auto;
     }
     
+    .tech-stack-title h1 {
+        font-size: 55px;
+    }
     .tech-stack-icon {
         height: 11.5vw;
     }
