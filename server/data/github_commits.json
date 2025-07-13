@@ -1,212 +1,102 @@
 [
   {
-    "name": "2048-game",
-    "description": "2048 game in python",
-    "last_commit_message": "Update README.md",
-    "date": "2022-12-22T13:52:05Z",
-    "url": "https://github.com/apotato369550/2048-game"
-  },
-  {
-    "name": "ajax-practice",
-    "description": "No description",
-    "last_commit_message": "Initial commit",
-    "date": "2025-04-10T14:09:57Z",
-    "url": "https://github.com/apotato369550/ajax-practice"
-  },
-  {
-    "name": "all-purpose-calculator",
-    "description": "A Math/Science calculator I created using PHP to help my classmates and I study",
-    "last_commit_message": "Add files via upload",
-    "date": "2021-01-31T23:34:03Z",
-    "url": "https://github.com/apotato369550/all-purpose-calculator"
-  },
-  {
-    "name": "amazon-reviews-ml-predictor",
-    "description": "No description",
-    "last_commit_message": "Saved changes before editing history",
-    "date": "2024-11-07T12:10:52Z",
-    "url": "https://github.com/apotato369550/amazon-reviews-ml-predictor"
-  },
-  {
-    "name": "apotato369550",
-    "description": "Config files for my GitHub profile.",
-    "last_commit_message": "Updated README.md",
-    "date": "2025-04-25T10:05:59Z",
-    "url": "https://github.com/apotato369550/apotato369550"
-  },
-  {
-    "name": "arduino-res-project",
-    "description": "No description",
-    "last_commit_message": "Added features to res_project_software_v2",
-    "date": "2022-10-28T05:55:19Z",
-    "url": "https://github.com/apotato369550/arduino-res-project"
-  },
-  {
-    "name": "arduino-sample-sketches",
-    "description": "No description",
-    "last_commit_message": "Add relay, lcd display, and servo motor samples",
-    "date": "2022-10-28T05:53:30Z",
-    "url": "https://github.com/apotato369550/arduino-sample-sketches"
-  },
-  {
-    "name": "arm-assembly-reference",
-    "description": "No description",
-    "last_commit_message": "Added section about arithmetic and cpsr register",
-    "date": "2022-12-19T12:55:57Z",
-    "url": "https://github.com/apotato369550/arm-assembly-reference"
-  },
-  {
-    "name": "bartr-ecommerce",
-    "description": "No description",
-    "last_commit_message": "Replace mailing server with yahoo",
-    "date": "2022-06-10T11:08:18Z",
-    "url": "https://github.com/apotato369550/bartr-ecommerce"
-  },
-  {
-    "name": "basic-login-system",
-    "description": "A basic account-signup, login, logout, and delete system made with HTML, CSS, and PHP",
-    "last_commit_message": "Edited to add code snippets",
-    "date": "2021-01-29T11:50:04Z",
-    "url": "https://github.com/apotato369550/basic-login-system"
-  },
-  {
-    "name": "basic-snake-game",
-    "description": "A basic snake game made in HTML, CSS, and Javascript.",
-    "last_commit_message": "Added main files",
-    "date": "2021-01-27T04:47:28Z",
-    "url": "https://github.com/apotato369550/basic-snake-game"
-  },
-  {
-    "name": "blob-shooter-game",
-    "description": "No description",
-    "last_commit_message": "Update README.md",
-    "date": "2022-12-22T13:50:48Z",
-    "url": "https://github.com/apotato369550/blob-shooter-game"
-  },
-  {
-    "name": "bloxx-shooter-game",
-    "description": "No description",
-    "last_commit_message": "Initial commit",
-    "date": "2021-03-30T05:16:56Z",
-    "url": "https://github.com/apotato369550/bloxx-shooter-game"
-  },
-  {
-    "name": "breadth-first-search-python",
-    "description": "Visualizing breadth first search algorithm in python",
-    "last_commit_message": "Add Version 3 of breadth first search",
-    "date": "2021-03-29T10:00:58Z",
-    "url": "https://github.com/apotato369550/breadth-first-search-python"
-  },
-  {
-    "name": "cbvt-landing-page",
-    "description": "Cebu Best Value Trading Corporation's Landing Page",
-    "last_commit_message": "Update: Created alternative Careers2.scss file",
-    "date": "2024-10-28T03:20:08Z",
-    "url": "https://github.com/apotato369550/cbvt-landing-page"
-  },
-  {
-    "name": "cfp-code-jams",
-    "description": "A compilation of code taught and discussed during student-hosted CFP study sessions:)",
-    "last_commit_message": "Initial commit",
-    "date": "2022-10-28T06:05:17Z",
-    "url": "https://github.com/apotato369550/cfp-code-jams"
-  },
-  {
-    "name": "cfp-project-finals",
-    "description": "No description",
-    "last_commit_message": "Initial commit",
-    "date": "2022-12-23T14:24:02Z",
-    "url": "https://github.com/apotato369550/cfp-project-finals"
-  },
-  {
-    "name": "cis1102n-portfolio-site",
-    "description": "No description",
-    "last_commit_message": "Initial Commit",
-    "date": "2024-11-27T02:54:21Z",
-    "url": "https://github.com/apotato369550/cis1102n-portfolio-site"
-  },
-  {
-    "name": "coding-problems-solution",
-    "description": "No description",
-    "last_commit_message": "Create README.md",
-    "date": "2023-12-30T07:33:09Z",
-    "url": "https://github.com/apotato369550/coding-problems-solution"
-  },
-  {
-    "name": "console-based-login-system",
-    "description": "A simple login system I made while learning C++",
-    "last_commit_message": "Create LICENSE",
-    "date": "2021-03-09T11:11:18Z",
-    "url": "https://github.com/apotato369550/console-based-login-system"
-  },
-  {
-    "name": "console-based-student-enroll",
-    "description": "No description",
-    "last_commit_message": "Update README.md",
-    "date": "2021-02-23T12:20:01Z",
-    "url": "https://github.com/apotato369550/console-based-student-enroll"
-  },
-  {
-    "name": "crud-employee-management-app",
-    "description": "No description",
-    "last_commit_message": "Removed Comments",
-    "date": "2021-04-10T05:15:37Z",
-    "url": "https://github.com/apotato369550/crud-employee-management-app"
-  },
-  {
-    "name": "crypto-tracker-app",
-    "description": "No description",
-    "last_commit_message": "Update: Title",
-    "date": "2024-09-07T12:30:32Z",
-    "url": "https://github.com/apotato369550/crypto-tracker-app"
-  },
-  {
     "name": "dsa-notes",
     "description": "A repository full of my notes/programs implementing Data Structures and Algorithms in C",
-    "last_commit_message": "Started on adjacency matrix implementation of BFS",
-    "date": "2025-07-12T04:23:12Z",
-    "url": "https://github.com/apotato369550/dsa-notes"
+    "last_commit_message": "Finished adjacency matrix implementation of BFS",
+    "date": "2025-07-13T00:46:10Z",
+    "url": "https://github.com/apotato369550/dsa-notes",
+    "stars": 0,
+    "forks": 0,
+    "language": "C"
   },
   {
-    "name": "fake-news-detection-app-tensorflow",
-    "description": "No description",
-    "last_commit_message": "Track large files with Git LFS",
-    "date": "2024-11-07T11:56:14Z",
-    "url": "https://github.com/apotato369550/fake-news-detection-app-tensorflow"
+    "name": "im-2-project",
+    "description": "A repository containing the code for our Information Management II (CIS 2104) project entitled: A Web-Based Management System for Cebu Best Value Trading ",
+    "last_commit_message": "Merge pull request #11 from apotato369550/rean-dev\n\nAdded all manager page layouts - needs functionality integration",
+    "date": "2025-07-12T12:29:11Z",
+    "url": "https://github.com/apotato369550/im-2-project",
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
-    "name": "first-2d-pygame",
-    "description": "No description",
-    "last_commit_message": "first commit",
-    "date": "2024-07-28T12:40:42Z",
-    "url": "https://github.com/apotato369550/first-2d-pygame"
-  },
-  {
-    "name": "first-android-app",
-    "description": "No description",
+    "name": "nextjs-todo-list",
+    "description": "A fullstack todo-list application built in next.js to help me familiarize myself with next.js and Tailwind",
     "last_commit_message": "Initial commit",
-    "date": "2021-08-22T08:41:42Z",
-    "url": "https://github.com/apotato369550/first-android-app"
+    "date": "2025-07-12T05:00:26Z",
+    "url": "https://github.com/apotato369550/nextjs-todo-list",
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
-    "name": "first-bootstrap-website",
-    "description": "My attempt at learning Bootstrap 4 by following a tutorial",
-    "last_commit_message": "Add files via upload",
-    "date": "2021-02-13T10:54:29Z",
-    "url": "https://github.com/apotato369550/first-bootstrap-website"
+    "name": "portfolio-site-v2",
+    "description": "A vaporwave-inspired personal portfolio site built with love, code, and caffeine. Powered by Git, gradients, and good vibes.",
+    "last_commit_message": "Worked on github commit fetcher",
+    "date": "2025-07-12T04:59:51Z",
+    "url": "https://github.com/apotato369550/portfolio-site-v2",
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
-    "name": "first-contributions",
-    "description": "🚀✨ Help beginners to contribute to open source projects",
-    "last_commit_message": "Merge pull request #41190 from eabalta/add-eabalta\n\nAdd Enes Alper Balta to Contributors list",
-    "date": "2021-07-25T20:56:50Z",
-    "url": "https://github.com/apotato369550/first-contributions"
+    "name": "hamiltonian-cycles-heuristic",
+    "description": "A Python simulation framework for exploring anchor-based heuristics to find efficient Hamiltonian cycles in complete, weighted graphs.",
+    "last_commit_message": "Added some moar stufF",
+    "date": "2025-07-11T14:03:48Z",
+    "url": "https://github.com/apotato369550/hamiltonian-cycles-heuristic",
+    "stars": 0,
+    "forks": 0,
+    "language": "Python"
   },
   {
-    "name": "first-git-demo",
+    "name": "mern-todo-list",
+    "description": "A small fullstack todo-list application I made using the MERN stack to teach myself fullstack development in MERN",
+    "last_commit_message": "Initial commit",
+    "date": "2025-07-11T13:17:00Z",
+    "url": "https://github.com/apotato369550/mern-todo-list",
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript"
+  },
+  {
+    "name": "first-laravel-project",
+    "description": "My first project in laravel. Learning the basics and fundamentals",
+    "last_commit_message": "Added stuff about routes",
+    "date": "2025-06-29T05:17:37Z",
+    "url": "https://github.com/apotato369550/first-laravel-project",
+    "stars": 0,
+    "forks": 0,
+    "language": "PHP"
+  },
+  {
+    "name": "scholar-portal",
+    "description": "The official Scholar Portal for DOST SA USC.",
+    "last_commit_message": "FEAT: SignOut error handling",
+    "date": "2025-06-18T06:58:00Z",
+    "url": "https://github.com/apotato369550/scholar-portal",
+    "stars": 0,
+    "forks": 0,
+    "language": null
+  },
+  {
+    "name": "prog2-activities",
     "description": "No description",
-    "last_commit_message": "Add another line of text",
-    "date": "2021-02-21T07:50:41Z",
-    "url": "https://github.com/apotato369550/first-git-demo"
+    "last_commit_message": "created a new c file sample",
+    "date": "2025-06-16T03:26:54Z",
+    "url": "https://github.com/apotato369550/prog2-activities",
+    "stars": 0,
+    "forks": 0,
+    "language": "C"
+  },
+  {
+    "name": "web-dev-1-final-project",
+    "description": "No description",
+    "last_commit_message": "Added responsiveness and quotation display for client",
+    "date": "2025-05-12T11:38:07Z",
+    "url": "https://github.com/apotato369550/web-dev-1-final-project",
+    "stars": 0,
+    "forks": 0,
+    "language": "PHP"
   }
 ]

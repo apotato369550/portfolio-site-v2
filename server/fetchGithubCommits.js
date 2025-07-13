@@ -6,9 +6,9 @@ import path from "path";
 import fetch from "node-fetch";
 import { fileURLToPath } from 'url';
 
-const GITHUB_USERNAME = "apotato369550";
+const GITHUB_USERNAME = process.env.GITHUB_USERNAME || null;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || null;
-
+const MAX_REPOSITORIES = 10; // Hard limit on number of repositories to fetch
 
 // Get __dirname equivalent in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -23,7 +23,8 @@ async function fetchGithubData() {
             headers['User-Agent'] = 'GitHub-Portfolio-Fetcher';
         }
 
-        const reposResponse = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos`, {
+        // Fetch repositories sorted by last push date (most recent first)
+        const reposResponse = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=pushed&direction=desc&per_page=${MAX_REPOSITORIES}`, {
             headers
         });
         
@@ -40,7 +41,7 @@ async function fetchGithubData() {
         const repos = await reposResponse.json();
         
         // Debug: Log what we actually received
-        console.log("GitHub API Response:", repos);
+        console.log(`Fetched ${repos.length} repositories (sorted by recent activity)`);
         console.log("Response type:", typeof repos);
         console.log("Is array:", Array.isArray(repos));
         
@@ -57,17 +58,29 @@ async function fetchGithubData() {
 
         const results = [];
 
+        // Process repositories (they're already sorted by recent activity)
         for (const repo of repos) {
-            console.log(`Fetching commits for repository: ${repo.name}`);
+            console.log(`Fetching commits for repository: ${repo.name} (last pushed: ${repo.pushed_at})`);
             
-            // Fixed: Added missing 'fetch' call with authentication
-            const commitsResponse = await fetch(`https://api.github.com/repos/${GITHUB_USERNAME}/${repo.name}/commits`, {
+            // Fetch commits for this repository
+            const commitsResponse = await fetch(`https://api.github.com/repos/${GITHUB_USERNAME}/${repo.name}/commits?per_page=1`, {
                 headers
             });
             
             if (!commitsResponse.ok) {
                 console.warn(`Failed to fetch commits for ${repo.name}: ${commitsResponse.status} - ${commitsResponse.statusText}`);
-                continue; // Skip this repo and continue with others
+                // Still include the repo info even if we can't get commits
+                results.push({
+                    name: repo.name,
+                    description: repo.description || "No description",
+                    last_commit_message: "Could not fetch latest commit",
+                    date: repo.pushed_at, // Use repo's last push date as fallback
+                    url: repo.html_url,
+                    stars: repo.stargazers_count,
+                    forks: repo.forks_count,
+                    language: repo.language
+                });
+                continue;
             }
             
             const commits = await commitsResponse.json();
@@ -79,10 +92,24 @@ async function fetchGithubData() {
                     description: repo.description || "No description",
                     last_commit_message: latestCommit.commit.message,
                     date: latestCommit.commit.author.date,
-                    url: repo.html_url
+                    url: repo.html_url,
+                    stars: repo.stargazers_count,
+                    forks: repo.forks_count,
+                    language: repo.language
                 });
             } else {
                 console.log(`No commits found for repository: ${repo.name}`);
+                // Include repo info even without commits
+                results.push({
+                    name: repo.name,
+                    description: repo.description || "No description",
+                    last_commit_message: "No commits found",
+                    date: repo.pushed_at,
+                    url: repo.html_url,
+                    stars: repo.stargazers_count,
+                    forks: repo.forks_count,
+                    language: repo.language
+                });
             }
         }
 
@@ -94,7 +121,8 @@ async function fetchGithubData() {
 
         const filePath = path.join(dataDir, "github_commits.json");
         fs.writeFileSync(filePath, JSON.stringify(results, null, 2));
-        console.log(`Github data saved to ${filePath}`);
+        console.log(`✅ GitHub data saved to ${filePath}`);
+        console.log(`📊 Fetched ${results.length} repositories (limited to ${MAX_REPOSITORIES})`);
         
         return results;
     } catch (error) {
@@ -104,17 +132,3 @@ async function fetchGithubData() {
 }
 
 export default fetchGithubData;
-
-/*
-fetchGithubData().catch((err) => {
-    console.error("❌ Failed to fetch GitHub data:", err);
-});
-*/
-
-/*
-api improvement prompt
-
-Hi Claude! I'd like some clarification, some advice, and a few modifications to my existing code for a program that utilizes GitHub's offical API. I'm currently working on a portfolio site project and I want to manually
-
-
- */
