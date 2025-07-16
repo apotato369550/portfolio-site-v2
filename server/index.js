@@ -1,12 +1,14 @@
 import express from "express";
 import cors from "cors";
 import fetchGithubData from "./fetchGithubCommits.js";
+import fetchLeetCodeData from "./fetchLeetcodeSubmissions.js";
 // import cron from "node-cron";
 
 const app = express();
 const port = 5000;
 
 // Call the function to fetch GitHub data once on startup
+/*
 console.log("🚀 Starting server and fetching GitHub data...");
 fetchGithubData()
     .then(() => {
@@ -15,6 +17,18 @@ fetchGithubData()
     .catch((error) => {
         console.error("❌ Initial GitHub data fetch failed:", error);
     });
+*/
+
+fetchLeetCodeData()
+    .then(() => {
+        console.log("✅ Initial Leetcode data fetch completed");
+    })
+    .catch((error) => {
+        console.error("❌ Initial Leetcode data fetch failed:", error);
+    });
+
+
+
 
 // Uncomment the code below to enable hourly cron job
 // Make sure to install node-cron: npm install node-cron
@@ -28,6 +42,14 @@ cron.schedule('0 * * * *', () => {
         })
         .catch((error) => {
             console.error("❌ Scheduled GitHub data fetch failed:", error);
+        });
+        
+    fetchLeetCodeData()
+        .then(() => {
+            console.log("✅ Scheduled Leetcode data fetch completed");
+        })
+        .catch((error) => {
+            console.error("❌ Scheduled Leetcode data fetch failed:", error);
         });
 });
 */
