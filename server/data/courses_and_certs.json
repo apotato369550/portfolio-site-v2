@@ -3,30 +3,35 @@
         "course_title": "Introduction to Deep Learning with PyTorch",
         "course_description": "Completed a hands-on introduction to deep learning by building and training neural networks using PyTorch, gaining practical skills in one of the leading AI frameworks.",
         "date_completed": "7/16/2025",
-        "certificate_url": "server\\certs\\intro_to_dl_pytorch.pdf"
+        "certificate_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/a388904125407b5a6b0ae22e93107d5635402388",
+        "image_url": "server\\certs\\intro_to_dl_pytorch.pdf"
     },
     {
         "course_title": "Feature Engineering for NLP in Python",
         "course_description": "Successfully completed 'Feature Engineering for NLP in Python' on DataCamp, where I applied advanced text processing techniques such as POS tagging, named entity recognition, and tf-idf modeling using scikit-learn and spaCy. Built sentiment predictors, document similarity tools, and recommendation systems, showcasing the ability to extract and engineer valuable features from raw text for real-world machine learning applications.",
         "date_completed": "6/12/2025",
-        "certificate_url": "server\\certs\\feature_engineering_nlp_python.pdf"
+        "certificate_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/03cd0f80be942a9cefbb3c5a2fa0c721d6e88db6",
+        "image_url": "server\\certs\\feature_engineering_nlp_python.pdf"
     },
     {
         "course_title": "Natural Language Processing with spaCy",
         "course_description": "Completed 'Advanced NLP with spaCy' on DataCamp, gaining hands-on experience with spaCy’s industry-grade NLP capabilities. Mastered core operations like tokenization, parsing, and named entity recognition, while also building custom pipelines, matching patterns, and training models for real-world text analysis. This course sharpened my ability to structure unstructured data and apply powerful NLP workflows in production-ready environments.",
         "date_completed": "7/7/2025",
-        "certificate_url": "server\\certs\\nlp_with_spacy.pdf"
+        "certificate_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/82b1b0ebe7c46d9202eaca2fb1495237430441bf",
+        "image_url": "server\\certs\\nlp_with_spacy.pdf"
     },
     {
         "course_title": "Introduction to Natural Language Processing in Python",
         "course_description": "Completed Introduction to Natural Language Processing in Python on DataCamp. Gained foundational skills in NLP, including tokenization, topic modeling, and text classification. Built a fake news classifier and explored essential tools like NLTK and deep learning libraries to solve real-world text processing problems. This course strengthened my ability to analyze and extract meaning from raw text using Python.",
         "date_completed": "6/30/2025",
-        "certificate_url": "server\\certs\\intro_to_nlp_in_python.pdf"
+        "certificate_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/29438766db3fa27953d3f4cfc3a9574a74d77789",
+        "image_url": "server\\certs\\intro_to_nlp_in_python.pdf"
     },
     {
         "course_title": "Hyperparameter Tuning in Python",
         "course_description": "Completed Hyperparameter Tuning in Python on DataCamp. Learned how to optimize machine learning model performance through automated hyperparameter tuning techniques using Scikit-Learn. Gained hands-on experience with Grid Search, Random Search, Bayesian optimization, and Genetic algorithms, along with best practices for choosing and analyzing hyperparameter values.",
         "date_completed": "6/23/2025",
-        "certificate_url": "server\\certs\\hyperparameter_tuning_in_python.pdf"
+        "certificate_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/9cb24bcc2f2aa741bdc34a4f086646ace4f6b75d",
+        "image_url": "server\\certs\\hyperparameter_tuning_in_python.pdf"
     }
 ]
