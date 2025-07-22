@@ -18,6 +18,7 @@ fetchGithubData()
         console.error("❌ Initial GitHub data fetch failed:", error);
     });
 
+*/
 fetchLeetCodeData()
     .then(() => {
         console.log("✅ Initial Leetcode data fetch completed");
@@ -25,7 +26,6 @@ fetchLeetCodeData()
     .catch((error) => {
         console.error("❌ Initial Leetcode data fetch failed:", error);
     });
-*/
 
 
 

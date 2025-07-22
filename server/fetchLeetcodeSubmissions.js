@@ -14,6 +14,68 @@ const MAX_SUBMISSIONS = 10; // Hard limit on number of submissions to fetch
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+function formatTimestamp(timestamp) {
+    try {
+        let date;
+        
+        // Debug logging
+        console.log(`Raw timestamp: ${timestamp}, type: ${typeof timestamp}`);
+        
+        if (!timestamp) {
+            return "Unknown Date";
+        }
+        
+        // Handle different timestamp formats
+        if (typeof timestamp === 'string') {
+            // If it's already a date string, try to parse it
+            date = new Date(timestamp);
+        } else if (typeof timestamp === 'number') {
+            // Check if it's in seconds (Unix timestamp) or milliseconds
+            if (timestamp < 10000000000) {
+                // Likely seconds (Unix timestamp) - convert to milliseconds
+                date = new Date(timestamp * 1000);
+            } else {
+                // Likely already in milliseconds
+                date = new Date(timestamp);
+            }
+        } else {
+            return "Unknown Date";
+        }
+        
+        // Validate the date
+        if (isNaN(date.getTime())) {
+            console.log(`Invalid date created from timestamp: ${timestamp}`);
+            return "Unknown Date";
+        }
+        
+        // Check if year is reasonable (between 2008-2030 for LeetCode)
+        const year = date.getFullYear();
+        if (year < 2008 || year > 2030) {
+            console.log(`Suspicious year ${year} from timestamp ${timestamp}, trying alternative parsing`);
+            
+            // Try treating as milliseconds if it was treated as seconds
+            if (typeof timestamp === 'number' && timestamp < 10000000000) {
+                date = new Date(timestamp); // Don't multiply by 1000
+            } else if (typeof timestamp === 'number' && timestamp >= 10000000000) {
+                date = new Date(timestamp / 1000); // Divide by 1000 instead
+            }
+            
+            // Check again
+            const newYear = date.getFullYear();
+            if (newYear < 2008 || newYear > 2030) {
+                console.log(`Still suspicious year ${newYear}, returning current date`);
+                return new Date().toLocaleDateString('en-US');
+            }
+        }
+        
+        return date.toLocaleDateString('en-US');
+        
+    } catch (error) {
+        console.error(`Error formatting timestamp ${timestamp}:`, error);
+        return "Unknown Date";
+    }
+}
+
 async function fetchLeetCodeData() {
     try {
         let leetcode;
@@ -83,14 +145,23 @@ async function fetchLeetCodeData() {
         for (const submission of limitedSubmissions) {
             console.log(`Processing submission: ${submission.title || submission.titleSlug || submission.problem?.title || 'Unknown Problem'}`);
             
-            // Format date to MM/DD/YYYY format
+            // Debug: Log the raw submission data for the first few submissions
+            if (results.length < 3) {
+                console.log("Raw submission data:", {
+                    timestamp: submission.timestamp,
+                    time: submission.time,
+                    lang: submission.lang,
+                    statusDisplay: submission.statusDisplay,
+                    status: submission.status
+                });
+            }
+            
+            // Format date using improved logic
             let formattedDate = "Unknown Date";
             if (submission.timestamp) {
-                const date = new Date(submission.timestamp * 1000); // Convert Unix timestamp to milliseconds
-                formattedDate = date.toLocaleDateString('en-US');
+                formattedDate = formatTimestamp(submission.timestamp);
             } else if (submission.time) {
-                const date = new Date(submission.time * 1000);
-                formattedDate = date.toLocaleDateString('en-US');
+                formattedDate = formatTimestamp(submission.time);
             }
             
             // Extract status - handle different response structures
