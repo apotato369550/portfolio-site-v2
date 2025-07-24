@@ -9,5 +9,12 @@ const LeetCodeSubmissionsSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    
-})
+    submission_status: {
+        type: String,
+        required: true
+    }
+});
+
+const LeetCodeSubmissionsModel = mongoose.model("LeetCodeSubmissions", LeetCodeSubmissionsSchema);
+
+module.exports = LeetCodeSubmissionsModel;
