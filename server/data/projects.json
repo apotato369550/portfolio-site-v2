@@ -2,48 +2,48 @@
     {
         "name": "Cebu Best Value Trading",
         "description": "Currently in the process of developing the website of CBVT (Cebu Best Value Trading)",
-        "image": "../public/projects/cbvt/cbvt.png",
+        "image": "/projects/cbvt/cbvt.png",
         "github_url": "https://github.com/apotato369550/im-2-project",
         "tech_stack": [
             {
                 "name": "React",
-                "icon": "../public/projects/cbvt/react.png"
+                "icon": "/projects/cbvt/react.png"
             },
             {
                 "name": "Tailwind",
-                "icon": "../public/projects/cbvt/tailwind.png"
+                "icon": "/projects/cbvt/tailwind.png"
             },
             {
                 "name": "React",
-                "icon": "../public/projects/cbvt/php.png"
+                "icon": "/projects/cbvt/php.png"
             }
         ]
     },
     {
         "name": "Traveling Salesman Problem Heuristic",
         "description": "Researching efficient alternatives to constructing low-cost Hamiltonian cycles in complete metric, nonmetric, and Euclidean graphs",
-        "image": "../public/projects/cbvt/tsp.png",
+        "image": "/projects/cbvt/tsp.png",
         "github_url": "https://github.com/apotato369550/hamiltonian-cycles-heuristic",
         "tech_stack": [
             {
                 "name": "Python",
-                "icon": "../public/projects/tsp_heuristic/python.png"
+                "icon": "/projects/tsp_heuristic/python.png"
             }
         ]
     },
     {
         "name": "Data Structures, Algorithms, and NeetCode 150",
         "description": "Learning and grinding LeetCode questions in Python, while learning Data Structures and Algorithms (DSA) fundamentals in C",
-        "image": "../public/projects/cbvt/cbvt.png",
+        "image": "/projects/cbvt/cbvt.png",
         "github_url": "https://github.com/apotato369550/dsa-notes",
         "tech_stack": [
             {
                 "name": "Python",
-                "icon": "../public/projects/leetcode/python.png"
+                "icon": "/projects/leetcode/python.png"
             },
             {
                 "name": "C",
-                "icon": "../public/projects/leetcode/c.png"
+                "icon": "/projects/leetcode/c.png"
             }
         ]
     }

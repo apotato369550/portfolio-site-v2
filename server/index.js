@@ -1,5 +1,7 @@
 import express from "express";
 import cors from "cors";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
 import fetchGithubData from "./fetchGithubCommits.js";
 import fetchLeetCodeData from "./fetchLeetcodeSubmissions.js";
 // import cron from "node-cron";
@@ -18,7 +20,6 @@ fetchGithubData()
         console.error("❌ Initial GitHub data fetch failed:", error);
     });
 
-*/
 fetchLeetCodeData()
     .then(() => {
         console.log("✅ Initial Leetcode data fetch completed");
@@ -27,6 +28,7 @@ fetchLeetCodeData()
         console.error("❌ Initial Leetcode data fetch failed:", error);
     });
 
+*/
 
 
 // Uncomment the code below to enable hourly cron job
@@ -53,7 +55,11 @@ cron.schedule('0 * * * *', () => {
 });
 */
 
+app.use(express.json());
 app.use(cors());
+
+// connect to mongodb via mongoose
+mongoose.connect()
 
 app.get("/", (req, res) => {
     res.send("Server is running 🚀");
