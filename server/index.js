@@ -4,62 +4,23 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import fetchGithubData from "./fetchGithubCommits.js";
 import fetchLeetCodeData from "./fetchLeetcodeSubmissions.js";
-// import cron from "node-cron";
+
+// models
+import DataCampCoursesModel from './models/DataCampCourses.js';
+import DataCampProjectsModel from './models/DataCampProjects.js';
+import GithubCommitsModel from './models/GithubCommits.js';
+import GitHubProjectModel from './models/GitHubProject.js';
+import LeetCodeSubmissionsModel from './models/LeetCodeSubmissions.js';
 
 const app = express();
 const port = 5000;
 
-// Call the function to fetch GitHub data once on startup
-/*
-console.log("🚀 Starting server and fetching GitHub data...");
-fetchGithubData()
-    .then(() => {
-        console.log("✅ Initial GitHub data fetch completed");
-    })
-    .catch((error) => {
-        console.error("❌ Initial GitHub data fetch failed:", error);
-    });
-
-fetchLeetCodeData()
-    .then(() => {
-        console.log("✅ Initial Leetcode data fetch completed");
-    })
-    .catch((error) => {
-        console.error("❌ Initial Leetcode data fetch failed:", error);
-    });
-
-*/
-
-
-// Uncomment the code below to enable hourly cron job
-// Make sure to install node-cron: npm install node-cron
-/*
-console.log("⏰ Setting up hourly cron job for GitHub data fetching...");
-cron.schedule('0 * * * *', () => {
-    console.log("🔄 Running scheduled GitHub data fetch...");
-    fetchGithubData()
-        .then(() => {
-            console.log("✅ Scheduled GitHub data fetch completed");
-        })
-        .catch((error) => {
-            console.error("❌ Scheduled GitHub data fetch failed:", error);
-        });
-        
-    fetchLeetCodeData()
-        .then(() => {
-            console.log("✅ Scheduled Leetcode data fetch completed");
-        })
-        .catch((error) => {
-            console.error("❌ Scheduled Leetcode data fetch failed:", error);
-        });
-});
-*/
 
 app.use(express.json());
 app.use(cors());
 
 // connect to mongodb via mongoose
-mongoose.connect()
+mongoose.connect("mongodb://localhost:27017/portfolio-site");
 
 app.get("/", (req, res) => {
     res.send("Server is running 🚀");
@@ -109,3 +70,51 @@ app.get("/github-data", async (req, res) => {
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
+
+// import cron from "node-cron";
+
+// Call the function to fetch GitHub data once on startup
+/*
+console.log("🚀 Starting server and fetching GitHub data...");
+fetchGithubData()
+    .then(() => {
+        console.log("✅ Initial GitHub data fetch completed");
+    })
+    .catch((error) => {
+        console.error("❌ Initial GitHub data fetch failed:", error);
+    });
+
+fetchLeetCodeData()
+    .then(() => {
+        console.log("✅ Initial Leetcode data fetch completed");
+    })
+    .catch((error) => {
+        console.error("❌ Initial Leetcode data fetch failed:", error);
+    });
+
+*/
+
+
+// Uncomment the code below to enable hourly cron job
+// Make sure to install node-cron: npm install node-cron
+/*
+console.log("⏰ Setting up hourly cron job for GitHub data fetching...");
+cron.schedule('0 * * * *', () => {
+    console.log("🔄 Running scheduled GitHub data fetch...");
+    fetchGithubData()
+        .then(() => {
+            console.log("✅ Scheduled GitHub data fetch completed");
+        })
+        .catch((error) => {
+            console.error("❌ Scheduled GitHub data fetch failed:", error);
+        });
+        
+    fetchLeetCodeData()
+        .then(() => {
+            console.log("✅ Scheduled Leetcode data fetch completed");
+        })
+        .catch((error) => {
+            console.error("❌ Scheduled Leetcode data fetch failed:", error);
+        });
+});
+*/
