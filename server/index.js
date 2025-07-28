@@ -2,8 +2,8 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import fetchGithubData from "./fetchGithubCommits.js";
-import fetchLeetCodeData from "./fetchLeetcodeSubmissions.js";
+import fetchGithubData from "./fetchers/fetchGithubCommits.js";
+import fetchLeetCodeData from "./fetchers/fetchLeetcodeSubmissions.js";
 
 // models
 import DataCampCoursesModel from './models/DataCampCourses.js';

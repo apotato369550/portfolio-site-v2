@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config({ path: '../.env' });
 
+import GithubCommitsModel from "../models/GithubCommits";
 import fs from "fs";
 import path from "path";
 import fetch from "node-fetch";
@@ -14,7 +15,7 @@ const MAX_REPOSITORIES = 10; // Hard limit on number of repositories to fetch
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-async function fetchGithubData() {
+export async function fetchGithubData() {
     try {
         // Set up headers for authentication if token is provided
         const headers = {};
@@ -131,4 +132,8 @@ async function fetchGithubData() {
     }
 }
 
-export default fetchGithubData;
+export async function fetchAndStoreCommits() {
+    const commits = await fetchGithubData();
+
+    await GithubCommitsModel
+}
