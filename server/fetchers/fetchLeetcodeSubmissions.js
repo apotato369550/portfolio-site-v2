@@ -5,6 +5,7 @@ import fs from "fs";
 import path from "path";
 import { LeetCode, Credential } from "leetcode-query";
 import { fileURLToPath } from 'url';
+import LeetCodeSubmissionsModel from "../models/LeetCodeSubmissions";
 
 const LEETCODE_USERNAME = process.env.LEETCODE_USERNAME || null;
 const LEETCODE_SESSION_COOKIE = process.env.LEETCODE_SESSION_COOKIE || null;
@@ -76,7 +77,7 @@ function formatTimestamp(timestamp) {
     }
 }
 
-async function fetchLeetCodeData() {
+export async function fetchLeetCodeData() {
     try {
         let leetcode;
         
@@ -206,4 +207,12 @@ async function fetchLeetCodeData() {
     }
 }
 
-export default fetchLeetCodeData;
+
+export async function fetchAndStoreSubmissions() {
+    const commits = await fetchLeetCodeData();
+
+    await LeetCodeSubmissionsModel.deleteMany({});
+    await LeetCodeSubmissionsModel.insertMany(commits);
+
+    await fs.writeFile("./data/github_commits.json", JSON.stringify(commits, null, 2))
+}

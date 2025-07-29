@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config({ path: '../.env' });
 
-import GithubCommitsModel from "../models/GithubCommits";
+import GithubCommitsModel from "../models/GitHubCommits";
 import fs from "fs";
 import path from "path";
 import fetch from "node-fetch";
@@ -135,5 +135,8 @@ export async function fetchGithubData() {
 export async function fetchAndStoreCommits() {
     const commits = await fetchGithubData();
 
-    await GithubCommitsModel
+    await GithubCommitsModel.deleteMany({});
+    await GithubCommitsModel.insertMany(commits);
+
+    await fs.writeFile("./data/github_commits.json", JSON.stringify(commits, null, 2));
 }

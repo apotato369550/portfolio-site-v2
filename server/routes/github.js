@@ -1,5 +1,5 @@
 import express from "express";
-import GithubCommitsModel from "../models/GithubCommits";
+import GithubCommitsModel from "../models/GitHubCommits";
 import { runQueryWithFallback } from "../utils/fallbackReader";
 
 const router = express.Router();
