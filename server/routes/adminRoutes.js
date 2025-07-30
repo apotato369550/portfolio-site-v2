@@ -4,10 +4,6 @@ import ProjectModel from "../models/GitHubProjects";
 
 const router = express.Router();
 
-// figure out how to upload photos ????
-router.post("/github-projects", async (request, response) => {
-    const data = request.body;
-    await ProjectModel.insertOne(data);
-})
+/* TODO: Create admin upload routes in the future */
 
 export default router;
