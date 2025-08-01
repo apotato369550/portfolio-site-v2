@@ -8,19 +8,21 @@ import fetchLeetCodeData from "./fetchers/fetchLeetcodeSubmissions.js";
 // models
 import DataCampCoursesModel from './models/DataCampCourses.js';
 import DataCampProjectsModel from './models/DataCampProjects.js';
-import GithubCommitsModel from './models/GithubCommits.js';
+import GithubCommitsModel from './models/GitHubCommits.js';
 import GitHubProjectModel from './models/GitHubProject.js';
 import LeetCodeSubmissionsModel from './models/LeetCodeSubmissions.js';
 
+dotenv.config();
+
 const app = express();
 const port = 5000;
-
+const mongoUri = process.env.MONGODB_URI
 
 app.use(express.json());
 app.use(cors());
 
 // connect to mongodb via mongoose
-mongoose.connect("mongodb://localhost:27017/portfolio-site");
+mongoose.connect(mongoUri);
 
 app.get("/", (req, res) => {
     res.send("Server is running 🚀");

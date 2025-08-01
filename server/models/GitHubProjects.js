@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const TechStackSchema = new mongoose.Schema({
     name: {
@@ -36,4 +36,5 @@ const ProjectSchema = new mongoose.Schema({
 
 const ProjectModel = mongoose.model("Project", ProjectSchema);
 
-module.exports = ProjectModel;
+// module.exports = ProjectModel;
+export default ProjectModel;

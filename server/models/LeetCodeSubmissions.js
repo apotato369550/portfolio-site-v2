@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const LeetCodeSubmissionsSchema = new mongoose.Schema({
     problem_name: {
@@ -17,4 +17,5 @@ const LeetCodeSubmissionsSchema = new mongoose.Schema({
 
 const LeetCodeSubmissionsModel = mongoose.model("LeetCodeSubmissions", LeetCodeSubmissionsSchema);
 
-module.exports = LeetCodeSubmissionsModel;
+// module.exports = LeetCodeSubmissionsModel;
+export default LeetCodeSubmissionsModel

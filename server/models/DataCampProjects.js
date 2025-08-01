@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const DataCampProjectsSchema = new mongoose.Schema({
     project_title: {
@@ -17,4 +17,5 @@ const DataCampProjectsSchema = new mongoose.Schema({
 
 const DataCampProjectsModel = mongoose.model("DataCampProjects", DataCampProjectsSchema);
 
-module.exports = DataCampProjectsModel;
+// module.exports = DataCampProjectsModel;
+export default DataCampProjectsModel;

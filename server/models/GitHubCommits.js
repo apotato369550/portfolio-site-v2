@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const GithubCommitsSchema = new mongoose.Schema({
     name: {
@@ -37,4 +37,5 @@ const GithubCommitsSchema = new mongoose.Schema({
 
 const GithubCommitsModel = mongoose.model("GithubCommits", GithubCommitsSchema);
 
-module.exports = GithubCommitsModel;
+// module.exports = GithubCommitsModel;
+export default GithubCommitsModel;

@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const DataCampCoursesSchema = new mongoose.Schema({
     course_title: {
@@ -25,4 +25,5 @@ const DataCampCoursesSchema = new mongoose.Schema({
 
 const DataCampCoursesModel = mongoose.model("DataCampCourses", DataCampCoursesSchema);
 
-module.exports = DataCampCoursesModel;
+// module.exports = DataCampCoursesModel;
+export default DataCampCoursesModel;
