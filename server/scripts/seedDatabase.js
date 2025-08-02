@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 import fs from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
 
 import DataCampCoursesModel from '../models/DataCampCourses.js';
 import DataCampProjectsModel from '../models/DataCampProjects.js';
@@ -10,12 +11,18 @@ import ProjectModel from '../models/GitHubProjects.js';
 import LeetCodeSubmissionsModel from '../models/LeetCodeSubmissions.js';
 import { error } from 'console';
 
-dotenv.config();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const mongoUri = process.env.MONGODB_URI
+dotenv.config({ path: path.resolve(__dirname, '../../.env') });
+
+const mongoUri = process.env.MONGODB_URI;
+if (!mongoUri) {
+    throw new Error('MONGODB_URI is not defined in .env file');
+}
 
 async function loadJSON(filePath) {
-    data = fs.readFileSync(filePath, 'utf-8');
+    const data = fs.readFileSync(filePath, 'utf-8');
     return JSON.parse(data);
 }
 
@@ -27,11 +34,12 @@ async function seedModel(model, filePath) {
 }
 
 async function main() {
+    console.log("Mongodb URI: " + mongoUri);
     await mongoose.connect(mongoUri);
 
     console.log("Connected to MongoDB");
 
-    await seedModel(DataCampCoursesModel, 'data/datacamp_project.json');
+    await seedModel(DataCampCoursesModel, 'data/courses_and_certs.json');
     await seedModel(DataCampProjectsModel, 'data/datacamp_projects.json');
     await seedModel(GithubCommitsModel, 'data/github_commits.json');
     await seedModel(ProjectModel, 'data/projects.json');
