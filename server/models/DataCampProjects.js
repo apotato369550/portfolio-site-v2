@@ -11,7 +11,7 @@ const DataCampProjectsSchema = new mongoose.Schema({
     },
     project_image: {
         type: String,
-        required: true,
+        required: false,
     },
 });
 

@@ -2,26 +2,26 @@
     {
         "project_title": "Assessing Customer Churn Using Machine Learning",
         "project_description": "Completed a customer churn prediction project using real-world datasets from India's telecom sector. Applied data analysis with pandas to uncover demographic and usage trends, then built predictive machine learning models to forecast customer retention. Strengthened skills in data wrangling, feature engineering, and model evaluation through hands-on, end-to-end analysis",
-        "project_image": "asdfas"
+        "project_image": ""
     },
     {
         "project_title": "Predicting Credit Card Approvals",
         "project_description": "Built a supervised machine learning model to automate credit card application approvals, helping banks streamline decision-making processes. Applied data preprocessing, model training, and evaluation to develop a cost-effective and scalable solution for real-world financial use cases.",
-        "project_image": "asdfasd"
+        "project_image": ""
     },
     {
         "project_title": "Hypothesis Testing in Healthcare",
         "project_description": "Analyzed a simulated pharmaceutical dataset to assess the safety of a hypothetical drug. Used Python to perform hypothesis testing and determine the significance of reported adverse reactions, including the influence of factors like age. Strengthened statistical reasoning skills while applying data science to real-world-inspired health scenarios.",
-        "project_image": "asdfasdf"
+        "project_image": ""
     },
     {
         "project_title": "Predicting Movie Rental Durations",
         "project_description": "Built and evaluated multiple regression models to predict DVD rental durations using real-world-inspired data. Applied exploratory analysis, model selection, and performance evaluation to recommend the most accurate model—enhancing inventory planning strategies through data-driven insights.",
-        "project_image": "asdf"
+        "project_image": ""
     },
     {
         "project_title": "Clustering Antarctic Penguin Species",
         "project_description": "Used unsupervised learning to cluster Antarctic penguin species based on real-world biological data. Applied k-means clustering to uncover hidden patterns and natural groupings in the dataset—demonstrating how machine learning can reveal structure in unlabeled data.",
-        "project_image": "asdfas"
+        "project_image": ""
     }
 ]

@@ -31,7 +31,7 @@ const GithubCommitsSchema = new mongoose.Schema({
     },
     language: {
         type: String,
-        required: true,
+        required: false,
     },
 });
 
