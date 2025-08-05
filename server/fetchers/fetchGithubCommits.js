@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config({ path: '../.env' });
 
-import GithubCommitsModel from "../models/GitHubCommits";
+import GithubCommitsModel from "../models/GitHubCommits.js";
 import fs from "fs";
 import path from "path";
 import fetch from "node-fetch";

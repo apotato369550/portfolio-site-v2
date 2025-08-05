@@ -1,6 +1,6 @@
 import express, { request } from "express";
-import GithubCommitsModel from "../models/GitHubCommits";
-import { runQueryWithFallback } from "../utils/fallbackReader";
+import GithubCommitsModel from "../models/GitHubCommits.js";
+import { runQueryWithFallback } from "../utils/fallbackReader.js";
 import fs from "fs/promises";
 
 const router = express.Router();

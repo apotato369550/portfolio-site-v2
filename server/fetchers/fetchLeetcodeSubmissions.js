@@ -5,7 +5,7 @@ import fs from "fs";
 import path from "path";
 import { LeetCode, Credential } from "leetcode-query";
 import { fileURLToPath } from 'url';
-import LeetCodeSubmissionsModel from "../models/LeetCodeSubmissions";
+import LeetCodeSubmissionsModel from "../models/LeetCodeSubmissions.js";
 
 const LEETCODE_USERNAME = process.env.LEETCODE_USERNAME || null;
 const LEETCODE_SESSION_COOKIE = process.env.LEETCODE_SESSION_COOKIE || null;

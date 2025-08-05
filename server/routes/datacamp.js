@@ -1,8 +1,8 @@
 import express, { request } from "express";
 import fs from "fs/promises";
-import { runQueryWithFallback } from "../utils/fallbackReader";
-import DataCampCoursesModel from "../models/DataCampCourses";
-import DataCampProjectsModel from "../models/DataCampProjects";
+import { runQueryWithFallback } from "../utils/fallbackReader.js";
+import DataCampCoursesModel from "../models/DataCampCourses.js";
+import DataCampProjectsModel from "../models/DataCampProjects.js";
 
 const router = express.Router();
 

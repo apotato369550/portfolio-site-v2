@@ -2,8 +2,11 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import fetchGithubData from "./fetchers/fetchGithubCommits.js";
-import fetchLeetCodeData from "./fetchers/fetchLeetcodeSubmissions.js";
+import { fetchAndStoreCommits } from "./fetchers/fetchGithubCommits.js";
+import { fetchAndStoreSubmissions } from "./fetchers/fetchLeetcodeSubmissions.js";
+import dataCampRoutes from "./routes/datacamp.js";
+import githubRoutes from "./routes/github.js";
+import leetcodeRoutes from "./routes/leetcode.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,6 +20,11 @@ const mongoUri = process.env.MONGODB_URI
 app.use(express.json());
 app.use(cors());
 
+// test me!!!
+app.use("/api", dataCampRoutes);
+app.use("/api", githubRoutes);
+app.use("/api", leetcodeRoutes);
+
 // connect to mongodb via mongoose
 mongoose.connect(mongoUri);
 
@@ -24,13 +32,12 @@ app.get("/", (req, res) => {
     res.send("Server is running 🚀");
 });
 
-// add github, datacamp, and leetcode routes here :V
 
 // TODO: Add endpoint verification. Literally NOTHING is stopping users from spamming this endpoint lmao
 app.get("/refresh-github", async (req, res) => {
     try {
         console.log("🔄 Manual GitHub data refresh triggered...");
-        const data = await fetchGithubData();
+        await fetchAndStoreCommits();
         res.json({ 
             success: true, 
             message: "GitHub data refreshed successfully", 
@@ -48,7 +55,7 @@ app.get("/refresh-github", async (req, res) => {
 app.get("/refresh-leetcode", async (req, res) => {
     try {
         console.log("🔄 Manual GitHub data refresh triggered...");
-        const data = await fetchLeetCodeData();
+        await fetchAndStoreSubmissions();
         res.json({ 
             success: true, 
             message: "GitHub data refreshed successfully", 

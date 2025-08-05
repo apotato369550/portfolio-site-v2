@@ -1,6 +1,6 @@
 import express from "express";
-import LeetCodeSubmissionsModel from "../models/LeetCodeSubmissions"
-import { runQueryWithFallback } from "../utils/fallbackReader";
+import LeetCodeSubmissionsModel from "../models/LeetCodeSubmissions.js"
+import { runQueryWithFallback } from "../utils/fallbackReader.js";
 
 const router = express.Router();
 
