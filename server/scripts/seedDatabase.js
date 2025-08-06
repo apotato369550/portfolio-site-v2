@@ -9,7 +9,6 @@ import DataCampProjectsModel from '../models/DataCampProjects.js';
 import GithubCommitsModel from '../models/GitHubCommits.js';
 import ProjectModel from '../models/GitHubProjects.js';
 import LeetCodeSubmissionsModel from '../models/LeetCodeSubmissions.js';
-import { error } from 'console';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

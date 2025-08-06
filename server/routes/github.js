@@ -1,5 +1,6 @@
 import express, { request } from "express";
 import GithubCommitsModel from "../models/GitHubCommits.js";
+import ProjectModel from "../models/GitHubProjects.js";
 import { runQueryWithFallback } from "../utils/fallbackReader.js";
 import fs from "fs/promises";
 
@@ -14,8 +15,13 @@ router.get("/recent-commits", async (requrest, response) => {
 });
 
 router.get("/recent-projects", async (request, response) => {
-    const json = await fs.readFile("../data/projects.json", "utf-8");
-    response.json(JSON.parse(json));
+    // const json = await fs.readFile("../data/projects.json", "utf-8");
+    const data = await runQueryWithFallback(
+        () => ProjectModel.find({}),
+        "../data/projects.json"
+    );
+
+    response.json(data);
 });
 
 export default router;

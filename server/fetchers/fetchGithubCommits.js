@@ -15,6 +15,8 @@ const MAX_REPOSITORIES = 10; // Hard limit on number of repositories to fetch
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// fix the following error:
+// The \"cb\" argument must be of type function. Received undefined
 export async function fetchGithubData() {
     try {
         // Set up headers for authentication if token is provided

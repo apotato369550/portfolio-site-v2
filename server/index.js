@@ -1,12 +1,21 @@
+// must-haves
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+
+// fetchers
 import { fetchAndStoreCommits } from "./fetchers/fetchGithubCommits.js";
 import { fetchAndStoreSubmissions } from "./fetchers/fetchLeetcodeSubmissions.js";
+
+// routes
 import dataCampRoutes from "./routes/datacamp.js";
 import githubRoutes from "./routes/github.js";
 import leetcodeRoutes from "./routes/leetcode.js";
+
+// for .env loading
+import { fileURLToPath } from 'url';
+import path from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

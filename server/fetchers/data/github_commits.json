@@ -1,0 +1,102 @@
+[
+  {
+    "name": "dsa-notes",
+    "description": "A repository full of my notes/programs implementing Data Structures and Algorithms in C",
+    "last_commit_message": "Added create complete edges functioN",
+    "date": "2025-08-06T13:29:01Z",
+    "url": "https://github.com/apotato369550/dsa-notes",
+    "stars": 0,
+    "forks": 0,
+    "language": "C"
+  },
+  {
+    "name": "nextjs-todo-list",
+    "description": "A fullstack todo-list application built in next.js to help me familiarize myself with next.js and Tailwind",
+    "last_commit_message": "Got started with Supabase integration",
+    "date": "2025-08-05T06:25:30Z",
+    "url": "https://github.com/apotato369550/nextjs-todo-list",
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript"
+  },
+  {
+    "name": "portfolio-site-v2",
+    "description": "A vaporwave-inspired personal portfolio site built with love, code, and caffeine. Powered by Git, gradients, and good vibes.",
+    "last_commit_message": "Debugging the main server script",
+    "date": "2025-08-05T06:02:12Z",
+    "url": "https://github.com/apotato369550/portfolio-site-v2",
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript"
+  },
+  {
+    "name": "resqbites-saad-prototype",
+    "description": "A Proof-of-concept Prototype for our project Idea ResQBites, a platform where restaurants can donate their excess food to charities. Built in fulfillment for the requirements of CIS 2201 SAAD (Software Architecture and Design)",
+    "last_commit_message": "Create comprehensive ResQBites system documentation\n\ncgen-4091931d182e4af9b600661cc32e328d",
+    "date": "2025-07-21T12:55:32Z",
+    "url": "https://github.com/apotato369550/resqbites-saad-prototype",
+    "stars": 0,
+    "forks": 0,
+    "language": "TypeScript"
+  },
+  {
+    "name": "im-2-project",
+    "description": "A repository containing the code for our Information Management II (CIS 2104) project entitled: A Web-Based Management System for Cebu Best Value Trading ",
+    "last_commit_message": "Merge pull request #42 from apotato369550/atheena-dev\n\nAtheena dev",
+    "date": "2025-07-20T15:46:12Z",
+    "url": "https://github.com/apotato369550/im-2-project",
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript"
+  },
+  {
+    "name": "hamiltonian-cycles-heuristic",
+    "description": "A Python simulation framework for exploring anchor-based heuristics to find efficient Hamiltonian cycles in complete, weighted graphs.",
+    "last_commit_message": "Added some moar stufF",
+    "date": "2025-07-11T14:03:48Z",
+    "url": "https://github.com/apotato369550/hamiltonian-cycles-heuristic",
+    "stars": 0,
+    "forks": 0,
+    "language": "Python"
+  },
+  {
+    "name": "mern-todo-list",
+    "description": "A small fullstack todo-list application I made using the MERN stack to teach myself fullstack development in MERN",
+    "last_commit_message": "Initial commit",
+    "date": "2025-07-11T13:17:00Z",
+    "url": "https://github.com/apotato369550/mern-todo-list",
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript"
+  },
+  {
+    "name": "first-laravel-project",
+    "description": "My first project in laravel. Learning the basics and fundamentals",
+    "last_commit_message": "Added stuff about routes",
+    "date": "2025-06-29T05:17:37Z",
+    "url": "https://github.com/apotato369550/first-laravel-project",
+    "stars": 0,
+    "forks": 0,
+    "language": "PHP"
+  },
+  {
+    "name": "scholar-portal",
+    "description": "The official Scholar Portal for DOST SA USC.",
+    "last_commit_message": "FEAT: SignOut error handling",
+    "date": "2025-06-18T06:58:00Z",
+    "url": "https://github.com/apotato369550/scholar-portal",
+    "stars": 0,
+    "forks": 0,
+    "language": null
+  },
+  {
+    "name": "prog2-activities",
+    "description": "No description",
+    "last_commit_message": "created a new c file sample",
+    "date": "2025-06-16T03:26:54Z",
+    "url": "https://github.com/apotato369550/prog2-activities",
+    "stars": 0,
+    "forks": 0,
+    "language": "C"
+  }
+]
