@@ -2,8 +2,8 @@
   {
     "name": "dsa-notes",
     "description": "A repository full of my notes/programs implementing Data Structures and Algorithms in C",
-    "last_commit_message": "Added create complete edges functioN",
-    "date": "2025-08-06T13:29:01Z",
+    "last_commit_message": "Setup graphs in main",
+    "date": "2025-08-07T14:43:26Z",
     "url": "https://github.com/apotato369550/dsa-notes",
     "stars": 0,
     "forks": 0,
@@ -12,8 +12,8 @@
   {
     "name": "nextjs-todo-list",
     "description": "A fullstack todo-list application built in next.js to help me familiarize myself with next.js and Tailwind",
-    "last_commit_message": "Got started with Supabase integration",
-    "date": "2025-08-05T06:25:30Z",
+    "last_commit_message": "Worked on integrating supabase and whatnot",
+    "date": "2025-08-06T13:53:13Z",
     "url": "https://github.com/apotato369550/nextjs-todo-list",
     "stars": 0,
     "forks": 0,
@@ -22,8 +22,8 @@
   {
     "name": "portfolio-site-v2",
     "description": "A vaporwave-inspired personal portfolio site built with love, code, and caffeine. Powered by Git, gradients, and good vibes.",
-    "last_commit_message": "Debugging the main server script",
-    "date": "2025-08-05T06:02:12Z",
+    "last_commit_message": "Updated data, tested api routes, fixing fetcher bugs.",
+    "date": "2025-08-06T13:38:52Z",
     "url": "https://github.com/apotato369550/portfolio-site-v2",
     "stars": 0,
     "forks": 0,

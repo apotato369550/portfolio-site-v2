@@ -15,6 +15,8 @@ const MAX_SUBMISSIONS = 10; // Hard limit on number of submissions to fetch
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// fix the fetcher
+
 function formatTimestamp(timestamp) {
     try {
         let date;

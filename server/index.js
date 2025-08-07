@@ -5,8 +5,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 
 // fetchers
-import { fetchAndStoreCommits } from "./fetchers/fetchGithubCommits.js";
-import { fetchAndStoreSubmissions } from "./fetchers/fetchLeetcodeSubmissions.js";
+import { fetchGithubData } from "./fetchers/fetchGithubCommits.js";
+import { fetchLeetCodeData } from "./fetchers/fetchLeetcodeSubmissions.js";
 
 // routes
 import dataCampRoutes from "./routes/datacamp.js";
@@ -46,7 +46,7 @@ app.get("/", (req, res) => {
 app.get("/refresh-github", async (req, res) => {
     try {
         console.log("🔄 Manual GitHub data refresh triggered...");
-        await fetchAndStoreCommits();
+        const data = await fetchGithubData();
         res.json({ 
             success: true, 
             message: "GitHub data refreshed successfully", 
@@ -64,7 +64,7 @@ app.get("/refresh-github", async (req, res) => {
 app.get("/refresh-leetcode", async (req, res) => {
     try {
         console.log("🔄 Manual GitHub data refresh triggered...");
-        await fetchAndStoreSubmissions();
+        const data = await fetchLeetCodeData();
         res.json({ 
             success: true, 
             message: "GitHub data refreshed successfully", 
