@@ -103,7 +103,31 @@ export async function fetchLeetCodeData() {
             console.log(`Fetching all submissions for authenticated user...`);
             try {
                 const submissionData = await leetcode.submissions({ limit: MAX_SUBMISSIONS, offset: 0 });
-                submissions = submissionData.submission || submissionData || [];
+                
+                // Debug: Log the actual structure we received
+                console.log("Submission data structure:", JSON.stringify(submissionData, null, 2));
+                
+                // Handle different possible response structures
+                if (submissionData?.data?.submissionList?.submissions) {
+                    submissions = submissionData.data.submissionList.submissions;
+                } else if (submissionData?.submissionList?.submissions) {
+                    submissions = submissionData.submissionList.submissions;
+                } else if (submissionData?.data?.submissions) {
+                    submissions = submissionData.data.submissions;
+                } else if (submissionData?.submissions) {
+                    submissions = submissionData.submissions;
+                } else if (Array.isArray(submissionData?.data)) {
+                    submissions = submissionData.data;
+                } else if (Array.isArray(submissionData)) {
+                    submissions = submissionData;
+                }
+                
+                // Ensure we have an array
+                if (!Array.isArray(submissions)) {
+                    console.log("Submissions is not an array, got:", typeof submissions);
+                    submissions = [];
+                }
+                
                 console.log(`✅ Retrieved ${submissions.length} submissions using authenticated API`);
             } catch (authError) {
                 console.log(`⚠️  Authenticated submissions failed: ${authError.message}`);
@@ -112,7 +136,7 @@ export async function fetchLeetCodeData() {
         }
         
         // Fallback to public recent submissions if authenticated method failed or no auth
-        if (submissions.length === 0) {
+        if (submissions.length === 0 && LEETCODE_USERNAME) {
             console.log(`Fetching user profile for: ${LEETCODE_USERNAME}`);
             const userData = await leetcode.user(LEETCODE_USERNAME);
             

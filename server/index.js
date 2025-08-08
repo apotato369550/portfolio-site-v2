@@ -63,17 +63,17 @@ app.get("/refresh-github", async (req, res) => {
 
 app.get("/refresh-leetcode", async (req, res) => {
     try {
-        console.log("🔄 Manual GitHub data refresh triggered...");
+        console.log("🔄 Manual Leetcode data refresh triggered...");
         const data = await fetchLeetCodeData();
         res.json({ 
             success: true, 
-            message: "GitHub data refreshed successfully", 
+            message: "Leetcode data refreshed successfully", 
             repositoryCount: data.length 
         });
     } catch (error) {
         res.status(500).json({ 
             success: false, 
-            message: "Failed to refresh GitHub data", 
+            message: "Failed to refresh Leetcode data", 
             error: error.message 
         });
     }
