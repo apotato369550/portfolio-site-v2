@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 // fetchers
 import { fetchGithubData } from "./fetchers/fetchGithubCommits.js";
 import { fetchLeetCodeData } from "./fetchers/fetchLeetcodeSubmissions.js";
+import { fetchSampleData } from "./fetchers/fetcherSampleLeetcode.js";
 
 // routes
 import dataCampRoutes from "./routes/datacamp.js";
@@ -78,6 +79,18 @@ app.get("/refresh-leetcode", async (req, res) => {
         });
     }
 });
+
+app.get("/refresh-sample", async (req, res) => {
+    try {
+        console.log("REFRESH DATA SAMPLE");
+        await fetchSampleData();
+    } catch (error) {
+        console.log("ERROR");
+        console.log(error);
+    }
+})
+
+
 
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
