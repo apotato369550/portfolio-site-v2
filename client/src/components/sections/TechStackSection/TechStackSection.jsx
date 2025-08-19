@@ -1,11 +1,10 @@
-import React from 'react'
-import './TechStackSection.css';
+import React from "react";
+import "./TechStackSection.css";
 
 // languages and frameworks
 import htmlImage from "../../../assets/html_5_photo.png";
 import cssImage from "../../../assets/css_photo.png";
 import jsImage from "../../../assets/js_photo.png";
-
 
 import mongodbImage from "../../../assets/mongodb.png";
 import expressJsImage from "../../../assets/express.js.png";
@@ -26,61 +25,129 @@ import scikitlearnImage from "../../../assets/scikitlearn logo.png";
 
 const TechStackSection = () => {
   return (
-    <div id="tech-stack-section">
-      <div className="tech-stack-image-container">
-        <div className="tech-stack-container">
-          <div className="left-container">
-            <div className="tech-stack-title">
-              <h1>
-                <span className="question-emphasis">What</span> do I work with?
+    <div
+      id="tech-stack-section"
+      className="m-0 p-0 h-screen w-full relative overflow-hidden lg:h-screen"
+    >
+      <div className="tech-stack-image-container h-full w-full absolute top-0 left-0 min-h-screen">
+        <div className="tech-stack-container flex flex-col mx-auto lg:flex-row lg:h-full">
+          <div className="left-container w-4/5 lg:w-2/5 mx-auto mt-7 lg:mt-7 lg:ml-5 lg:h-95">
+            <div className="tech-stack-title px-3 py-1 rounded-3xl mb-5 lg:mb-5">
+              <h1 className="font-normal text-4xl lg:text-5xl">
+                <span className="question-emphasis font-extralight italic">
+                  What
+                </span>{" "}
+                do I work with?
               </h1>
             </div>
-            <div className="languages-and-frameworks">
-              <div className="subtitle">
-                <h2>Languages and Frameworks</h2>
+            <div className="languages-and-frameworks px-3 py-1 rounded-3xl mb-5 lg:mb-5">
+              <div className="subtitle mb-2">
+                <h2 className="text-2xl lg:text-3xl">
+                  Languages and Frameworks
+                </h2>
               </div>
-              <div className="html-css-js">
-                <img className="tech-stack-icon" src={htmlImage} alt="html image" />
-                <img className="tech-stack-icon" src={cssImage} alt="css image" />
-                <img className="tech-stack-icon" src={jsImage} alt="javascript image" />
+              <div className="html-css-js w-full flex mb-2">
+                <img
+                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                  src={htmlImage}
+                  alt="html image"
+                />
+                <img
+                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                  src={cssImage}
+                  alt="css image"
+                />
+                <img
+                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                  src={jsImage}
+                  alt="javascript image"
+                />
               </div>
-              <div className="mongo-express-react">
-                <img className="tech-stack-icon" src={mongodbImage} alt="mongodb image" />
-                <img className="tech-stack-icon" src={expressJsImage} alt="expressjs image" />
-                <img className="tech-stack-icon" src={reactImage} alt="react image" />
+              <div className="mongo-express-react w-full flex mb-2">
+                <img
+                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                  src={mongodbImage}
+                  alt="mongodb image"
+                />
+                <img
+                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                  src={expressJsImage}
+                  alt="expressjs image"
+                />
+                <img
+                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                  src={reactImage}
+                  alt="react image"
+                />
               </div>
-              <div className="node-python">
-                <img className="tech-stack-icon" src={nodeJsImage} alt="nodejs image" />
-                <img className="tech-stack-icon" src={pythonImage} alt="python image" />
+              <div className="node-python w-full flex mb-2">
+                <img
+                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                  src={nodeJsImage}
+                  alt="nodejs image"
+                />
+                <img
+                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                  src={pythonImage}
+                  alt="python image"
+                />
               </div>
             </div>
           </div>
-          <div className="right-container">
-            <div className="tools-and-platforms">
-              <div className="subtitle">
-                <h2>Tools and Platforms</h2>
+          <div className="right-container w-4/5 lg:w-2/5 mx-auto lg:mr-5 lg:h-95">
+            <div className="tools-and-platforms px-3 py-1 rounded-3xl mb-5 lg:mb-5">
+              <div className="subtitle mb-2">
+                <h2 className="text-2xl lg:text-3xl">Tools and Platforms</h2>
               </div>
-              <div className="tools-and-platforms-icons">
-                <div className="github-and-firebase">
-                  <img className="tech-stack-icon" src={githubImage} alt="github logo" />
-                  <img className="tech-stack-icon" src={firebaseImage} alt="firebase logo" />
+              <div className="tools-and-platforms-icons w-full flex mb-2">
+                <div className="github-and-firebase mx-auto flex flex-col lg:flex-row">
+                  <img
+                    className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                    src={githubImage}
+                    alt="github logo"
+                  />
+                  <img
+                    className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                    src={firebaseImage}
+                    alt="firebase logo"
+                  />
                 </div>
-                <div className="jupyter">
-                  <img className="tech-stack-icon" src={jupyterImage} alt="jupyter logo" />
+                <div className="jupyter mx-auto">
+                  <img
+                    className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                    src={jupyterImage}
+                    alt="jupyter logo"
+                  />
                 </div>
-                <div className="figma-and-git">
-                  <img className="tech-stack-icon" src={figmaImage} alt="figma logo" />
-                  <img className="tech-stack-icon" src={gitImage} alt="git logo" />
+                <div className="figma-and-git mx-auto flex flex-col lg:flex-row">
+                  <img
+                    className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                    src={figmaImage}
+                    alt="figma logo"
+                  />
+                  <img
+                    className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                    src={gitImage}
+                    alt="git logo"
+                  />
                 </div>
               </div>
             </div>
-            <div className="currently-exploring">
-              <div className="subtitle">
-                <h2>Currently Exploring</h2>
+            <div className="currently-exploring px-3 py-1 rounded-3xl mb-5 lg:mb-5">
+              <div className="subtitle mb-2">
+                <h2 className="text-2xl lg:text-3xl">Currently Exploring</h2>
               </div>
-              <div className="c-and-scikitlearn">
-                <img className="tech-stack-icon" src={cImage} alt="" />
-                <img className="tech-stack-icon" src={scikitlearnImage} alt="" />
+              <div className="c-and-scikitlearn w-full flex mb-2">
+                <img
+                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                  src={cImage}
+                  alt="c programming language"
+                />
+                <img
+                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
+                  src={scikitlearnImage}
+                  alt="scikit-learn"
+                />
               </div>
             </div>
           </div>
@@ -88,6 +155,6 @@ const TechStackSection = () => {
       </div>
     </div>
   );
-}
+};
 
-export default TechStackSection
+export default TechStackSection;

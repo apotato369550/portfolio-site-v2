@@ -1,53 +1,49 @@
 #identity-section {
-    margin: 0px;
-    padding: 0px;
-    height: 155vh;
-    width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 155vh;
+  width: 100%;
 }
 
 .identity-gradient-container {
-    margin: 0px;
-    padding: 0px;
-    height: inherit;
-    width: inherit;
-    background: linear-gradient(#2B063B, #3D5CF8); 
+  background: linear-gradient(#2b063b, #3d5cf8);
 }
 
 .identity-container {
-    margin: 0px;
-    padding: 0px;
-    height: inherit;
-    width: inherit;
-    display: flex;
-    flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  height: inherit;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
 }
 
-
-.statue-container, .pillars-container {
-    margin: 5vh 0 7vh 0;
-    padding: 0px;
-    width: 100vw;
+.statue-container,
+.pillars-container {
+  margin: 5vh 0 7vh 0;
+  padding: 0px;
+  width: 100vw;
 }
 
 .pillars-container {
-    margin-right: 3vw;
-    /*change if this doesn't work*/
-    position: relative;
+  margin-right: 3vw;
+  /*change if this doesn't work*/
+  position: relative;
 }
 
 .statue-wrapper {
-    position: relative;
-    width: 75vw;
-    margin: 0 auto 0 auto;
+  position: relative;
+  width: 75vw;
+  margin: 0 auto 0 auto;
 }
 
 .statue {
-    margin: 0px;
-    padding: 0px;
-    width: 70vw;
-    /* z-index works, just remember to set position to something else like relative */
-    z-index: 2;
-    position: relative;
+  margin: 0px;
+  padding: 0px;
+  width: 70vw;
+  /* z-index works, just remember to set position to something else like relative */
+  z-index: 2;
+  position: relative;
 }
 
 .statue-ellipse {
@@ -59,174 +55,109 @@
 
 .statue-ellipse-1 {
   background-color: rgba(57, 217, 253, 0.5);
-  width: 75vw;
-  height: 14vh;
-  transform: rotate(30deg);
-
 }
 
 .statue-ellipse-2 {
   background-color: rgba(216, 73, 238, 0.5);
-  width: 80vw;
-  height: 16vh;
-  transform: rotate(160deg);
 }
 
 .pillar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5vh 5vw;
-    gap: 3vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5vh 5vw;
+  gap: 3vw;
 }
 
 .identity-title h1 {
-    font-weight: 400;
-    font-size: 40px;
+  font-weight: 400;
+  font-size: 40px;
 }
 
 .question-emphasis {
-    font-weight: 200;
-    font-style: italic;
+  font-weight: 200;
+  font-style: italic;
 }
 
 .pillar-image {
-    width: 35vw;
+  width: 35vw;
 }
 
-.identity-title, .identity-information {
-    padding: 1vh 3vw;
-    border-radius: 25px;
+.identity-title,
+.identity-information {
+  padding: 1vh 3vw;
+  border-radius: 25px;
 }
 
 .identity-title {
-    /* change this to rgba, follow figma */
-    background: linear-gradient(to right, rgba(138, 81, 152, 0.5), rgba(45, 27, 50, 0.5)); 
+  background: linear-gradient(
+    to right,
+    rgba(138, 81, 152, 0.5),
+    rgba(45, 27, 50, 0.5)
+  );
 }
 
 .identity-information-1 {
-    background: linear-gradient(to right, rgba(186, 64, 243, 0.5), rgba(108, 37, 141, 0.5)); 
+  background: linear-gradient(
+    to right,
+    rgba(186, 64, 243, 0.5),
+    rgba(108, 37, 141, 0.5)
+  );
 }
 
 .identity-information-2 {
-    background: linear-gradient(to right, rgba(62, 186, 230, 0.5), rgba(35, 103, 128, 0.5)); 
+  background: linear-gradient(
+    to right,
+    rgba(62, 186, 230, 0.5),
+    rgba(35, 103, 128, 0.5)
+  );
 }
 
-@media only screen and (min-width: 530px) {
-    #identity-section {
-        height: 170vh;
-    }
+/* Custom utility classes for responsive design */
+.rotate-30 {
+  transform: rotate(30deg);
 }
 
-@media only screen and (min-width: 550px) {
-    #identity-section {
-        height: 175vh;
-    }
-    .statue-container, .pillars-container {  
-        margin: 3vh 0 5vh 0;
-    }
-    .pillar {
-        margin: 2.5vh 5vw;
-        gap: 1.5vw;
-    }
+.rotate-160 {
+  transform: rotate(160deg);
 }
 
-@media only screen and (min-width: 650px) {
-    #identity-section {
-        height: 150vh;
-    }
+.mt-40 {
+  margin-top: 10rem; /* 160px */
 }
 
-
-@media only screen and (min-width: 772px) {
-    #identity-section {
-        height: 95vh;
-    }
-    .identity-container {
-        flex-direction: row;
-    }
-    .statue-container, .pillars-container {
-        width: 50vw;
-    }
-    .statue-container {
-        margin-top: 10vh;
-    }
-    .statue, .information-pillar {
-        width: 45vw;
-    }
-    .statue-ellipse {
-        margin-top: 50vh;
-        width: 50vw;
-    }
-    .statue-ellipse-1 {
-        height: 14vh;
-    }
-    .statue-ellipse-2 {
-        height: 16vh;
-    }
-    .pillar {
-        margin-right: 100vw;
-    }
-    .pillar-image {
-        width: 20vw;
-    }
-    .pillar-right {
-        margin-left: 20vw;
-    }
-    .identity-title, .identity-information {
-        position: absolute;
-        margin: auto 5vw auto auto;
-        z-index: 2;
-    }
-    .identity-information {
-        font-size: 17px;
-    }
+.mt-50 {
+  margin-top: 12.5rem; /* 200px */
 }
 
-
-
-@media only screen and (min-width: 1200px) {
-    #identity-section {
-        height: 100vh;
-    }
-    .statue-container {
-        margin-top: 5vh;
-    }
-    .statue {
-        max-width: 480px;
-        margin-left: 8vw;
-    }
-    .statue-ellipse {
-        margin-top: 50vh;
-        width: 47vw;
-    }
-    .statue-ellipse-1 {
-        height: 20vh;
-    }
-    .statue-ellipse-2 {
-        height: 22vh;
-    }
-    .pillar-image {
-        width: 12vw;
-    }
-    .pillar-left {
-        margin-left: 5vw;
-    }
-    .pillar-right {
-        margin-left: 25vw;
-    }
+.h-14 {
+  height: 3.5rem; /* 56px */
 }
 
+.h-16 {
+  height: 4rem; /* 64px */
+}
 
-@media only screen and (min-width: 1358px) {
-    .identity-title h1 {
-        font-size: 55px;
-    }
-    .identity-information {
-        font-size: 22px;
-    }
-    .pillar-image {
-        width: 12.5vw;
-    }
+.h-20 {
+  height: 5rem; /* 80px */
+}
+
+.h-22 {
+  height: 5.5rem; /* 88px */
+}
+
+.ml-25 {
+  margin-left: 6.25rem; /* 100px */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .mt-40 {
+    margin-top: 8rem; /* 128px */
+  }
+
+  .mt-50 {
+    margin-top: 10rem; /* 160px */
+  }
 }
