@@ -10,103 +10,109 @@ const IdentitySection = () => {
       className="m-0 p-0 h-screen w-full relative overflow-hidden"
     >
       <div className="identity-gradient-container h-full w-full m-0 p-0">
-        <div className="identity-container h-full w-full m-0 p-0 flex flex-col lg:flex-row items-center justify-center px-4 lg:px-8">
-          {/* Left Side - Statue with Subtle Ellipses */}
-          <div className="statue-container w-full lg:w-1/2 flex justify-center items-center relative z-10">
-            <div className="statue-wrapper relative w-3/4 lg:w-2/3 max-w-lg">
-              {/* Subtle Ellipse Effects - Much Smaller */}
-              <div className="statue-ellipse statue-ellipse-1 absolute rounded-full z-10 transform rotate-30"></div>
-              <div className="statue-ellipse statue-ellipse-2 absolute rounded-full z-10 transform rotate-160"></div>
+        {/* Night Sky Stars Background */}
+        <div className="stars-container absolute inset-0 z-1">
+          {[...Array(50)].map((_, i) => (
+            <div
+              key={i}
+              className={`star star-${i % 4} absolute bg-white rounded-full`}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${2 + Math.random() * 3}s`
+              }}
+            ></div>
+          ))}
+        </div>
 
-              {/* Subtle Glowing Orbs */}
-              <div className="glow-orb orb-1 absolute w-2 h-2 bg-cyan-400 rounded-full blur-sm"></div>
-              <div className="glow-orb orb-2 absolute w-1.5 h-1.5 bg-purple-400 rounded-full blur-sm"></div>
+        {/* Floating Geometric Shapes */}
+        <div className="floating-shapes absolute inset-0 z-1">
+          <div className="shape shape-1 absolute w-32 h-32 bg-gradient-to-br from-cyan-400/20 to-purple-400/20 rounded-full blur-sm"></div>
+          <div className="shape shape-2 absolute w-24 h-24 bg-gradient-to-br from-pink-400/20 to-blue-400/20 rounded-full blur-sm"></div>
+          <div className="shape shape-3 absolute w-40 h-20 bg-gradient-to-br from-purple-400/20 to-cyan-400/20 rounded-full blur-sm"></div>
+          <div className="shape shape-4 absolute w-16 h-32 bg-gradient-to-br from-blue-400/20 to-pink-400/20 rounded-full blur-sm"></div>
+        </div>
 
-              <img
-                className="statue w-full mx-auto relative z-20 drop-shadow-xl filter brightness-105"
-                src={statueImage}
-                alt="vaporwave statue image"
-              />
-            </div>
-          </div>
-
-          {/* Right Side - Creative Pillar Layout */}
-          <div className="pillars-container w-full lg:w-1/2 flex flex-col space-y-6 lg:space-y-8 px-4 lg:px-6 relative z-10">
-            {/* Main Title with Pillar Integration */}
-            <div className="title-section flex items-center justify-center lg:justify-start space-x-4 mb-6">
-              <div className="identity-title px-6 py-4 rounded-2xl text-center lg:text-left">
-                <h1 className="font-light text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
-                  <span className="question-emphasis font-extralight italic">
-                    Who
-                  </span>{" "}
-                  am I, really?
-                </h1>
+        <div className="identity-container h-full w-full m-0 p-0 flex items-center justify-center px-6 lg:px-12 relative z-10">
+          <div className="max-w-screen-2xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Statue with Enhanced Background Elements */}
+            <div className="statue-container w-full flex justify-center items-center relative z-10">
+              {/* Left pillar stack (outside content, alongside statue) */}
+              <div className="pillar-stack pillar-stack-left pointer-events-none select-none">
+                <img src={pillarImage} alt="pillar" className="pillar-stack-img" />
+                <img src={pillarImage} alt="pillar" className="pillar-stack-img" />
               </div>
-              <img
-                src={pillarImage}
-                alt="pillar image"
-                className="pillar-accent w-16 h-16 lg:w-20 lg:h-20 transform rotate-12 opacity-80"
-              />
+
+              <div className="statue-wrapper relative w-[88%] lg:w-[85%] max-w-3xl">
+                {/* Enhanced Ellipse Effects - More Prominent */}
+                <div className="statue-ellipse statue-ellipse-1 absolute rounded-full z-10 transform rotate-30"></div>
+                <div className="statue-ellipse statue-ellipse-2 absolute rounded-full z-10 transform rotate-160"></div>
+                <div className="statue-ellipse statue-ellipse-3 absolute rounded-full z-10 transform rotate-90"></div>
+                <div className="statue-ellipse statue-ellipse-4 absolute rounded-full z-10 transform -rotate-12"></div>
+                <div className="statue-ellipse statue-ellipse-5 absolute rounded-full z-10 transform rotate-6"></div>
+
+                {/* Enhanced Glowing Orbs */}
+                <div className="glow-orb orb-1 absolute w-3 h-3 bg-cyan-400 rounded-full blur-sm"></div>
+                <div className="glow-orb orb-2 absolute w-2.5 h-2.5 bg-purple-400 rounded-full blur-sm"></div>
+                <div className="glow-orb orb-3 absolute w-2 h-2 bg-pink-400 rounded-full blur-sm"></div>
+
+                <img
+                  className="statue w-full mx-auto relative z-20 drop-shadow-2xl filter brightness-110"
+                  src={statueImage}
+                  alt="vaporwave statue image"
+                />
+              </div>
             </div>
 
-            {/* Content Cards with Pillar Accents */}
-            <div className="content-grid grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
-              {/* First Content Card */}
-              <div className="content-card identity-information-1 px-5 py-4 rounded-2xl text-center transform hover:scale-102 transition-transform duration-300">
-                <div className="card-header flex items-center justify-center space-x-3 mb-3">
-                  <img
-                    src={pillarImage}
-                    alt="pillar accent"
-                    className="pillar-mini w-8 h-8 opacity-70"
-                  />
-                  <h3 className="text-cyan-300 font-medium text-sm lg:text-base">
-                    Innovation
-                  </h3>
+            {/* Right Side - Larger Content with Prominent Side Pillars */}
+            <div className="pillars-container w-full relative z-10">
+              {/* Right pillar stack (outside content, alongside cards) */}
+              <div className="pillar-stack pillar-stack-right pointer-events-none select-none">
+                <img src={pillarImage} alt="pillar" className="pillar-stack-img" />
+                <img src={pillarImage} alt="pillar" className="pillar-stack-img" />
+              </div>
+
+              {/* Main Title with separate accent (outside boxes) */}
+              <div className="title-section flex items-center justify-center lg:justify-start space-x-6 mb-6">
+                <div className="identity-title px-10 py-8 rounded-3xl text-center lg:text-left">
+                  <h1 className="font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
+                    <span className="question-emphasis font-extralight italic">Who</span> am I, really?
+                  </h1>
                 </div>
-                <p className="text-sm sm:text-base lg:text-lg text-white leading-relaxed">
-                  A developer who bridges classical elegance with modern
-                  innovation, creating digital experiences that are both
-                  beautiful and functional.
-                </p>
+                <img
+                  src={pillarImage}
+                  alt="pillar image"
+                  className="pillar-accent w-32 h-32 lg:w-36 lg:h-36 transform rotate-6 opacity-95 hover:opacity-100 transition-all duration-300"
+                />
               </div>
 
-              {/* Second Content Card */}
-              <div className="content-card identity-information-2 px-5 py-4 rounded-2xl text-center transform hover:scale-102 transition-transform duration-300">
-                <div className="card-header flex items-center justify-center space-x-3 mb-3">
-                  <img
-                    src={pillarImage}
-                    alt="pillar accent"
-                    className="pillar-mini w-8 h-8 opacity-70"
-                  />
-                  <h3 className="text-purple-300 font-medium text-sm lg:text-base">
-                    Passion
-                  </h3>
+              {/* Larger Content Grid */}
+              <div className="content-grid grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+                {/* First Content Card */}
+                <div className="content-card identity-information-1 px-10 py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[220px] lg:min-h-[260px]">
+                  <h3 className="text-cyan-100 font-medium text-lg lg:text-2xl mb-4 tracking-wide">Innovation</h3>
+                  <p className="text-base sm:text-lg lg:text-2xl text-white/95 leading-relaxed">
+                    A developer who bridges classical elegance with modern innovation, creating digital experiences that are both beautiful and functional.
+                  </p>
                 </div>
-                <p className="text-sm sm:text-base lg:text-lg text-white leading-relaxed">
-                  Driven by curiosity and a love for learning, exploring the
-                  intersection of art and science to create meaningful digital
-                  solutions.
-                </p>
-              </div>
-            </div>
 
-            {/* Bottom Pillar Row - Creative Layout */}
-            <div className="bottom-pillars flex justify-center lg:justify-end space-x-4 mt-4">
-              <img
-                src={pillarImage}
-                alt="pillar image"
-                className="pillar-bottom w-12 h-12 lg:w-16 lg:h-16 transform -rotate-12 opacity-60 hover:opacity-100 transition-opacity duration-300"
-              />
-              <img
-                src={pillarImage}
-                alt="pillar image"
-                className="pillar-bottom w-12 h-12 lg:w-16 lg:h-16 transform rotate-12 opacity-60 hover:opacity-100 transition-opacity duration-300"
-              />
-              <img
-                src={pillarImage}
-                alt="pillar image"
-                className="pillar-bottom w-12 h-12 lg:w-16 lg:h-16 transform -rotate-6 opacity-60 hover:opacity-100 transition-opacity duration-300"
-              />
+                {/* Second Content Card */}
+                <div className="content-card identity-information-2 px-10 py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[220px] lg:min-h-[260px]">
+                  <h3 className="text-purple-100 font-medium text-lg lg:text-2xl mb-4 tracking-wide">Passion</h3>
+                  <p className="text-base sm:text-lg lg:text-2xl text-white/95 leading-relaxed">
+                    Driven by curiosity and a love for learning, exploring the intersection of art and science to create meaningful digital solutions.
+                  </p>
+                </div>
+
+                {/* Third Content Card - Full Width */}
+                <div className="content-card identity-information-3 md:col-span-2 px-10 py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[220px] lg:min-h-[260px]">
+                  <h3 className="text-pink-100 font-medium text-lg lg:text-2xl mb-4 tracking-wide">Excellence</h3>
+                  <p className="text-base sm:text-lg lg:text-2xl text-white/95 leading-relaxed">
+                    Committed to delivering high-quality solutions with attention to detail and user experience.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

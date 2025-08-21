@@ -120,12 +120,28 @@
 }
 
 /* Custom text sizes for responsive design */
-.text-64 {
-  font-size: 16rem; /* 256px */
+.text-9xl {
+  font-size: 8rem; /* 128px */
 }
 
-.text-72 {
-  font-size: 18rem; /* 288px */
+.text-10xl {
+  font-size: 9rem; /* 144px */
+}
+
+.text-11xl {
+  font-size: 10rem; /* 160px */
+}
+
+.text-12xl {
+  font-size: 11rem; /* 176px */
+}
+
+.text-13xl {
+  font-size: 12rem; /* 192px */
+}
+
+.text-14xl {
+  font-size: 13rem; /* 208px */
 }
 
 /* Responsive adjustments */
@@ -143,6 +159,10 @@
   .scroll-instruction {
     bottom: 4rem;
   }
+  
+  .jay {
+    font-size: 6rem !important; /* Ensure JAY is still prominent on mobile */
+  }
 }
 
 @media (min-width: 641px) and (max-width: 768px) {
@@ -154,6 +174,10 @@
 
   .jay-glow {
     filter: blur(22px);
+  }
+  
+  .jay {
+    font-size: 7rem !important;
   }
 }
 
@@ -167,9 +191,13 @@
   .jay-glow {
     filter: blur(24px);
   }
+  
+  .jay {
+    font-size: 8rem !important;
+  }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1025px) and (max-width: 1280px) {
   .hero-image-container::before {
     height: 70%;
     background-size: 60px 60px;
@@ -178,6 +206,22 @@
 
   .jay-glow {
     filter: blur(25px);
+  }
+  
+  .jay {
+    font-size: 9rem !important;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1536px) {
+  .jay {
+    font-size: 10rem !important;
+  }
+}
+
+@media (min-width: 1537px) {
+  .jay {
+    font-size: 11rem !important;
   }
 }
 
