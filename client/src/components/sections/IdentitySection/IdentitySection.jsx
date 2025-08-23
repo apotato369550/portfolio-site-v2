@@ -1,7 +1,7 @@
 import React from "react";
 import "./IdentitySection.css";
 import statueImage from "../../../assets/vaporwave statue.png";
-import pillarImage from "../../../assets/vaporwave pillar.png";
+import pillarImage from "../../../assets/new_pillar.png";
 
 const IdentitySection = () => {
   return (
@@ -10,6 +10,9 @@ const IdentitySection = () => {
       className="m-0 p-0 h-screen w-full relative overflow-hidden"
     >
       <div className="identity-gradient-container h-full w-full m-0 p-0">
+        {/* Side-by-side house pillars */}
+        <img src={pillarImage} alt="pillar left" className="side-pillar side-pillar-left" />
+        <img src={pillarImage} alt="pillar right" className="side-pillar side-pillar-right" />
         {/* Night Sky Stars Background */}
         <div className="stars-container absolute inset-0 z-1">
           {[...Array(50)].map((_, i) => (
@@ -38,11 +41,7 @@ const IdentitySection = () => {
           <div className="max-w-screen-2xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Statue with Enhanced Background Elements */}
             <div className="statue-container w-full flex justify-center items-center relative z-10">
-              {/* Left pillar stack (outside content, alongside statue) */}
-              <div className="pillar-stack pillar-stack-left pointer-events-none select-none">
-                <img src={pillarImage} alt="pillar" className="pillar-stack-img" />
-                <img src={pillarImage} alt="pillar" className="pillar-stack-img" />
-              </div>
+              {/* Removed old pillar stacks */}
 
               <div className="statue-wrapper relative w-[88%] lg:w-[85%] max-w-3xl">
                 {/* Enhanced Ellipse Effects - More Prominent */}
@@ -67,11 +66,7 @@ const IdentitySection = () => {
 
             {/* Right Side - Larger Content with Prominent Side Pillars */}
             <div className="pillars-container w-full relative z-10">
-              {/* Right pillar stack (outside content, alongside cards) */}
-              <div className="pillar-stack pillar-stack-right pointer-events-none select-none">
-                <img src={pillarImage} alt="pillar" className="pillar-stack-img" />
-                <img src={pillarImage} alt="pillar" className="pillar-stack-img" />
-              </div>
+              {/* Removed old pillar stacks */}
 
               {/* Main Title with separate accent (outside boxes) */}
               <div className="title-section flex items-center justify-center lg:justify-start space-x-6 mb-6">
@@ -80,11 +75,6 @@ const IdentitySection = () => {
                     <span className="question-emphasis font-extralight italic">Who</span> am I, really?
                   </h1>
                 </div>
-                <img
-                  src={pillarImage}
-                  alt="pillar image"
-                  className="pillar-accent w-32 h-32 lg:w-36 lg:h-36 transform rotate-6 opacity-95 hover:opacity-100 transition-all duration-300"
-                />
               </div>
 
               {/* Larger Content Grid */}
