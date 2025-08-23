@@ -1,191 +1,133 @@
 #location-section {
-    margin: 0px;
-    padding: 0px;
-    height: 200vh;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  height: 200vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .location-gradient-container {
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#3B5AF9, #60b3fc);
-    position: absolute;
-    top: 0;
-    left: 0;
+  background: linear-gradient(#3b5af9, #60b3fc);
 }
 
-.cebu-container, .tree-container {
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+.cebu-container,
+.tree-container {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .location-container {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    flex-direction: column-reverse;
-    position: relative;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
 }
 
 .cebu-container {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
 }
 
 .tree-container {
-    position: relative;
+  position: relative;
 }
 
 .tree {
-    position: absolute;
-    z-index: 1;
-    height: auto;
-    display: block;
-    width: 125vw;
-    margin-top: 10vh;
-    left: 25%;
-    transform: translateX(-25%);
+  position: absolute;
+  z-index: 1;
+  height: auto;
+  display: block;
+  width: 125vw;
+  margin-top: 10vh;
+  left: 25%;
+  transform: translateX(-25%);
 }
 
-.location-title, .location-information {
-    /*60058B 190125*/
-    padding: 1vh 3vw;
-    border-radius: 25px;
-    background: linear-gradient(to right, rgba(96, 5, 139, 0.5), rgba(25, 1, 37, 0.5)); 
-    position: relative;
-    z-index: 2;
-    width: 45vw;
-    margin-bottom: 5vh;
+.location-title,
+.location-information {
+  background: linear-gradient(
+    to right,
+    rgba(96, 5, 139, 0.5),
+    rgba(25, 1, 37, 0.5)
+  );
+  position: relative;
+  z-index: 2;
 }
 
 .location-title {
-    float: left;
-    margin-left: 5vw;
-    margin-top: 5vh;
+  float: left;
+  margin-left: 5vw;
+  margin-top: 5vh;
 }
 
 .location-information {
-    float: right;
-    margin-right: 5vw;
+  float: right;
+  margin-right: 5vw;
 }
 
 .location-title h1 {
-    font-weight: 400;
-    font-size: 40px;
+  font-weight: 400;
+  font-size: 40px;
 }
 
 .location-information p {
-    font-size: 22px;
+  font-size: 22px;
 }
 
-
 .cebu-and-flag {
-    margin: auto;
-    margin-top: 25vh;
-    display: flex;
-    flex-direction: row;
-    align-items: end;
+  margin: auto;
+  margin-top: 25vh;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
 }
 
 .cebu {
-    position: absolute;
-    z-index: 1;
-    width: 50vw;
+  position: absolute;
+  z-index: 1;
+  width: 50vw;
 }
 
 .flag {
-    position: relative;
-    z-index: 2;
-    height: auto;
-    display: block;
-    width: 60vw;
-    margin-left: 25vw;
+  position: relative;
+  z-index: 2;
+  height: auto;
+  display: block;
+  width: 60vw;
+  margin-left: 25vw;
 }
 
-
-@media only screen and (min-width: 500px) {
-    .cebu-and-flag {
-        margin-top: 40vh;
-    }
+/* Custom utility classes for responsive design */
+.mt-25 {
+  margin-top: 6.25rem; /* 100px */
 }
 
-@media only screen and (min-width: 600px) {
-    .cebu-and-flag {
-        margin-top: 50vh;
-    }
+.mt-45 {
+  margin-top: 11.25rem; /* 180px */
 }
 
-@media only screen and (min-width: 700px) {
-    .cebu-and-flag {
-        margin-top: 60vh;
-    }
+.ml-25 {
+  margin-left: 6.25rem; /* 100px */
 }
 
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .mt-25 {
+    margin-top: 5rem; /* 80px */
+  }
 
-@media only screen and (min-width: 772px) {
-    #location-section {
-        height: 125vh;
-    }
-    .location-container {
-        flex-direction: row;
-        margin-top: 10vh;
-    }
-    .cebu-and-flag {
-        margin-top: 45vh;
-    }
-    .cebu {
-        width: 30vw;
-    }
-    .flag {
-        width: 30vw;
-        margin-left: 10vw;
-    }
-    .tree {
-        width: 70vw;
-        margin-top: 0px;
-    }
-    .location-title, .location-information {
-        width: 35vw;
-    }
-}
+  .mt-45 {
+    margin-top: 9rem; /* 144px */
+  }
 
-@media only screen and (min-width: 1200px) {
-    #location-section {
-        height: 135vh;
-    }
-
-    .location-container {
-        margin-top: 20vh;
-    }
-
-    /* do title and info fonts and stuff */ 
-    .location-title h1 {
-        font-size: 55px;
-    }
-    
-    .location-information p {
-        font-size: 22px;
-    }
-
-    .cebu-and-flag {
-        margin-top: 65vh;
-    }
-    .cebu {
-        width: 22.5vw;
-    }
-    .flag {
-        width: 20vw;
-    }
-    .tree {
-        width: 47.5vw;
-    }
+  .ml-25 {
+    margin-left: 5rem; /* 80px */
+  }
 }

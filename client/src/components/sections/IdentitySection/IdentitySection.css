@@ -1,232 +1,107 @@
 #identity-section {
-    margin: 0px;
-    padding: 0px;
-    height: 155vh;
-    width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 130vh;
+  width: 100%;
 }
 
 .identity-gradient-container {
-    margin: 0px;
-    padding: 0px;
-    height: inherit;
-    width: inherit;
-    background: linear-gradient(#2B063B, #3D5CF8); 
+  background: linear-gradient(#2b063b, #3d5cf8);
+  position: relative;
+  overflow: hidden;
 }
 
-.identity-container {
-    margin: 0px;
-    padding: 0px;
-    height: inherit;
-    width: inherit;
-    display: flex;
-    flex-direction: column;
+/* Night Sky Stars Background */
+.stars-container { z-index: 1; }
+.star { width: 2px; height: 2px; animation: twinkle 3s ease-in-out infinite; }
+.star-0 { width: 1px; height: 1px; animation-duration: 2s; }
+.star-1 { width: 2px; height: 2px; animation-duration: 3s; }
+.star-2 { width: 1.5px; height: 1.5px; animation-duration: 4s; }
+.star-3 { width: 2.5px; height: 2.5px; animation-duration: 2.5s; }
+@keyframes twinkle { 0%,100%{opacity:.3;transform:scale(1)} 50%{opacity:1;transform:scale(1.2)} }
+
+/* Floating Geometric Shapes */
+.floating-shapes { z-index: 1; }
+.shape { animation: float 8s ease-in-out infinite; }
+.shape-1 { top: 10%; left: 5%; animation-delay: 0s; }
+.shape-2 { top: 20%; right: 10%; animation-delay: 2s; }
+.shape-3 { bottom: 30%; left: 15%; animation-delay: 4s; }
+.shape-4 { bottom: 20%; right: 20%; animation-delay: 6s; }
+@keyframes float { 0%,100%{transform:translateY(0) rotate(0);opacity:.2} 50%{transform:translateY(-20px) rotate(180deg);opacity:.4} }
+
+/* Much Bigger Ellipses */
+.statue-ellipse-1 { background:linear-gradient(45deg,rgba(57,217,253,.45),rgba(0,255,255,.35)); width:62vw; height:16vh; margin-top:56vh; left:-6vw; box-shadow:0 0 25px rgba(57,217,253,.45); animation: enhancedFloat 11s ease-in-out infinite; }
+.statue-ellipse-2 { background:linear-gradient(45deg,rgba(216,73,238,.45),rgba(255,0,255,.35)); width:66vw; height:18vh; margin-top:50vh; left:0; box-shadow:0 0 25px rgba(216,73,238,.45); animation: enhancedFloat 11s ease-in-out infinite reverse; }
+.statue-ellipse-3 { background:linear-gradient(45deg,rgba(255,0,128,.45),rgba(255,0,255,.35)); width:58vw; height:14vh; margin-top:66vh; left:2vw; box-shadow:0 0 25px rgba(255,0,128,.45); animation: enhancedFloat 12s ease-in-out infinite; }
+.statue-ellipse-4 { background:linear-gradient(45deg,rgba(0,255,255,.35),rgba(0,128,255,.25)); width:52vw; height:12vh; margin-top:74vh; left:-3vw; box-shadow:0 0 20px rgba(0,128,255,.35); animation: enhancedFloat 13s ease-in-out infinite; }
+.statue-ellipse-5 { background:linear-gradient(45deg,rgba(255,0,255,.35),rgba(255,128,255,.25)); width:48vw; height:11vh; margin-top:60vh; left:6vw; box-shadow:0 0 20px rgba(255,0,255,.35); animation: enhancedFloat 14s ease-in-out infinite reverse; }
+@keyframes enhancedFloat { 0%,100%{transform:rotate(30deg) translateY(0) scale(1)} 50%{transform:rotate(30deg) translateY(-15px) scale(1.05)} }
+
+/* Orbs */
+.glow-orb{ position:absolute; z-index:15; filter:blur(1px); opacity:.85; animation:orbPulse 4s ease-in-out infinite; }
+.orb-1{ top:20%; left:15%; animation-delay:0s; }
+.orb-2{ top:60%; right:20%; animation-delay:2s; }
+.orb-3{ top:40%; left:25%; animation-delay:4s; }
+@keyframes orbPulse { 0%,100%{opacity:.6;transform:scale(1)} 50%{opacity:1;transform:scale(1.2)} }
+
+/* Side pillars outside content */
+.side-pillar{ position:absolute; top:50%; transform:translateY(-50%); filter:drop-shadow(0 12px 24px rgba(0,0,0,.5)); opacity:.95; z-index:0; }
+.side-pillar-left{ left:72px; width:360px; height:760px; }
+.side-pillar-right{ right:72px; width:360px; height:760px; transform:translateY(-50%) rotateY(180deg); }
+
+/* Pillar stacks at sides */
+.pillar-stack{ position:absolute; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; align-items:center; gap:12px; z-index:2; }
+.pillar-stack-left{ left:-12px; }
+.pillar-stack-right{ right:-12px; }
+.pillar-stack-img{ width:200px; height:auto; filter:drop-shadow(0 10px 20px rgba(0,0,0,.45)); opacity:.98; }
+
+@media (min-width: 1536px){
+  .pillar-stack-img{ width:240px; }
+  .pillar-stack-left{ left:8px; }
+  .pillar-stack-right{ right:8px; }
 }
 
-
-.statue-container, .pillars-container {
-    margin: 5vh 0 7vh 0;
-    padding: 0px;
-    width: 100vw;
+@media (max-width: 1280px){
+  .pillar-stack-img{ width:170px; }
 }
 
-.pillars-container {
-    margin-right: 3vw;
-    /*change if this doesn't work*/
-    position: relative;
+@media (max-width: 1024px){
+  .pillar-stack{ display:none; }
 }
 
-.statue-wrapper {
-    position: relative;
-    width: 75vw;
-    margin: 0 auto 0 auto;
+/* Title and Cards */
+.identity-title{ background:linear-gradient(135deg,rgba(138,81,152,.8),rgba(45,27,50,.8)); backdrop-filter:blur(14px); border:1px solid rgba(0,255,255,.28); box-shadow:0 10px 34px rgba(0,0,0,.38),0 0 24px rgba(0,255,255,.14); }
+.identity-information-1{ background:linear-gradient(135deg,rgba(186,64,243,.8),rgba(108,37,141,.8)); backdrop-filter:blur(14px); border:1px solid rgba(255,0,255,.28); box-shadow:0 10px 34px rgba(0,0,0,.38),0 0 24px rgba(255,0,255,.14); }
+.identity-information-2{ background:linear-gradient(135deg,rgba(62,186,230,.8),rgba(35,103,128,.8)); backdrop-filter:blur(14px); border:1px solid rgba(0,255,255,.28); box-shadow:0 10px 34px rgba(0,0,0,.38),0 0 24px rgba(0,255,255,.14); }
+.identity-information-3{ background:linear-gradient(135deg,rgba(255,0,128,.8),rgba(186,64,243,.8)); backdrop-filter:blur(14px); border:1px solid rgba(255,0,128,.28); box-shadow:0 10px 34px rgba(0,0,0,.38),0 0 24px rgba(255,0,128,.14); }
+
+.content-card{ transition:all .3s cubic-bezier(.4,0,.2,1); border:1px solid rgba(255,255,255,.2); }
+.content-card:hover{ transform:translateY(-6px); box-shadow:0 14px 38px rgba(0,0,0,.48),0 0 28px rgba(0,255,255,.22); }
+
+/* Bottom pillars (kept but scaled) */
+.pillar-accent{ filter:drop-shadow(0 10px 20px rgba(0,0,0,.45)); transition:all .3s ease; }
+.pillar-accent:hover{ filter:drop-shadow(0 12px 22px rgba(0,255,255,.35)); transform:rotate(8deg) scale(1.12); }
+.pillar-bottom{ filter:drop-shadow(0 8px 16px rgba(0,0,0,.38)); transition:all .3s ease; }
+.pillar-bottom:hover{ filter:drop-shadow(0 10px 18px rgba(0,255,255,.28)); transform:scale(1.08); }
+
+/* Responsive */
+@media (max-width: 1280px){
+  #identity-section{ height: 140vh; }
+  .side-pillar-left{ left:48px; width:300px; height:600px; }
+  .side-pillar-right{ right:48px; width:300px; height:600px; }
+}
+@media (max-width: 1024px){
+  #identity-section{ height:auto; }
+  .side-pillar{ display:none; }
+}
+@media (max-width: 640px){
+  .glow-orb{ display:none; }
+  .shape{ display:none; }
 }
 
-.statue {
-    margin: 0px;
-    padding: 0px;
-    width: 70vw;
-    /* z-index works, just remember to set position to something else like relative */
-    z-index: 2;
-    position: relative;
-}
-
-.statue-ellipse {
-  position: absolute;
-  border-radius: 50%;
-  margin-top: 40vh;
-  z-index: 1;
-}
-
-.statue-ellipse-1 {
-  background-color: rgba(57, 217, 253, 0.5);
-  width: 75vw;
-  height: 14vh;
-  transform: rotate(30deg);
-
-}
-
-.statue-ellipse-2 {
-  background-color: rgba(216, 73, 238, 0.5);
-  width: 80vw;
-  height: 16vh;
-  transform: rotate(160deg);
-}
-
-.pillar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5vh 5vw;
-    gap: 3vw;
-}
-
-.identity-title h1 {
-    font-weight: 400;
-    font-size: 40px;
-}
-
-.question-emphasis {
-    font-weight: 200;
-    font-style: italic;
-}
-
-.pillar-image {
-    width: 35vw;
-}
-
-.identity-title, .identity-information {
-    padding: 1vh 3vw;
-    border-radius: 25px;
-}
-
-.identity-title {
-    /* change this to rgba, follow figma */
-    background: linear-gradient(to right, rgba(138, 81, 152, 0.5), rgba(45, 27, 50, 0.5)); 
-}
-
-.identity-information-1 {
-    background: linear-gradient(to right, rgba(186, 64, 243, 0.5), rgba(108, 37, 141, 0.5)); 
-}
-
-.identity-information-2 {
-    background: linear-gradient(to right, rgba(62, 186, 230, 0.5), rgba(35, 103, 128, 0.5)); 
-}
-
-@media only screen and (min-width: 530px) {
-    #identity-section {
-        height: 170vh;
-    }
-}
-
-@media only screen and (min-width: 550px) {
-    #identity-section {
-        height: 175vh;
-    }
-    .statue-container, .pillars-container {  
-        margin: 3vh 0 5vh 0;
-    }
-    .pillar {
-        margin: 2.5vh 5vw;
-        gap: 1.5vw;
-    }
-}
-
-@media only screen and (min-width: 650px) {
-    #identity-section {
-        height: 150vh;
-    }
-}
-
-
-@media only screen and (min-width: 772px) {
-    #identity-section {
-        height: 95vh;
-    }
-    .identity-container {
-        flex-direction: row;
-    }
-    .statue-container, .pillars-container {
-        width: 50vw;
-    }
-    .statue-container {
-        margin-top: 10vh;
-    }
-    .statue, .information-pillar {
-        width: 45vw;
-    }
-    .statue-ellipse {
-        margin-top: 50vh;
-        width: 50vw;
-    }
-    .statue-ellipse-1 {
-        height: 14vh;
-    }
-    .statue-ellipse-2 {
-        height: 16vh;
-    }
-    .pillar {
-        margin-right: 100vw;
-    }
-    .pillar-image {
-        width: 20vw;
-    }
-    .pillar-right {
-        margin-left: 20vw;
-    }
-    .identity-title, .identity-information {
-        position: absolute;
-        margin: auto 5vw auto auto;
-        z-index: 2;
-    }
-    .identity-information {
-        font-size: 17px;
-    }
-}
-
-
-
-@media only screen and (min-width: 1200px) {
-    #identity-section {
-        height: 100vh;
-    }
-    .statue-container {
-        margin-top: 5vh;
-    }
-    .statue {
-        max-width: 480px;
-        margin-left: 8vw;
-    }
-    .statue-ellipse {
-        margin-top: 50vh;
-        width: 47vw;
-    }
-    .statue-ellipse-1 {
-        height: 20vh;
-    }
-    .statue-ellipse-2 {
-        height: 22vh;
-    }
-    .pillar-image {
-        width: 12vw;
-    }
-    .pillar-left {
-        margin-left: 5vw;
-    }
-    .pillar-right {
-        margin-left: 25vw;
-    }
-}
-
-
-@media only screen and (min-width: 1358px) {
-    .identity-title h1 {
-        font-size: 55px;
-    }
-    .identity-information {
-        font-size: 22px;
-    }
-    .pillar-image {
-        width: 12.5vw;
-    }
-}
+.identity-title,.identity-information,.content-card{ transition:all .3s cubic-bezier(.4,0,.2,1); }
+.identity-section{ scroll-behavior:smooth; will-change:transform; }
+.identity-title h1,.identity-information p,.content-card p{ text-shadow:0 1px 2px rgba(0,0,0,.3); }
+.question-emphasis{ background:linear-gradient(45deg,#00ffff,#0080ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; text-shadow:none; }
+.card-header h3{ font-weight:500; letter-spacing:.5px; }
+.hover\:scale-105:hover{ transform:scale(1.05); }

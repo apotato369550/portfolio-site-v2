@@ -1,128 +1,97 @@
 #tech-stack-section {
-    margin: 0px;
-    padding: 0px;
-    height: 175vh;
-    width: 100vw;
-    /* Add these to ensure no gaps */
-    position: relative;
-    overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  height: 175vh;
+  width: 100vw;
+  /* Add these to ensure no gaps */
+  position: relative;
+  overflow: hidden;
 }
 
 .tech-stack-image-container {
-    margin: 0px;
-    padding: 0px;
-    background-image: url("../../../assets/vaporwave_background_3.png");
-    background-position: center center; 
-    background-repeat:no-repeat;
-    background-size: cover;
-    /* Change from inherit to 100% to ensure full coverage */
-    height: 100%;
-    width: 100%;
-    /* Add these to fix background positioning */
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 200vh; /* Ensure minimum height matches parent */
+  background-image: url("../../../assets/vaporwave_background_3.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .tech-stack-container {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
-.left-container, .right-container {
-    width: 85vw;
+.left-container,
+.right-container {
+  width: 85vw;
 }
 
 .left-container {
-    margin: 7vh auto 0vh auto;
+  margin: 7vh auto 0vh auto;
 }
 
 .right-container {
-    margin: 0vh auto 0vh auto;
+  margin: 0vh auto 0vh auto;
 }
 
-.tech-stack-title, .languages-and-frameworks, .tools-and-platforms, .currently-exploring {
-    padding: 1vh 3vw;
-    border-radius: 25px;
-    background: linear-gradient(to right, rgba(96, 5, 139, 0.5), rgba(25, 1, 37, 0.5)); 
-    position: relative;
-    z-index: 2;
-    margin-bottom: 5vh;
+.tech-stack-title,
+.languages-and-frameworks,
+.tools-and-platforms,
+.currently-exploring {
+  background: linear-gradient(
+    to right,
+    rgba(96, 5, 139, 0.5),
+    rgba(25, 1, 37, 0.5)
+  );
+  position: relative;
+  z-index: 2;
 }
 
 .tech-stack-title h1 {
-    font-weight: 400;
-    font-size: 40px;
+  font-weight: 400;
+  font-size: 40px;
 }
 
-.html-css-js, .mongo-express-react, .node-python, .tools-and-platforms-icons, .c-and-scikitlearn {
-    width: inherit;
-    display: flex;
-    margin-bottom: 2vh;
+.html-css-js,
+.mongo-express-react,
+.node-python,
+.tools-and-platforms-icons,
+.c-and-scikitlearn {
+  width: inherit;
+  display: flex;
+  margin-bottom: 2vh;
 }
 
-.github-and-firebase, .jupyter, .figma-and-git {
-    margin: auto;
+.github-and-firebase,
+.jupyter,
+.figma-and-git {
+  margin: auto;
 }
 
-.github-and-firebase, .figma-and-git {
-    display: flex;
-    flex-direction: column;
+.github-and-firebase,
+.figma-and-git {
+  display: flex;
+  flex-direction: column;
 }
 
 .tech-stack-icon {
-    height: 20vw;
-    margin: auto;
+  height: 20vw;
+  margin: auto;
 }
 
 .mongo-express-react {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
-
-
-@media only screen and (min-width: 772px) {
-    #tech-stack-section {
-        height: 100vh;
-    }
-    
-    .tech-stack-container {
-        flex-direction: row;
-    }
-    
-    .left-container {
-        margin-left: 5vw;
-    }
-
-    .right-container {
-        margin-right: 5vw;
-    }
-
-    .left-container, .right-container {
-        width: 40vw;
-        height: 95vh;
-        margin: 7vh auto 0vh auto;
-    }
-    
-    .tech-stack-title h1 {
-        font-size: 55px;
-    }
-    .tech-stack-icon {
-        height: 11.5vw;
-    }
+/* Custom utility classes for responsive design */
+.h-95 {
+  height: 95vh;
 }
 
-@media only screen and (min-width: 1200px) {
-    #tech-stack-section {
-        height: 115vh;
-    }
-    .github-and-firebase,.figma-and-git {
-        flex-direction: column;
-    }
-    .tech-stack-icon {
-        height: 10vw;
-    }
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .h-95 {
+    height: auto;
+  }
 }

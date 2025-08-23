@@ -1,44 +1,114 @@
-import React from 'react'
-import './IdentitySection.css';
+import React from "react";
+import "./IdentitySection.css";
 import statueImage from "../../../assets/vaporwave statue.png";
-import pillarImage from "../../../assets/vaporwave pillar.png";
+import pillarImage from "../../../assets/new_pillar.png";
 
 const IdentitySection = () => {
   return (
-    <div id="identity-section">
-        <div className="identity-gradient-container">
-            <div className="identity-container">
-                <div className="statue-container">
-                  <div className="statue-wrapper">
-                    <div className="statue-ellipse statue-ellipse-1"></div>
-                    <div className="statue-ellipse statue-ellipse-2"></div>
-                    <img className="statue" src={statueImage} alt="vaporwave statue image" />
-                  </div>
-                </div>
-                <div className="pillars-container">
-                  <div className="pillar">
-                    <div className="identity-title">
-                      <h1><span className="question-emphasis">Who</span> am I, really?</h1>
-                    </div>
-                    <img src={pillarImage} alt="pillar image" className="pillar-image pillar-right" />
-                  </div>
-                  <div className="pillar">
-                    <img src={pillarImage} alt="pillar image" className="pillar-image pillar-left" />
-                    <div className="identity-information identity-information-1">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, lorem ut molestie luctus, sapien orci suscipit neque, sed venenatis lorem</p>
-                    </div>
-                  </div>
-                  <div className="pillar">
-                    <div className="identity-information identity-information-2">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, lorem ut molestie luctus, sapien orci suscipit neque, sed venenatis lorem</p>
-                    </div>
-                    <img src={pillarImage} alt="pillar image" className="pillar-image pillar-right" />
-                  </div>
-                </div>
-            </div>
+    <div
+      id="identity-section"
+      className="m-0 p-0 h-screen w-full relative overflow-hidden"
+    >
+      <div className="identity-gradient-container h-full w-full m-0 p-0">
+        {/* Side-by-side house pillars */}
+        <img src={pillarImage} alt="pillar left" className="side-pillar side-pillar-left" />
+        <img src={pillarImage} alt="pillar right" className="side-pillar side-pillar-right" />
+        {/* Night Sky Stars Background */}
+        <div className="stars-container absolute inset-0 z-1">
+          {[...Array(50)].map((_, i) => (
+            <div
+              key={i}
+              className={`star star-${i % 4} absolute bg-white rounded-full`}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${2 + Math.random() * 3}s`
+              }}
+            ></div>
+          ))}
         </div>
-    </div>
-  )
-}
 
-export default IdentitySection
+        {/* Floating Geometric Shapes */}
+        <div className="floating-shapes absolute inset-0 z-1">
+          <div className="shape shape-1 absolute w-32 h-32 bg-gradient-to-br from-cyan-400/20 to-purple-400/20 rounded-full blur-sm"></div>
+          <div className="shape shape-2 absolute w-24 h-24 bg-gradient-to-br from-pink-400/20 to-blue-400/20 rounded-full blur-sm"></div>
+          <div className="shape shape-3 absolute w-40 h-20 bg-gradient-to-br from-purple-400/20 to-cyan-400/20 rounded-full blur-sm"></div>
+          <div className="shape shape-4 absolute w-16 h-32 bg-gradient-to-br from-blue-400/20 to-pink-400/20 rounded-full blur-sm"></div>
+        </div>
+
+        <div className="identity-container h-full w-full m-0 p-0 flex items-center justify-center px-6 lg:px-12 relative z-10">
+          <div className="max-w-screen-2xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Statue with Enhanced Background Elements */}
+            <div className="statue-container w-full flex justify-center items-center relative z-10">
+              {/* Removed old pillar stacks */}
+
+              <div className="statue-wrapper relative w-[88%] lg:w-[85%] max-w-3xl">
+                {/* Enhanced Ellipse Effects - More Prominent */}
+                <div className="statue-ellipse statue-ellipse-1 absolute rounded-full z-10 transform rotate-30"></div>
+                <div className="statue-ellipse statue-ellipse-2 absolute rounded-full z-10 transform rotate-160"></div>
+                <div className="statue-ellipse statue-ellipse-3 absolute rounded-full z-10 transform rotate-90"></div>
+                <div className="statue-ellipse statue-ellipse-4 absolute rounded-full z-10 transform -rotate-12"></div>
+                <div className="statue-ellipse statue-ellipse-5 absolute rounded-full z-10 transform rotate-6"></div>
+
+                {/* Enhanced Glowing Orbs */}
+                <div className="glow-orb orb-1 absolute w-3 h-3 bg-cyan-400 rounded-full blur-sm"></div>
+                <div className="glow-orb orb-2 absolute w-2.5 h-2.5 bg-purple-400 rounded-full blur-sm"></div>
+                <div className="glow-orb orb-3 absolute w-2 h-2 bg-pink-400 rounded-full blur-sm"></div>
+
+                <img
+                  className="statue w-full mx-auto relative z-20 drop-shadow-2xl filter brightness-110"
+                  src={statueImage}
+                  alt="vaporwave statue image"
+                />
+              </div>
+            </div>
+
+            {/* Right Side - Larger Content with Prominent Side Pillars */}
+            <div className="pillars-container w-full relative z-10">
+              {/* Removed old pillar stacks */}
+
+              {/* Main Title with separate accent (outside boxes) */}
+              <div className="title-section flex items-center justify-center lg:justify-start space-x-6 mb-6">
+                <div className="identity-title px-10 py-8 rounded-3xl text-center lg:text-left">
+                  <h1 className="font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
+                    <span className="question-emphasis font-extralight italic">Who</span> am I, really?
+                  </h1>
+                </div>
+              </div>
+
+              {/* Larger Content Grid */}
+              <div className="content-grid grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+                {/* First Content Card */}
+                <div className="content-card identity-information-1 px-10 py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[220px] lg:min-h-[260px]">
+                  <h3 className="text-cyan-100 font-medium text-lg lg:text-2xl mb-4 tracking-wide">Innovation</h3>
+                  <p className="text-base sm:text-lg lg:text-2xl text-white/95 leading-relaxed">
+                    A developer who bridges classical elegance with modern innovation, creating digital experiences that are both beautiful and functional.
+                  </p>
+                </div>
+
+                {/* Second Content Card */}
+                <div className="content-card identity-information-2 px-10 py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[220px] lg:min-h-[260px]">
+                  <h3 className="text-purple-100 font-medium text-lg lg:text-2xl mb-4 tracking-wide">Passion</h3>
+                  <p className="text-base sm:text-lg lg:text-2xl text-white/95 leading-relaxed">
+                    Driven by curiosity and a love for learning, exploring the intersection of art and science to create meaningful digital solutions.
+                  </p>
+                </div>
+
+                {/* Third Content Card - Full Width */}
+                <div className="content-card identity-information-3 md:col-span-2 px-10 py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[220px] lg:min-h-[260px]">
+                  <h3 className="text-pink-100 font-medium text-lg lg:text-2xl mb-4 tracking-wide">Excellence</h3>
+                  <p className="text-base sm:text-lg lg:text-2xl text-white/95 leading-relaxed">
+                    Committed to delivering high-quality solutions with attention to detail and user experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default IdentitySection;
