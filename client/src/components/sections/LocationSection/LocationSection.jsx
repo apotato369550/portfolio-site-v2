@@ -58,14 +58,14 @@ const LocationSection = () => {
               <div className="cebu-and-flag flex flex-col items-center space-y-6 lg:space-y-8">
                 <div className="relative">
                   <img
-                    className="cebu w-80 sm:w-96 lg:w-[28rem] xl:w-[32rem] h-auto relative z-20"
+                    className="cebu w-96 sm:w-[28rem] lg:w-[36rem] xl:w-[42rem] h-auto relative z-20"
                     src={cebuImage}
                     alt="Cebu cityscape"
                   />
                 </div>
                 <div className="relative">
                   <img
-                    className="flag w-64 sm:w-80 lg:w-[24rem] xl:w-[28rem] h-auto relative z-20"
+                    className="flag w-80 sm:w-[24rem] lg:w-[32rem] xl:w-[38rem] h-auto relative z-20"
                     src={flagImage}
                     alt="Philippine flag"
                   />
