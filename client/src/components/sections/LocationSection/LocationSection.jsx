@@ -47,7 +47,7 @@ const LocationSection = () => {
             />
           </div>
 
-          {/* Left Side - Images with Enhanced Effects */}
+          {/* Left Side - Cebu Image Only */}
           <div className="images-section relative">
             {/* Enhanced Ellipse Effects */}
             <div className="location-ellipse location-ellipse-1 absolute rounded-full transform rotate-30"></div>
@@ -55,51 +55,42 @@ const LocationSection = () => {
             <div className="location-ellipse location-ellipse-3 absolute rounded-full transform rotate-45"></div>
 
             <div className="cebu-container">
-              <div className="cebu-and-flag flex flex-col items-center space-y-6 lg:space-y-8">
-                <div className="relative">
-                  <img
-                    className="cebu w-96 sm:w-[28rem] lg:w-[36rem] xl:w-[42rem] h-auto relative z-20"
-                    src={cebuImage}
-                    alt="Cebu cityscape"
-                  />
-                </div>
-                <div className="relative">
-                  <img
-                    className="flag w-80 sm:w-[24rem] lg:w-[32rem] xl:w-[38rem] h-auto relative z-20"
-                    src={flagImage}
-                    alt="Philippine flag"
-                  />
-                </div>
+              <div className="cebu-image flex justify-center">
+                <img
+                  className="cebu w-72 sm:w-80 lg:w-96 xl:w-[28rem] h-auto relative z-20"
+                  src={cebuImage}
+                  alt="Cebu cityscape"
+                />
               </div>
             </div>
           </div>
 
-          {/* Right Side - Content Cards */}
-          <div className="content-section space-y-8 lg:space-y-12">
-            {/* Location Question and Answer */}
-            <div className="location-block space-y-6">
-              <div className="location-title px-10 py-8 lg:px-14 lg:py-12 rounded-3xl">
-                <h1 className="font-light text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight">
+          {/* Right Side - Grid Layout */}
+          <div className="content-section">
+            {/* Question Row */}
+            <div className="questions-row grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+              <div className="location-title px-6 py-4 lg:px-8 lg:py-6 rounded-2xl">
+                <h2 className="font-light text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
                   <span className="question-emphasis font-extralight italic">Where</span> am I located?
-                </h1>
+                </h2>
               </div>
-              <div className="location-information px-10 py-8 lg:px-14 lg:py-12 rounded-3xl">
-                <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-white/95 leading-relaxed">
+              <div className="location-title px-6 py-4 lg:px-8 lg:py-6 rounded-2xl">
+                <h2 className="font-light text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
+                  <span className="question-emphasis font-extralight italic">Where</span> am I studying?
+                </h2>
+              </div>
+            </div>
+
+            {/* Answer Row */}
+            <div className="answers-row grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mt-4">
+              <div className="compact-answer">
+                <p className="text-lg sm:text-xl lg:text-2xl text-white/95 leading-relaxed">
                   Currently coding life away in sunny <em className="text-cyan-200 font-medium">Cebu</em>, 
                   at the center of <em className="text-cyan-200 font-medium">Visayas, Philippines</em>
                 </p>
               </div>
-            </div>
-
-            {/* Education Question and Answer */}
-            <div className="education-block space-y-6">
-              <div className="location-title px-10 py-8 lg:px-14 lg:py-12 rounded-3xl">
-                <h1 className="font-light text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight">
-                  <span className="question-emphasis font-extralight italic">Where</span> am I studying?
-                </h1>
-              </div>
-              <div className="location-information px-10 py-8 lg:px-14 lg:py-12 rounded-3xl">
-                <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-white/95 leading-relaxed">
+              <div className="compact-answer">
+                <p className="text-lg sm:text-xl lg:text-2xl text-white/95 leading-relaxed">
                   Currently studying Computer Science at{" "}
                   <em className="text-purple-200 font-medium">The University of San Carlos</em>
                 </p>
