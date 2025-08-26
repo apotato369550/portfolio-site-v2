@@ -68,21 +68,21 @@ const LocationSection = () => {
           {/* Right Side - Grid Layout */}
           <div className="content-section">
             {/* Question Row */}
-            <div className="questions-row grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+            <div className="questions-row grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
               <div className="location-title px-6 py-4 lg:px-8 lg:py-6 rounded-2xl">
-                <h2 className="font-light text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
+                <h2 className="font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
                   <span className="question-emphasis font-extralight italic">Where</span> am I located?
                 </h2>
               </div>
               <div className="location-title px-6 py-4 lg:px-8 lg:py-6 rounded-2xl">
-                <h2 className="font-light text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
+                <h2 className="font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
                   <span className="question-emphasis font-extralight italic">Where</span> am I studying?
                 </h2>
               </div>
             </div>
 
             {/* Answer Row */}
-            <div className="answers-row grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mt-4">
+            <div className="answers-row grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-4">
               <div className="compact-answer">
                 <p className="text-lg sm:text-xl lg:text-2xl text-white/95 leading-relaxed">
                   Currently coding life away in sunny <em className="text-cyan-200 font-medium">Cebu</em>, 
