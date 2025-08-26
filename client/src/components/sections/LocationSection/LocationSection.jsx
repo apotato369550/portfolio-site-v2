@@ -57,7 +57,7 @@ const LocationSection = () => {
             <div className="cebu-container">
               <div className="cebu-image flex justify-center">
                 <img
-                  className="cebu w-72 sm:w-80 lg:w-96 xl:w-[28rem] h-auto relative z-20"
+                  className="cebu w-65 sm:w-75 lg:w-85 xl:w-[23rem] h-auto relative z-20"
                   src={cebuImage}
                   alt="Cebu cityscape"
                 />
