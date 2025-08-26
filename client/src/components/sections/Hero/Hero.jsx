@@ -23,15 +23,15 @@ const Hero = () => {
                 </h1>
               </div>
               <div className="name-and-roles space-y-4">
-                <span className="name text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl m-0 text-white font-medium block">
+                <span className="name text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl m-0 text-white font-medium block">
                   <strong className="text-pink-400">J</strong>ohn{" "}
                   <strong className="text-purple-400">A</strong>ndre{" "}
                   <strong className="text-blue-400">Y</strong>ap
                 </span>
-                <p className="roles text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl m-0 text-white font-light">
+                <p className="roles text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl m-0 text-white font-light">
                   Fullstack Developer - Data Scientist
                 </p>
-                <p className="roles text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl m-0 text-white font-light">
+                <p className="roles text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl m-0 text-white font-light">
                   Student - Scholar - Developer
                 </p>
               </div>

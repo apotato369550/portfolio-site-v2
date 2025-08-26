@@ -161,7 +161,7 @@
   }
   
   .jay {
-    font-size: 6rem !important; /* Ensure JAY is still prominent on mobile */
+    font-size: 6em !important; /* Ensure JAY is still prominent on mobile */
   }
 }
 
