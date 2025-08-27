@@ -27,127 +27,184 @@ const TechStackSection = () => {
   return (
     <div
       id="tech-stack-section"
-      className="m-0 p-0 h-screen w-full relative overflow-hidden lg:h-screen"
+      className="m-0 p-0 w-full relative overflow-hidden"
     >
-      <div className="tech-stack-image-container h-full w-full absolute top-0 left-0 min-h-screen">
-        <div className="tech-stack-container flex flex-col mx-auto lg:flex-row lg:h-full">
-          <div className="left-container w-4/5 lg:w-2/5 mx-auto mt-7 lg:mt-7 lg:ml-5 lg:h-95">
-            <div className="tech-stack-title px-3 py-1 rounded-3xl mb-5 lg:mb-5">
-              <h1 className="font-normal text-4xl lg:text-5xl">
-                <span className="question-emphasis font-extralight italic">
-                  What
-                </span>{" "}
-                do I work with?
-              </h1>
-            </div>
-            <div className="languages-and-frameworks px-3 py-1 rounded-3xl mb-5 lg:mb-5">
-              <div className="subtitle mb-2">
-                <h2 className="text-2xl lg:text-3xl">
-                  Languages and Frameworks
-                </h2>
-              </div>
-              <div className="html-css-js w-full flex mb-2">
-                <img
-                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                  src={htmlImage}
-                  alt="html image"
-                />
-                <img
-                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                  src={cssImage}
-                  alt="css image"
-                />
-                <img
-                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                  src={jsImage}
-                  alt="javascript image"
-                />
-              </div>
-              <div className="mongo-express-react w-full flex mb-2">
-                <img
-                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                  src={mongodbImage}
-                  alt="mongodb image"
-                />
-                <img
-                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                  src={expressJsImage}
-                  alt="expressjs image"
-                />
-                <img
-                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                  src={reactImage}
-                  alt="react image"
-                />
-              </div>
-              <div className="node-python w-full flex mb-2">
-                <img
-                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                  src={nodeJsImage}
-                  alt="nodejs image"
-                />
-                <img
-                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                  src={pythonImage}
-                  alt="python image"
-                />
-              </div>
-            </div>
+      <div className="tech-stack-gradient-container h-full w-full m-0 p-0">
+        {/* Floating Crystal Elements */}
+        <div className="tech-floating-crystals absolute inset-0 z-1">
+          <div className="tech-crystal tech-crystal-1 absolute w-20 h-20 bg-gradient-to-br from-cyan-400/30 to-transparent rounded-xl transform rotate-45 blur-sm"></div>
+          <div className="tech-crystal tech-crystal-2 absolute w-16 h-16 bg-gradient-to-br from-purple-400/30 to-transparent rounded-xl transform rotate-12 blur-sm"></div>
+          <div className="tech-crystal tech-crystal-3 absolute w-24 h-10 bg-gradient-to-br from-pink-400/30 to-transparent rounded-xl transform -rotate-30 blur-sm"></div>
+          <div className="tech-crystal tech-crystal-4 absolute w-18 h-18 bg-gradient-to-br from-blue-400/30 to-transparent rounded-xl transform rotate-60 blur-sm"></div>
+          <div className="tech-crystal tech-crystal-5 absolute w-14 h-14 bg-gradient-to-br from-cyan-300/25 to-transparent rounded-xl transform -rotate-45 blur-sm"></div>
+        </div>
+
+        {/* Wireframe Geometric Elements */}
+        <div className="tech-wireframe-elements absolute inset-0 z-2 pointer-events-none">
+          <svg className="tech-wireframe tech-wireframe-1 absolute w-28 h-28" viewBox="0 0 100 100">
+            <polygon points="50,10 90,90 10,90" className="tech-wireframe" />
+          </svg>
+          <svg className="tech-wireframe tech-wireframe-2 absolute w-24 h-24" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="35" className="tech-wireframe" />
+          </svg>
+          <svg className="tech-wireframe tech-wireframe-3 absolute w-20 h-20" viewBox="0 0 100 100">
+            <rect x="15" y="15" width="70" height="70" className="tech-wireframe" />
+          </svg>
+          <svg className="tech-wireframe tech-wireframe-4 absolute w-22 h-22" viewBox="0 0 100 100">
+            <polygon points="50,20 80,40 80,80 20,80 20,40" className="tech-wireframe" />
+          </svg>
+        </div>
+
+        {/* Enhanced Ellipse Effects */}
+        <div className="tech-ellipse tech-ellipse-1 absolute rounded-full transform rotate-30"></div>
+        <div className="tech-ellipse tech-ellipse-2 absolute rounded-full transform -rotate-15"></div>
+        <div className="tech-ellipse tech-ellipse-3 absolute rounded-full transform rotate-45"></div>
+
+        {/* Glowing Orbs */}
+        <div className="tech-orb tech-orb-1 w-5 h-5 bg-cyan-400 rounded-full blur-sm"></div>
+        <div className="tech-orb tech-orb-2 w-4 h-4 bg-purple-400 rounded-full blur-sm"></div>
+        <div className="tech-orb tech-orb-3 w-6 h-6 bg-pink-400 rounded-full blur-sm"></div>
+        <div className="tech-orb tech-orb-4 w-3 h-3 bg-blue-400 rounded-full blur-sm"></div>
+
+        <div className="tech-stack-container">
+          {/* Title Section */}
+          <div className="tech-stack-title">
+            <h1 className="font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
+              <span className="question-emphasis font-extralight italic">What</span> do I work with?
+            </h1>
           </div>
-          <div className="right-container w-4/5 lg:w-2/5 mx-auto lg:mr-5 lg:h-95">
-            <div className="tools-and-platforms px-3 py-1 rounded-3xl mb-5 lg:mb-5">
-              <div className="subtitle mb-2">
-                <h2 className="text-2xl lg:text-3xl">Tools and Platforms</h2>
-              </div>
-              <div className="tools-and-platforms-icons w-full flex mb-2">
-                <div className="github-and-firebase mx-auto flex flex-col lg:flex-row">
+
+          {/* Tech Categories Grid */}
+          <div className="tech-categories-grid">
+            {/* Languages and Frameworks */}
+            <div className="tech-category-card languages-frameworks">
+              <h2 className="tech-category-title text-2xl lg:text-3xl">
+                Languages and Frameworks
+              </h2>
+              <div className="tech-icons-grid">
+                <div className="tech-icon-container">
                   <img
-                    className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                    src={githubImage}
-                    alt="github logo"
-                  />
-                  <img
-                    className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                    src={firebaseImage}
-                    alt="firebase logo"
+                    className="tech-stack-icon"
+                    src={htmlImage}
+                    alt="HTML5"
                   />
                 </div>
-                <div className="jupyter mx-auto">
+                <div className="tech-icon-container">
                   <img
-                    className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                    src={jupyterImage}
-                    alt="jupyter logo"
+                    className="tech-stack-icon"
+                    src={cssImage}
+                    alt="CSS3"
                   />
                 </div>
-                <div className="figma-and-git mx-auto flex flex-col lg:flex-row">
+                <div className="tech-icon-container">
                   <img
-                    className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                    src={figmaImage}
-                    alt="figma logo"
+                    className="tech-stack-icon"
+                    src={jsImage}
+                    alt="JavaScript"
                   />
+                </div>
+                <div className="tech-icon-container">
                   <img
-                    className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                    src={gitImage}
-                    alt="git logo"
+                    className="tech-stack-icon"
+                    src={mongodbImage}
+                    alt="MongoDB"
+                  />
+                </div>
+                <div className="tech-icon-container">
+                  <img
+                    className="tech-stack-icon"
+                    src={expressJsImage}
+                    alt="Express.js"
+                  />
+                </div>
+                <div className="tech-icon-container">
+                  <img
+                    className="tech-stack-icon"
+                    src={reactImage}
+                    alt="React"
+                  />
+                </div>
+                <div className="tech-icon-container">
+                  <img
+                    className="tech-stack-icon"
+                    src={nodeJsImage}
+                    alt="Node.js"
+                  />
+                </div>
+                <div className="tech-icon-container">
+                  <img
+                    className="tech-stack-icon"
+                    src={pythonImage}
+                    alt="Python"
                   />
                 </div>
               </div>
             </div>
-            <div className="currently-exploring px-3 py-1 rounded-3xl mb-5 lg:mb-5">
-              <div className="subtitle mb-2">
-                <h2 className="text-2xl lg:text-3xl">Currently Exploring</h2>
+
+            {/* Tools and Platforms */}
+            <div className="tech-category-card tools-platforms">
+              <h2 className="tech-category-title text-2xl lg:text-3xl">
+                Tools and Platforms
+              </h2>
+              <div className="tech-icons-grid">
+                <div className="tech-icon-container">
+                  <img
+                    className="tech-stack-icon"
+                    src={githubImage}
+                    alt="GitHub"
+                  />
+                </div>
+                <div className="tech-icon-container">
+                  <img
+                    className="tech-stack-icon"
+                    src={firebaseImage}
+                    alt="Firebase"
+                  />
+                </div>
+                <div className="tech-icon-container">
+                  <img
+                    className="tech-stack-icon"
+                    src={jupyterImage}
+                    alt="Jupyter"
+                  />
+                </div>
+                <div className="tech-icon-container">
+                  <img
+                    className="tech-stack-icon"
+                    src={figmaImage}
+                    alt="Figma"
+                  />
+                </div>
+                <div className="tech-icon-container">
+                  <img
+                    className="tech-stack-icon"
+                    src={gitImage}
+                    alt="Git"
+                  />
+                </div>
               </div>
-              <div className="c-and-scikitlearn w-full flex mb-2">
-                <img
-                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                  src={cImage}
-                  alt="c programming language"
-                />
-                <img
-                  className="tech-stack-icon h-20 lg:h-12 mx-auto"
-                  src={scikitlearnImage}
-                  alt="scikit-learn"
-                />
+            </div>
+
+            {/* Currently Exploring */}
+            <div className="tech-category-card exploring">
+              <h2 className="tech-category-title text-2xl lg:text-3xl">
+                Currently Exploring
+              </h2>
+              <div className="tech-icons-grid">
+                <div className="tech-icon-container">
+                  <img
+                    className="tech-stack-icon"
+                    src={cImage}
+                    alt="C Programming"
+                  />
+                </div>
+                <div className="tech-icon-container">
+                  <img
+                    className="tech-stack-icon"
+                    src={scikitlearnImage}
+                    alt="Scikit-learn"
+                  />
+                </div>
               </div>
             </div>
           </div>
