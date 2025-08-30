@@ -109,7 +109,7 @@
 
 /* Enhanced Content Cards */
 .location-title {
-  background: linear-gradient(135deg, rgba(57,217,253,.9), rgba(0,255,255,.8));
+  background: linear-gradient(135deg, rgba(57,217,253,.7), rgba(0,255,255,.6));
   backdrop-filter: blur(20px);
   border: 1px solid rgba(0,255,255,.4);
   box-shadow: 0 15px 50px rgba(0,0,0,.4), 0 0 40px rgba(0,255,255,.25);
@@ -122,7 +122,7 @@
 }
 
 .location-information {
-  background: linear-gradient(135deg, rgba(216,73,238,.9), rgba(255,0,255,.8));
+  background: linear-gradient(135deg, rgba(216,73,238,.7), rgba(255,0,255,.6));
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255,0,255,.4);
   box-shadow: 0 15px 50px rgba(0,0,0,.4), 0 0 40px rgba(255,0,255,.25);

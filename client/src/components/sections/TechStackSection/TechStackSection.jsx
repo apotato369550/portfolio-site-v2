@@ -81,7 +81,7 @@ const TechStackSection = () => {
               <h2 className="tech-category-title text-2xl lg:text-3xl">
                 Languages and Frameworks
               </h2>
-              <div className="tech-icons-grid">
+              <div className="tech-icons-container">
                 <div className="tech-icon-container">
                   <img
                     className="tech-stack-icon"
@@ -146,7 +146,7 @@ const TechStackSection = () => {
               <h2 className="tech-category-title text-2xl lg:text-3xl">
                 Tools and Platforms
               </h2>
-              <div className="tech-icons-grid">
+              <div className="tech-icons-container">
                 <div className="tech-icon-container">
                   <img
                     className="tech-stack-icon"
@@ -190,7 +190,7 @@ const TechStackSection = () => {
               <h2 className="tech-category-title text-2xl lg:text-3xl">
                 Currently Exploring
               </h2>
-              <div className="tech-icons-grid">
+              <div className="tech-icons-container">
                 <div className="tech-icon-container">
                   <img
                     className="tech-stack-icon"
