@@ -34,7 +34,7 @@
     {
         "name": "Data Structures, Algorithms, and NeetCode 150",
         "description": "Learning and grinding LeetCode questions in Python, while learning Data Structures and Algorithms (DSA) fundamentals in C",
-        "image": "/projects/cbvt/cbvt.png",
+        "image": "/projects/cbvt/dsa.png",
         "github_url": "https://github.com/apotato369550/dsa-notes",
         "tech_stack": [
             {

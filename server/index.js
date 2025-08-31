@@ -24,11 +24,12 @@ const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
 const app = express();
-const port = 5000;
+const port = 3001;
 const mongoUri = process.env.MONGODB_URI
 
 app.use(express.json());
 app.use(cors());
+app.use('/api/projects/images', express.static(path.join(__dirname, 'assets', 'projects')));
 
 // test me!!!
 app.use("/api", dataCampRoutes);
