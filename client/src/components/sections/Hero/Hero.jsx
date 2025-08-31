@@ -23,24 +23,19 @@ const Hero = () => {
                 </h1>
               </div>
               <div className="name-and-roles space-y-4">
-                <span className="name text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl m-0 text-white font-medium block">
-                  <strong className="text-pink-400">J</strong>ohn{" "}
-                  <strong className="text-purple-400">A</strong>ndre{" "}
-                  <strong className="text-blue-400">Y</strong>ap
+                <span className="name text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl m-0 text-white font-bold block">
+                  <strong className="text-white">J</strong>ohn{" "}
+                  <strong className="text-white">A</strong>ndre{" "}
+                  <strong className="text-white">Y</strong>ap
                 </span>
-                <p className="roles text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl m-0 text-white font-light">
+                <p className="roles text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl m-0 text-white font-normal">
                   Fullstack Developer - Data Scientist
                 </p>
-                <p className="roles text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl m-0 text-white font-light">
+                <p className="roles text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl m-0 text-white font-normal">
                   Student - Scholar - Developer
                 </p>
               </div>
             </div>
-          </div>
-          <div className="scroll-instruction absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
-            <p className="text-white text-lg sm:text-xl lg:text-2xl xl:text-3xl font-light">
-              Scroll or Click The Navbar to Get Started!
-            </p>
           </div>
         </div>
       </div>

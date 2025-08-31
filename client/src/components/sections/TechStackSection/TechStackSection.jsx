@@ -2,26 +2,26 @@ import React from "react";
 import "./TechStackSection.css";
 
 // languages and frameworks
-import htmlImage from "../../../assets/html_5_photo.png";
-import cssImage from "../../../assets/css_photo.png";
-import jsImage from "../../../assets/js_photo.png";
+import htmlImage from "../../../assets/TechStackSection/html_5_photo.png";
+import cssImage from "../../../assets/TechStackSection/css_photo.png";
+import jsImage from "../../../assets/TechStackSection/js_photo.png";
 
-import mongodbImage from "../../../assets/mongodb.png";
-import expressJsImage from "../../../assets/express.js.png";
-import reactImage from "../../../assets/circle_react.png";
-import nodeJsImage from "../../../assets/node.js.png";
-import pythonImage from "../../../assets/python.png";
+import mongodbImage from "../../../assets/TechStackSection/mongodb.png";
+import expressJsImage from "../../../assets/TechStackSection/express.js.png";
+import reactImage from "../../../assets/TechStackSection/circle_react.png";
+import nodeJsImage from "../../../assets/TechStackSection/node.js.png";
+import pythonImage from "../../../assets/TechStackSection/python.png";
 
 // tools and platforms
-import githubImage from "../../../assets/github-logo.png";
-import firebaseImage from "../../../assets/firebase logo.png";
-import jupyterImage from "../../../assets/Jupyter_logo.svg.png";
-import figmaImage from "../../../assets/figma.png";
-import gitImage from "../../../assets/git logo.png";
+import githubImage from "../../../assets/TechStackSection/github-logo.png";
+import firebaseImage from "../../../assets/TechStackSection/firebase logo.png";
+import jupyterImage from "../../../assets/TechStackSection/Jupyter_logo.svg.png";
+import figmaImage from "../../../assets/TechStackSection/figma.png";
+import gitImage from "../../../assets/TechStackSection/git logo.png";
 
 // things i'm exploring
-import cImage from "../../../assets/c_logo.png";
-import scikitlearnImage from "../../../assets/scikitlearn logo.png";
+import cImage from "../../../assets/TechStackSection/c_logo.png";
+import scikitlearnImage from "../../../assets/TechStackSection/scikitlearn logo.png";
 
 const TechStackSection = () => {
   return (

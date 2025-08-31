@@ -10,7 +10,7 @@ const Navbar = () => {
           <li className="navbar-item">
             <a
               href="#hero"
-              className="text-white no-underline text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
+              className="text-white no-underline text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
             >
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-1 bg-cyan-300 transition-all duration-300 group-hover:w-full"></span>
@@ -19,7 +19,7 @@ const Navbar = () => {
           <li className="navbar-item">
             <a
               href="#about"
-              className="text-white no-underline text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
+              className="text-white no-underline text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
             >
               About Me
               <span className="absolute -bottom-1 left-0 w-0 h-1 bg-cyan-300 transition-all duration-300 group-hover:w-full"></span>
@@ -28,7 +28,7 @@ const Navbar = () => {
           <li className="navbar-item">
             <a
               href="#technologies"
-              className="text-white no-underline text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
+              className="text-white no-underline text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
             >
               What I Work With
               <span className="absolute -bottom-1 left-0 w-0 h-1 bg-cyan-300 transition-all duration-300 group-hover:w-full"></span>
@@ -37,7 +37,7 @@ const Navbar = () => {
           <li className="navbar-item">
             <a
               href="#projects"
-              className="text-white no-underline text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
+              className="text-white no-underline text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
             >
               What I'm Working On
               <span className="absolute -bottom-1 left-0 w-0 h-1 bg-cyan-300 transition-all duration-300 group-hover:w-full"></span>
@@ -46,7 +46,7 @@ const Navbar = () => {
           <li className="navbar-item">
             <a
               href="#contact"
-              className="text-white no-underline text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
+              className="text-white no-underline text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
             >
               Reach Out To Me
               <span className="absolute -bottom-1 left-0 w-0 h-1 bg-cyan-300 transition-all duration-300 group-hover:w-full"></span>
