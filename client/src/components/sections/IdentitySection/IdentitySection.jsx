@@ -1,7 +1,7 @@
 import React from "react";
 import "./IdentitySection.css";
-import statueImage from "../../../assets/vaporwave statue.png";
-import pillarImage from "../../../assets/new_pillar.png";
+import statueImage from "../../../assets/IdentitySection/vaporwave statue.png";
+import pillarImage from "../../../assets/IdentitySection/new_pillar.png";
 
 const IdentitySection = () => {
   return (
