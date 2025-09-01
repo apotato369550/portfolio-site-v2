@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ProjectsSection.css';
+import GitHubCalendar from 'react-github-calendar';
 
 // Import project assets
 
@@ -9,6 +10,11 @@ const ProjectsSection = () => {
   const [leetcode, setLeetcode] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  // Vaporwave theme for GitHub calendar
+  const vaporwaveTheme = {
+    light: ['rgba(255,0,128,0.1)', 'rgba(57,217,253,0.3)', 'rgba(255,0,128,0.6)', '#ff00ff', '#4c1d95']
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -119,7 +125,7 @@ const ProjectsSection = () => {
               {/* Commit Calendar Placeholder */}
               <div className="commit-calendar glass-morphism p-6 rounded-xl">
                 <h3 className="text-xl text-white mb-4">Commit Activity</h3>
-                <div className="text-gray-300">GitHub commit calendar would go here</div>
+                <GitHubCalendar username="apotato369550" theme={vaporwaveTheme} maxLevel={4} className="github-calendar-vaporwave" />
               </div>
 
               {/* Recent Commits List */}
@@ -129,7 +135,7 @@ const ProjectsSection = () => {
                   {commits.slice(0, 10).map((commit, index) => (
                     <div key={index} className="commit-item border-b border-gray-600 pb-3 last:border-b-0">
                       <div className="text-white font-medium">{commit.name}</div>
-                      <div className="text-gray-300 text-sm">{commit.last_commit_message}</div>
+                      <div className="commit-message text-gray-300 text-sm">{commit.last_commit_message}</div>
                       <div className="text-gray-400 text-xs">{commit.date}</div>
                     </div>
                   ))}

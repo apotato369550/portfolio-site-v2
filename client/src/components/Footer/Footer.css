@@ -1,0 +1,54 @@
+/* Footer.css - Adding that vaporwave glow and flash, cuz why not? */
+
+.footer {
+  position: relative;
+  /* Base styles are in JSX with Tailwind, but here we add the magic */
+}
+
+.glow-text {
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+  animation: glow-pulse 2s ease-in-out infinite alternate;
+}
+
+.glow-link {
+  transition: all 0.3s ease;
+}
+
+.glow-link:hover {
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  transform: scale(1.05);
+}
+
+/* Flashy animation for the bottom text */
+@keyframes glow-pulse {
+  from {
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  }
+  to {
+    text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00ffff;
+  }
+}
+
+/* Extra flashy border effect */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #8000ff);
+  animation: border-flash 3s linear infinite;
+}
+
+@keyframes border-flash {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Make sure it's responsive - Tailwind handles most, but add some custom if needed */
+@media (max-width: 768px) {
+  .glow-text {
+    font-size: 1rem; /* Smaller on mobile for better fit */
+  }
+}

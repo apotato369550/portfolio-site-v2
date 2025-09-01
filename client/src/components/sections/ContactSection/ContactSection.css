@@ -1,0 +1,231 @@
+/* Contact Section - Full vaporwave contact mode */
+#contact-section {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-gradient-container {
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating Elements - Making it pop with extra glow */
+.contact-floating-elements { z-index: 1; }
+
+/* Ellipse Effects - Amped up for vaporwave */
+.contact-ellipse {
+  background: linear-gradient(45deg, rgba(255,0,128,.4), rgba(0,255,255,.3), rgba(255,0,255,.4));
+  box-shadow: 0 0 40px rgba(255,0,128,.4), 0 0 80px rgba(0,255,255,.2);
+  animation: contactFloat 10s ease-in-out infinite;
+}
+.contact-ellipse-1 {
+  width: 40vw; height: 12vh;
+  top: 20%; left: -8vw;
+  animation-delay: 0s;
+}
+.contact-ellipse-2 {
+  width: 38vw; height: 11vh;
+  top: 50%; right: -6vw;
+  animation-delay: 3s;
+}
+.contact-ellipse-3 {
+  width: 32vw; height: 8vh;
+  bottom: 15%; left: 3vw;
+  animation-delay: 6s;
+}
+@keyframes contactFloat {
+  0%,100%{transform:rotate(25deg) translateY(0) scale(1)}
+  50%{transform:rotate(25deg) translateY(-20px) scale(1.1)}
+}
+
+/* Stars - Extra flashy */
+.contact-star {
+  position: absolute;
+  z-index: 15;
+  filter: blur(2px);
+  opacity: .8;
+  animation: contactStarPulse 8s ease-in-out infinite;
+}
+.contact-star-1 { top: 15%; left: 85%; animation-delay: 0s; }
+.contact-star-2 { top: 85%; left: 15%; animation-delay: 5s; }
+.contact-star-3 { top: 45%; right: 8%; animation-delay: 2s; }
+@keyframes contactStarPulse {
+  0%,100%{opacity:.5;transform:scale(1)}
+  50%{opacity:1;transform:scale(1.5)}
+}
+
+/* Wireframe Elements - Vaporwave grid vibes */
+.contact-wireframe {
+  stroke: rgba(0,255,255,0.5);
+  stroke-width: 3;
+  fill: none;
+  animation: contactWireframePulse 6s ease-in-out infinite;
+}
+.contact-wireframe-1 { top: 10%; left: 20%; animation-delay: 0s; }
+.contact-wireframe-2 { top: 40%; right: 25%; animation-delay: 4s; }
+@keyframes contactWireframePulse {
+  0%,100%{opacity:.3}
+  50%{opacity:.8}
+}
+
+/* Main Container */
+.contact-container {
+  position: relative;
+  z-index: 10;
+  padding: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Title */
+.contact-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Contact Emphasis - Rainbow glow effect */
+.contact-emphasis {
+  background: linear-gradient(90deg, #ff0080, #ff8000, #ffff00, #00ff00, #00ffff, #0080ff, #8000ff, #ff0080);
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: contactRainbowGlow 5s linear infinite;
+  filter: drop-shadow(0 0 20px rgba(255,0,128,0.5));
+}
+
+@keyframes contactRainbowGlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 400% 50%; }
+}
+
+/* Glass Morphism - Enhanced vaporwave style */
+.glass-morphism {
+  background: linear-gradient(135deg, rgba(0,255,255,0.1), rgba(255,0,255,0.15), rgba(0,255,255,0.1));
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(0,255,255,.4);
+  box-shadow: 0 20px 60px rgba(0,0,0,.5), 0 0 50px rgba(0,255,255,.3), 0 0 80px rgba(255,0,255,.2);
+  transition: all 0.5s cubic-bezier(0.4,0,0.2,1);
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-morphism::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,255,255,0.2), transparent);
+  animation: contactShimmer 4s infinite;
+}
+
+@keyframes contactShimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.glass-morphism:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 80px rgba(0,0,0,.6), 0 0 70px rgba(0,255,255,.5), 0 0 100px rgba(255,0,255,.3);
+}
+
+/* Contact Form Styles */
+.contact-input {
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+}
+
+.contact-input:focus {
+  box-shadow: 0 0 20px rgba(255,0,255,0.5), 0 0 30px rgba(0,255,255,0.3);
+  transform: scale(1.02);
+}
+
+.contact-submit-btn {
+  background: linear-gradient(135deg, #00ffff, #ff00ff);
+  box-shadow: 0 0 20px rgba(0,255,255,0.5), 0 0 30px rgba(255,0,255,0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0,255,255,0.7), 0 0 40px rgba(255,0,255,0.5);
+}
+
+.contact-submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: contactBtnShimmer 2s infinite;
+}
+
+@keyframes contactBtnShimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 1.5rem;
+  }
+
+  .contact-floating-elements {
+    display: none;
+  }
+
+  .contact-ellipse {
+    display: none;
+  }
+
+  .contact-star {
+    width: 10px;
+    height: 10px;
+  }
+
+  .contact-wireframe {
+    display: none;
+  }
+
+  .contact-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .glass-morphism {
+    padding: 1.5rem;
+  }
+
+  .contact-input {
+    padding: 0.75rem;
+  }
+
+  .contact-submit-btn {
+    padding: 0.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-container {
+    padding: 4rem;
+  }
+}
+
+/* Extra flashy animations for mobile */
+@media (max-width: 768px) {
+  .contact-emphasis {
+    animation-duration: 3s;
+  }
+}
