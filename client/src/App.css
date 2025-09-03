@@ -19,3 +19,7 @@ body {
   padding: 0;
   width: 100vw;
 }
+
+.contact-section + footer {
+  margin-top: 0;
+}

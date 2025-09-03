@@ -17,7 +17,7 @@ function App() {
       <TechStackSection />
       <ProjectsSection />
       <DataCampSection />
-      <ContactSection style={{ minHeight: 'auto' }} />
+      <ContactSection />
       <Footer />
     </>
   );

@@ -73,7 +73,7 @@ const ContactSection = () => {
   };
 
   return (
-    <div id="contact-section" className="m-0 p-0 w-full relative overflow-hidden min-h-screen">
+    <div id="contact-section" className="m-0 p-0 w-full relative overflow-hidden">
       <div className="contact-gradient-container h-full w-full m-0 p-0 relative">
 
         {/* Floating vaporwave elements - making it pop */}
