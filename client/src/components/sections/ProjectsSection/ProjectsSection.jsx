@@ -88,16 +88,16 @@ const ProjectsSection = () => {
         <div className="projects-container relative z-10">
 
           {/* Title */}
-          <div className="projects-title mb-12">
-            <h1 className="font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
+          <div className="projects-title mb-8 sm:mb-10 md:mb-12">
+            <h1 className="font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight">
               <span className="question-emphasis font-extralight italic">What</span> have I been working on?
             </h1>
           </div>
 
           {/* Projects Grid */}
-          <div className="projects-grid mb-16">
-            <h2 className="text-3xl lg:text-4xl text-white mb-8 font-light">My Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="projects-grid mb-12 sm:mb-14 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white mb-6 sm:mb-8 font-light">My Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {projects.map((project, index) => (
                 <div key={index} className="project-card glass-morphism p-6 rounded-xl hover:scale-105 transition-transform duration-300">
                   <img src={`http://localhost:3001/api/projects/images/${project.image.split('/').pop()}`} alt={project.name} className="w-full h-32 object-cover rounded-lg mb-4" />
@@ -119,9 +119,9 @@ const ProjectsSection = () => {
           </div>
 
           {/* Commits Section */}
-          <div className="commits-section mb-16">
-            <h2 className="text-3xl lg:text-4xl text-white mb-8 font-light">Recent Commits</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="commits-section mb-12 sm:mb-14 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white mb-6 sm:mb-8 font-light">Recent Commits</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               {/* Commit Calendar Placeholder */}
               <div className="commit-calendar glass-morphism p-6 rounded-xl">
                 <h3 className="text-xl text-white mb-4">Commit Activity</h3>
@@ -146,10 +146,10 @@ const ProjectsSection = () => {
 
           {/* LeetCode Section */}
           <div className="leetcode-section">
-            <h2 className="text-3xl lg:text-4xl text-white mb-8 font-light">LeetCode Activity</h2>
-            <div className="glass-morphism p-6 rounded-xl">
-              <h3 className="text-xl text-white mb-4">Recent Submissions</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white mb-6 sm:mb-8 font-light">LeetCode Activity</h2>
+            <div className="glass-morphism p-4 sm:p-6 rounded-xl">
+              <h3 className="text-lg sm:text-xl text-white mb-4">Recent Submissions</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 {leetcode.slice(0, 9).map((submission, index) => (
                   <div key={index} className="submission-item bg-gray-800/50 p-4 rounded-lg">
                     <div className="text-white font-medium">{submission.problem_name}</div>

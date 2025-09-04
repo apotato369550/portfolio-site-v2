@@ -37,7 +37,7 @@ const IdentitySection = () => {
           <div className="shape shape-4 absolute w-16 h-32 bg-gradient-to-br from-blue-400/20 to-pink-400/20 rounded-full blur-sm"></div>
         </div>
 
-        <div className="identity-container h-full w-full m-0 p-0 flex items-center justify-center px-6 lg:px-12 relative z-10">
+        <div className="identity-container h-full w-full m-0 p-0 flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 relative z-10">
           <div className="max-w-screen-2xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Statue with Enhanced Background Elements */}
             <div className="statue-container w-full flex justify-center items-center relative z-10">
@@ -78,9 +78,9 @@ const IdentitySection = () => {
               </div>
 
               {/* Larger Content Grid */}
-              <div className="content-grid grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+              <div className="content-grid grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 xl:gap-12">
                 {/* First Content Card */}
-                <div className="content-card identity-information-1 px-10 py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[220px] lg:min-h-[260px]">
+                <div className="content-card identity-information-1 px-6 py-6 sm:px-8 sm:py-8 md:px-10 md:py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[200px] sm:min-h-[220px] lg:min-h-[260px]">
                   <h3 className="text-cyan-100 font-medium text-lg lg:text-2xl mb-4 tracking-wide">Innovation</h3>
                   <p className="text-base sm:text-lg lg:text-2xl text-white/95 leading-relaxed">
                     A developer who bridges classical elegance with modern innovation, creating digital experiences that are both beautiful and functional.
@@ -88,7 +88,7 @@ const IdentitySection = () => {
                 </div>
 
                 {/* Second Content Card */}
-                <div className="content-card identity-information-2 px-10 py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[220px] lg:min-h-[260px]">
+                <div className="content-card identity-information-2 px-6 py-6 sm:px-8 sm:py-8 md:px-10 md:py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[200px] sm:min-h-[220px] lg:min-h-[260px]">
                   <h3 className="text-purple-100 font-medium text-lg lg:text-2xl mb-4 tracking-wide">Passion</h3>
                   <p className="text-base sm:text-lg lg:text-2xl text-white/95 leading-relaxed">
                     Driven by curiosity and a love for learning, exploring the intersection of art and science to create meaningful digital solutions.
@@ -96,7 +96,7 @@ const IdentitySection = () => {
                 </div>
 
                 {/* Third Content Card - Full Width */}
-                <div className="content-card identity-information-3 md:col-span-2 px-10 py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[220px] lg:min-h-[260px]">
+                <div className="content-card identity-information-3 md:col-span-2 px-6 py-6 sm:px-8 sm:py-8 md:px-10 md:py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[200px] sm:min-h-[220px] lg:min-h-[260px]">
                   <h3 className="text-pink-100 font-medium text-lg lg:text-2xl mb-4 tracking-wide">Excellence</h3>
                   <p className="text-base sm:text-lg lg:text-2xl text-white/95 leading-relaxed">
                     Committed to delivering high-quality solutions with attention to detail and user experience.

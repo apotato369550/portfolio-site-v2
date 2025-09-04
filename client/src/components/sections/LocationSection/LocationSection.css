@@ -247,8 +247,23 @@
   }
 }
 
+/* Split screen adjustments */
+@media (max-width: 768px) and (min-width: 641px) {
+  #location-section { height: 130vh; }
+  .location-container {
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+  .location-ellipse-1 { width: 45vw; height: 10vh; }
+  .location-ellipse-2 { width: 40vw; height: 9vh; }
+  .location-ellipse-3 { width: 35vw; height: 8vh; }
+  .crystal { width: 12px; height: 12px; }
+  .wireframe { width: 18px; height: 18px; }
+  .location-orb { width: 4px; height: 4px; }
+}
+
 /* Tablet Adjustments */
-@media (max-width: 1024px) and (min-width: 768px) {
+@media (max-width: 1024px) and (min-width: 769px) {
   #location-section { height: 120vh; }
   .location-container {
     gap: 2.5rem;

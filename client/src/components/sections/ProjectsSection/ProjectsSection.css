@@ -233,8 +233,60 @@
   100% { background-position: 200% 50%; }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Split screen adjustments */
+@media (max-width: 768px) and (min-width: 641px) {
+  .projects-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .projects-ellipse-1 { width: 50vw; height: 12vh; }
+  .projects-ellipse-2 { width: 45vw; height: 11vh; }
+  .projects-ellipse-3 { width: 40vw; height: 9vh; }
+
+  .projects-star {
+    width: 6px;
+    height: 6px;
+  }
+
+  .projects-wireframe {
+    width: 16px;
+    height: 16px;
+  }
+
+  .projects-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .projects-grid h2,
+  .commits-section h2,
+  .leetcode-section h2 {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+  }
+
+  .commit-calendar,
+  .recent-commits {
+    padding: 1.25rem;
+  }
+
+  .submission-item {
+    padding: 1rem;
+  }
+
+  .projects-grid .grid {
+    gap: 1.5rem;
+  }
+
+  .commits-section .grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
   .projects-container {
     padding: 1.5rem;
   }

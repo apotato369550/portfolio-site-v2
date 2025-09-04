@@ -115,9 +115,40 @@
   50% { opacity: 1; }
 }
 
-/* Make sure it's responsive - Tailwind handles most, but add some custom if needed */
-@media (max-width: 768px) {
+/* Split screen adjustments */
+@media (max-width: 768px) and (min-width: 641px) {
+  .glow-text {
+    font-size: 1.25rem;
+  }
+
+  .glow-link {
+    font-size: 1rem;
+  }
+
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-bg::before {
+    background-size: 30px 30px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
   .glow-text {
     font-size: 1.125rem; /* Adjusted for new text-xl base */
+  }
+
+  .glow-link {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    padding: 1rem 0.5rem;
+  }
+
+  .footer-bg::before {
+    background-size: 25px 25px;
   }
 }

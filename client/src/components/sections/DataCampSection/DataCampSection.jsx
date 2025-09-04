@@ -92,16 +92,16 @@ const DataCampSection = () => {
         <div className="datacamp-container relative z-10">
 
           {/* Title with that vaporwave flair */}
-          <div className="datacamp-title mb-12">
-            <h1 className="font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
+          <div className="datacamp-title mb-8 sm:mb-10 md:mb-12">
+            <h1 className="font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight">
               <span className="datacamp-emphasis font-extralight italic">DataCamp</span> Projects
             </h1>
           </div>
 
           {/* Projects Grid - grid layout with Tailwind */}
-          <div className="datacamp-grid mb-16">
-            <h2 className="text-3xl lg:text-4xl text-white mb-8 font-light">My Data Science Adventures</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="datacamp-grid mb-12 sm:mb-14 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white mb-6 sm:mb-8 font-light">My Data Science Adventures</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {projects.map((project, index) => (
                 <div key={index} className="datacamp-card glass-morphism p-6 rounded-xl hover:scale-105 transition-transform duration-300">
                   <img
@@ -128,9 +128,9 @@ const DataCampSection = () => {
           </div>
 
           {/* Courses and Certificates Grid */}
-          <div className="datacamp-grid mb-16">
-            <h2 className="text-3xl lg:text-4xl text-white mb-8 font-light">Courses & Certificates</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="datacamp-grid mb-12 sm:mb-14 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white mb-6 sm:mb-8 font-light">Courses & Certificates</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {courses.map((course, index) => (
                 <div key={index} className="datacamp-card glass-morphism p-6 rounded-xl hover:scale-105 transition-transform duration-300">
                   <h3 className="text-xl text-white mb-2">{course.course_title}</h3>

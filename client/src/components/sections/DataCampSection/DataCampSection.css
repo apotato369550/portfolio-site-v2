@@ -197,8 +197,50 @@
   transform: scale(1.05);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Split screen adjustments */
+@media (max-width: 768px) and (min-width: 641px) {
+  .datacamp-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .datacamp-ellipse-1 { width: 50vw; height: 14vh; }
+  .datacamp-ellipse-2 { width: 45vw; height: 13vh; }
+  .datacamp-ellipse-3 { width: 38vw; height: 10vh; }
+
+  .datacamp-star {
+    width: 6px;
+    height: 6px;
+  }
+
+  .datacamp-wireframe {
+    width: 16px;
+    height: 16px;
+  }
+
+  .datacamp-title h1 {
+    font-size: 3rem;
+  }
+
+  .datacamp-grid h2 {
+    font-size: 2.2rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .datacamp-card {
+    padding: 1.5rem;
+  }
+
+  .datacamp-card img {
+    height: 180px;
+  }
+
+  .datacamp-grid .grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
   .datacamp-container {
     padding: 1.5rem;
   }

@@ -3,7 +3,7 @@ import './Footer.css'; // Importing the custom CSS for that extra vaporwave vibe
 
 const Footer = () => {
   return (
-    <footer className="footer bg-gradient-to-r from-cyan-900 via-cyan-800 to-cyan-700 text-white py-8 px-4 relative overflow-hidden">
+    <footer className="footer bg-gradient-to-r from-cyan-900 via-cyan-800 to-cyan-700 text-white py-6 sm:py-8 px-2 sm:px-4 relative overflow-hidden">
       {/* Vaporwave background image */}
       <div className="footer-bg h-full w-full absolute inset-0"></div>
       {/* Glowy background effect */}

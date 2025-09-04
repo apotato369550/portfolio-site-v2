@@ -268,15 +268,41 @@
   }
 }
 
-/* Tablet Adjustments */
-@media (max-width: 1024px) and (min-width: 768px) {
-  #tech-stack-section { height: 120vh; }
-  
+/* Split screen adjustments */
+@media (max-width: 768px) and (min-width: 641px) {
+  #tech-stack-section { height: 130vh; }
+
   .tech-categories-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
+  .tech-ellipse-1 { width: 50vw; height: 12vh; }
+  .tech-ellipse-2 { width: 45vw; height: 11vh; }
+  .tech-ellipse-3 { width: 40vw; height: 9vh; }
+
+  .tech-stack-icon {
+    height: 5rem;
+  }
+
+  .tech-icons-container {
+    gap: 1.5rem;
+  }
+
+  .tech-category-card {
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* Tablet Adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+  #tech-stack-section { height: 120vh; }
+
+  .tech-categories-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
   .tech-ellipse-1 { width: 45vw; height: 11vh; }
   .tech-ellipse-2 { width: 40vw; height: 10vh; }
   .tech-ellipse-3 { width: 35vw; height: 8vh; }

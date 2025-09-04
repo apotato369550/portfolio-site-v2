@@ -97,15 +97,15 @@ const ContactSection = () => {
         <div className="contact-container relative z-10 h-full w-full flex flex-col justify-center items-center px-4">
 
            {/* Title with vaporwave flair */}
-           <div className="contact-title mb-8">
-             <h1 className="font-light text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl text-white leading-tight text-center">
+           <div className="contact-title mb-6 sm:mb-8">
+             <h1 className="font-light text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl text-white leading-tight text-center">
                <span className="contact-emphasis font-light italic">Get In Touch</span>
              </h1>
            </div>
 
            {/* Contact Form - glass morphism style */}
            <div className="contact-form-container max-w-3xl w-full">
-            <div className="glass-morphism p-8 rounded-xl">
+            <div className="glass-morphism p-6 sm:p-8 rounded-xl">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-white text-xl mb-2 font-light">Name</label>
