@@ -259,3 +259,290 @@
     transform: translateX(-50%) translateY(-5px);
   }
 }
+
+/* Floating Ellipses */
+.floating-ellipse {
+  position: absolute;
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: floatEllipse 15s ease-in-out infinite;
+  z-index: 1;
+}
+
+.ellipse-1 {
+  width: 120px;
+  height: 80px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.ellipse-2 {
+  width: 100px;
+  height: 60px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 5s;
+}
+
+.ellipse-3 {
+  width: 140px;
+  height: 90px;
+  top: 10%;
+  right: 10%;
+  animation-delay: 10s;
+}
+
+.ellipse-4 {
+  width: 110px;
+  height: 70px;
+  top: 45%;
+  left: 5%;
+  animation-delay: 12s;
+}
+
+@keyframes floatEllipse {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: rotate(90deg) scale(1.1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: rotate(180deg) scale(0.9);
+    opacity: 0.4;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.05);
+    opacity: 0.7;
+  }
+}
+
+/* Floating Stars */
+.floating-star {
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: pulseStar 12s ease-in-out infinite;
+  z-index: 1;
+}
+
+.star-1 {
+  width: 20px;
+  height: 20px;
+  top: 30%;
+  left: 80%;
+  animation-delay: 2s;
+}
+
+.star-2 {
+  width: 15px;
+  height: 15px;
+  top: 70%;
+  left: 20%;
+  animation-delay: 7s;
+}
+
+.star-3 {
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  right: 25%;
+  animation-delay: 4s;
+}
+
+.star-4 {
+  width: 18px;
+  height: 18px;
+  top: 85%;
+  left: 50%;
+  animation-delay: 9s;
+}
+
+@keyframes pulseStar {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+    filter: blur(0px);
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+    filter: blur(2px);
+  }
+}
+
+/* Floating Wireframes */
+.floating-wireframe {
+  position: absolute;
+  border: 1px solid rgba(0, 255, 255, 0.5);
+  background: transparent;
+  animation: wireframePulse 10s ease-in-out infinite;
+  z-index: 1;
+}
+
+.wireframe-1 {
+  width: 80px;
+  height: 80px;
+  top: 40%;
+  left: 5%;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation-delay: 1s;
+}
+
+.wireframe-2 {
+  width: 60px;
+  height: 60px;
+  top: 80%;
+  right: 5%;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  animation-delay: 6s;
+}
+
+.wireframe-3 {
+  width: 70px;
+  height: 70px;
+  top: 15%;
+  left: 70%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation-delay: 3s;
+}
+
+.wireframe-4 {
+  width: 50px;
+  height: 50px;
+  top: 35%;
+  right: 40%;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  animation-delay: 8s;
+}
+
+@keyframes wireframePulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Shimmer Effects */
+.shimmer-effect {
+  position: absolute;
+  background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+  animation: shimmerMove 8s ease-in-out infinite;
+  z-index: 1;
+}
+
+.shimmer-1 {
+  width: 200px;
+  height: 2px;
+  top: 50%;
+  left: 0%;
+  animation-delay: 0s;
+}
+
+.shimmer-2 {
+  width: 150px;
+  height: 2px;
+  top: 25%;
+  right: 0%;
+  animation-delay: 4s;
+}
+
+.shimmer-3 {
+  width: 180px;
+  height: 2px;
+  top: 75%;
+  left: 0%;
+  animation-delay: 6s;
+}
+
+.shimmer-4 {
+  width: 160px;
+  height: 2px;
+  top: 40%;
+  right: 0%;
+  animation-delay: 10s;
+}
+
+@keyframes shimmerMove {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+
+/* Rainbow Glow for Greeting */
+.rainbow-glow {
+  background: linear-gradient(45deg, #ff0080, #8000ff, #0080ff, #ff0080);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: rainbowGlow 8s ease-in-out infinite;
+}
+
+@keyframes rainbowGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Floating Cubes */
+.floating-cube {
+  position: absolute;
+  border: 1px solid rgba(0, 255, 255, 0.7);
+  background: transparent;
+  animation: floatCube 14s ease-in-out infinite;
+  z-index: 1;
+}
+
+.cube-1 {
+  width: 40px;
+  height: 40px;
+  top: 20%;
+  left: 30%;
+  animation-delay: 0s;
+}
+
+.cube-2 {
+  width: 30px;
+  height: 30px;
+  top: 65%;
+  right: 20%;
+  animation-delay: 7s;
+}
+
+@keyframes floatCube {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.7;
+  }
+  25% {
+    transform: rotate(90deg) scale(1.2);
+    opacity: 0.9;
+  }
+  50% {
+    transform: rotate(180deg) scale(0.8);
+    opacity: 0.5;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+    opacity: 0.8;
+  }
+}

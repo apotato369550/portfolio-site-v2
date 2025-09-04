@@ -9,6 +9,26 @@ const Hero = () => {
       className="h-screen w-screen m-0 p-0 relative overflow-hidden"
     >
       <div className="hero-image-container h-full w-full m-0 p-0">
+        {/* Floating Decorative Elements */}
+        <div className="floating-ellipse ellipse-1"></div>
+        <div className="floating-ellipse ellipse-2"></div>
+        <div className="floating-ellipse ellipse-3"></div>
+        <div className="floating-ellipse ellipse-4"></div>
+        <div className="floating-star star-1"></div>
+        <div className="floating-star star-2"></div>
+        <div className="floating-star star-3"></div>
+        <div className="floating-star star-4"></div>
+        <div className="floating-wireframe wireframe-1"></div>
+        <div className="floating-wireframe wireframe-2"></div>
+        <div className="floating-wireframe wireframe-3"></div>
+        <div className="floating-wireframe wireframe-4"></div>
+        <div className="shimmer-effect shimmer-1"></div>
+        <div className="shimmer-effect shimmer-2"></div>
+        <div className="shimmer-effect shimmer-3"></div>
+        <div className="shimmer-effect shimmer-4"></div>
+        <div className="floating-cube cube-1"></div>
+        <div className="floating-cube cube-2"></div>
+
         <div className="hero-container h-full w-full m-0 p-0 flex flex-col">
           <NavBar />
           <div className="name-and-titles-container w-full flex-1 flex items-center justify-center">

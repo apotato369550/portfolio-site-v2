@@ -73,7 +73,7 @@ const ContactSection = () => {
   };
 
   return (
-    <div id="contact-section" className="m-0 p-0 w-full relative overflow-hidden">
+    <div id="contact-section" className="h-screen w-screen m-0 p-0 relative overflow-hidden">
       <div className="contact-gradient-container h-full w-full m-0 p-0 relative">
 
         {/* Floating vaporwave elements - making it pop */}
@@ -83,8 +83,8 @@ const ContactSection = () => {
           <div className="contact-ellipse contact-ellipse-3 absolute rounded-full transform rotate-45"></div>
 
           <div className="contact-star contact-star-1 absolute w-4 h-4 bg-cyan-400 rounded-full blur-sm animate-pulse"></div>
-          <div className="contact-star contact-star-2 absolute w-3 h-3 bg-purple-400 rounded-full blur-sm animate-pulse"></div>
-          <div className="contact-star contact-star-3 absolute w-5 h-5 bg-pink-400 rounded-full blur-sm animate-pulse"></div>
+          <div className="contact-star contact-star-2 absolute w-3 h-3 bg-cyan-300 rounded-full blur-sm animate-pulse"></div>
+          <div className="contact-star contact-star-3 absolute w-5 h-5 bg-cyan-500 rounded-full blur-sm animate-pulse"></div>
 
           <svg className="contact-wireframe contact-wireframe-1 absolute w-24 h-24" viewBox="0 0 100 100">
             <polygon points="50,10 90,90 10,90" className="contact-wireframe-shape" />
@@ -94,56 +94,56 @@ const ContactSection = () => {
           </svg>
         </div>
 
-        <div className="contact-container relative z-10">
+        <div className="contact-container relative z-10 h-full w-full flex flex-col justify-center items-center px-4">
 
-          {/* Title with vaporwave flair */}
-          <div className="contact-title mb-12">
-            <h1 className="font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
-              <span className="contact-emphasis font-extralight italic">Get In Touch</span>
-            </h1>
-          </div>
+           {/* Title with vaporwave flair */}
+           <div className="contact-title mb-8">
+             <h1 className="font-light text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl text-white leading-tight text-center">
+               <span className="contact-emphasis font-light italic">Get In Touch</span>
+             </h1>
+           </div>
 
-          {/* Contact Form - glass morphism style */}
-          <div className="contact-form-container max-w-2xl mx-auto">
+           {/* Contact Form - glass morphism style */}
+           <div className="contact-form-container max-w-3xl w-full">
             <div className="glass-morphism p-8 rounded-xl">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-white text-lg mb-2">Name</label>
+                  <label htmlFor="name" className="block text-white text-xl mb-2 font-light">Name</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="contact-input w-full p-3 rounded-lg bg-transparent border-2 border-cyan-400 text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 transition-colors"
+                    className="contact-input w-full p-3 rounded-lg bg-transparent border-2 border-cyan-400 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-300 transition-colors"
                     placeholder="Your name"
                   />
                   {errors.name && <p className="text-red-400 mt-1">{errors.name}</p>}
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-white text-lg mb-2">Email</label>
+                  <label htmlFor="email" className="block text-white text-xl mb-2 font-light">Email</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="contact-input w-full p-3 rounded-lg bg-transparent border-2 border-cyan-400 text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 transition-colors"
+                    className="contact-input w-full p-3 rounded-lg bg-transparent border-2 border-cyan-400 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-300 transition-colors"
                     placeholder="your.email@example.com"
                   />
                   {errors.email && <p className="text-red-400 mt-1">{errors.email}</p>}
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-white text-lg mb-2">Message</label>
+                  <label htmlFor="message" className="block text-white text-xl mb-2 font-light">Message</label>
                   <textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     rows="5"
-                    className="contact-input w-full p-3 rounded-lg bg-transparent border-2 border-cyan-400 text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 transition-colors resize-none"
+                    className="contact-input w-full p-3 rounded-lg bg-transparent border-2 border-cyan-400 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-300 transition-colors resize-none"
                     placeholder="What's on your mind?"
                   />
                   {errors.message && <p className="text-red-400 mt-1">{errors.message}</p>}
@@ -152,7 +152,7 @@ const ContactSection = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="contact-submit-btn w-full py-3 px-6 bg-gradient-to-r from-cyan-400 to-pink-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-pink-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="contact-submit-btn w-full py-3 px-6 bg-gradient-to-r from-cyan-400 to-cyan-500 text-white font-light rounded-lg hover:from-cyan-500 hover:to-cyan-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {submitting ? 'Sending...' : 'Send Message'}
                 </button>
