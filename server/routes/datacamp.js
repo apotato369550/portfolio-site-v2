@@ -1,16 +1,20 @@
 import express, { request } from "express";
 import fs from "fs/promises";
+import path from "path";
+import { fileURLToPath } from 'url';
 import { runQueryWithFallback } from "../utils/fallbackReader.js";
 import DataCampCoursesModel from "../models/DataCampCourses.js";
 import DataCampProjectsModel from "../models/DataCampProjects.js";
 
-const router = express.Router();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
+const router = express.Router();
 
 router.get("/datacamp-courses", async (requrest, response) => {
     const data = await runQueryWithFallback(
         () => DataCampCoursesModel.find({}),
-        "../data/courses_and_certs.json"
+        path.join(__dirname, "../data/courses_and_certs.json")
     );
     response.json(data);
 });
@@ -18,7 +22,7 @@ router.get("/datacamp-courses", async (requrest, response) => {
 router.get("/datacamp-projects", async (request, response) => {
     const data = await runQueryWithFallback(
         () => DataCampProjectsModel.find({}),
-        "../data/datacamp_projects.json"
+        path.join(__dirname, "../data/datacamp_projects.json")
     )
     response.json(data);
 })
