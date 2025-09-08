@@ -124,6 +124,20 @@
   .star { display: none; } /* Hide stars on very small screens */
 }
 
+/* Split-screen and ultra-wide support */
+@media (min-width: 1440px){
+  .statue-wrapper { width: 80%; max-width: 4xl; }
+  .content-grid { gap: 16px; }
+  .identity-container { padding-left: 2rem; padding-right: 2rem; }
+}
+
+@media (min-width: 1920px){
+  .statue-wrapper { width: 75%; }
+  .content-grid { gap: 20px; }
+  .identity-title { padding: 16px 20px; }
+  .content-card { padding: 16px 20px; }
+}
+
 .identity-title,.identity-information,.content-card{ transition:all .3s cubic-bezier(.4,0,.2,1); }
 .identity-section{ scroll-behavior:smooth; will-change:transform; }
 .identity-title h1,.identity-information p,.content-card p{ text-shadow:0 1px 2px rgba(0,0,0,.3); }

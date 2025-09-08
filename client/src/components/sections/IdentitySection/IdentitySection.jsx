@@ -43,7 +43,7 @@ const IdentitySection = () => {
             <div className="statue-container w-full flex justify-center items-center relative z-10">
               {/* Removed old pillar stacks */}
 
-              <div className="statue-wrapper relative w-[88%] lg:w-[85%] max-w-3xl">
+              <div className="statue-wrapper relative w-[95%] sm:w-[90%] lg:w-[85%] max-w-3xl">
                 {/* Enhanced Ellipse Effects - More Prominent */}
                 <div className="statue-ellipse statue-ellipse-1 absolute rounded-full z-10 transform rotate-30"></div>
                 <div className="statue-ellipse statue-ellipse-2 absolute rounded-full z-10 transform rotate-160"></div>
@@ -71,7 +71,7 @@ const IdentitySection = () => {
               {/* Main Title with separate accent (outside boxes) */}
               <div className="title-section flex items-center justify-center lg:justify-start space-x-6 mb-6">
                 <div className="identity-title px-10 py-8 rounded-3xl text-center lg:text-left">
-                  <h1 className="font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
+                  <h1 className="font-light text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-tight">
                     <span className="question-emphasis font-extralight italic">Who</span> am I, really?
                   </h1>
                 </div>
@@ -81,24 +81,24 @@ const IdentitySection = () => {
               <div className="content-grid grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 xl:gap-12">
                 {/* First Content Card */}
                 <div className="content-card identity-information-1 px-6 py-6 sm:px-8 sm:py-8 md:px-10 md:py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[200px] sm:min-h-[220px] lg:min-h-[260px]">
-                  <h3 className="text-cyan-100 font-medium text-lg lg:text-2xl mb-4 tracking-wide">Innovation</h3>
-                  <p className="text-base sm:text-lg lg:text-2xl text-white/95 leading-relaxed">
+                  <h3 className="text-cyan-100 font-medium text-xl sm:text-2xl lg:text-3xl mb-4 tracking-wide">Innovation</h3>
+                  <p className="text-lg sm:text-xl lg:text-2xl text-white/95 leading-relaxed">
                     A developer who bridges classical elegance with modern innovation, creating digital experiences that are both beautiful and functional.
                   </p>
                 </div>
 
                 {/* Second Content Card */}
                 <div className="content-card identity-information-2 px-6 py-6 sm:px-8 sm:py-8 md:px-10 md:py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[200px] sm:min-h-[220px] lg:min-h-[260px]">
-                  <h3 className="text-purple-100 font-medium text-lg lg:text-2xl mb-4 tracking-wide">Passion</h3>
-                  <p className="text-base sm:text-lg lg:text-2xl text-white/95 leading-relaxed">
+                  <h3 className="text-purple-100 font-medium text-xl sm:text-2xl lg:text-3xl mb-4 tracking-wide">Passion</h3>
+                  <p className="text-lg sm:text-xl lg:text-2xl text-white/95 leading-relaxed">
                     Driven by curiosity and a love for learning, exploring the intersection of art and science to create meaningful digital solutions.
                   </p>
                 </div>
 
                 {/* Third Content Card - Full Width */}
                 <div className="content-card identity-information-3 md:col-span-2 px-6 py-6 sm:px-8 sm:py-8 md:px-10 md:py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[200px] sm:min-h-[220px] lg:min-h-[260px]">
-                  <h3 className="text-pink-100 font-medium text-lg lg:text-2xl mb-4 tracking-wide">Excellence</h3>
-                  <p className="text-base sm:text-lg lg:text-2xl text-white/95 leading-relaxed">
+                  <h3 className="text-pink-100 font-medium text-xl sm:text-2xl lg:text-3xl mb-4 tracking-wide">Excellence</h3>
+                  <p className="text-lg sm:text-xl lg:text-2xl text-white/95 leading-relaxed">
                     Committed to delivering high-quality solutions with attention to detail and user experience.
                   </p>
                 </div>
