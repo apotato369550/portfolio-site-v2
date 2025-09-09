@@ -13,6 +13,10 @@ const DataCampProjectsSchema = new mongoose.Schema({
         type: String,
         required: false,
     },
+    project_url: {
+        type: String,
+        required: false,
+    },
 });
 
 const DataCampProjectsModel = mongoose.model("DataCampProjects", DataCampProjectsSchema);

@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <header className="w-full">
       <nav id="navbar" className="hidden lg:block w-full">
-        <ul className="flex justify-between items-center mx-16 lg:mx-20 xl:mx-24 2xl:mx-32 mt-8 lg:mt-12 xl:mt-16 2xl:mt-20 list-none p-0">
+        <ul className="flex justify-between items-center mx-8 sm:mx-12 md:mx-16 lg:mx-20 xl:mx-24 2xl:mx-32 mt-4 sm:mt-6 md:mt-8 lg:mt-12 xl:mt-16 2xl:mt-20 list-none p-0">
           <li className="navbar-item">
             <a
               href="#hero"

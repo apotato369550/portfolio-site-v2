@@ -28,7 +28,22 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 769px) {
+  #navbar {
+    display: block !important;
+  }
+
+  #navbar ul {
+    margin: 0 2rem;
+    margin-top: 2rem;
+  }
+
+  .navbar-item a {
+    font-size: 0.8rem; /* Smaller for split screen */
+  }
+}
+
+@media (max-width: 768px) {
   #navbar {
     display: none !important;
   }

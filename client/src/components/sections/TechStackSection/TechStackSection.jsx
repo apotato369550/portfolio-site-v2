@@ -68,8 +68,8 @@ const TechStackSection = () => {
 
         <div className="tech-stack-container">
           {/* Title Section */}
-          <div className="tech-stack-title">
-            <h1 className="font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
+          <div className="tech-stack-title px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-6 lg:px-12 lg:py-8">
+            <h1 className="font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight">
               <span className="question-emphasis font-extralight italic">What</span> do I work with?
             </h1>
           </div>
@@ -78,7 +78,7 @@ const TechStackSection = () => {
           <div className="tech-categories-grid">
             {/* Languages and Frameworks */}
             <div className="tech-category-card languages-frameworks">
-              <h2 className="tech-category-title text-2xl lg:text-3xl">
+              <h2 className="tech-category-title text-xl sm:text-2xl lg:text-3xl">
                 Languages and Frameworks
               </h2>
               <div className="tech-icons-container">
@@ -143,7 +143,7 @@ const TechStackSection = () => {
 
             {/* Tools and Platforms */}
             <div className="tech-category-card tools-platforms">
-              <h2 className="tech-category-title text-2xl lg:text-3xl">
+              <h2 className="tech-category-title text-xl sm:text-2xl lg:text-3xl">
                 Tools and Platforms
               </h2>
               <div className="tech-icons-container">
@@ -187,7 +187,7 @@ const TechStackSection = () => {
 
             {/* Currently Exploring */}
             <div className="tech-category-card exploring">
-              <h2 className="tech-category-title text-2xl lg:text-3xl">
+              <h2 className="tech-category-title text-xl sm:text-2xl lg:text-3xl">
                 Currently Exploring
               </h2>
               <div className="tech-icons-container">
