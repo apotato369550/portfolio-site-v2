@@ -1,7 +1,6 @@
 import React from "react";
 import "./LocationSection.css";
 import treeImage from "../../../assets/LocationSection/vaporwave trees.png";
-import flagImage from "../../../assets/LocationSection/grunge_pinoy_flag.png";
 import cebuImage from "../../../assets/LocationSection/cebu_cropped_nobg.png";
 
 const LocationSection = () => {

@@ -81,25 +81,25 @@ const IdentitySection = () => {
               <div className="content-grid grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 xl:gap-12">
                 {/* First Content Card */}
                 <div className="content-card identity-information-1 px-6 py-6 sm:px-8 sm:py-8 md:px-10 md:py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[200px] sm:min-h-[220px] lg:min-h-[260px]">
-                  <h3 className="text-cyan-100 font-medium text-xl sm:text-2xl lg:text-3xl mb-4 tracking-wide">Innovation</h3>
+                  <h3 className="text-cyan-100 font-medium text-xl sm:text-2xl lg:text-3xl mb-4 tracking-wide">Curiosity</h3>
                   <p className="text-lg sm:text-xl lg:text-2xl text-white/95 leading-relaxed">
-                    A developer who bridges classical elegance with modern innovation, creating digital experiences that are both beautiful and functional.
+                    I wouldn't be me if I weren't curious about everything. I'm  fueled by a blend of curiosity, caffiene, and creativity. (Heavy on the caffiene part, tho). I love exploration.
                   </p>
                 </div>
 
                 {/* Second Content Card */}
                 <div className="content-card identity-information-2 px-6 py-6 sm:px-8 sm:py-8 md:px-10 md:py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[200px] sm:min-h-[220px] lg:min-h-[260px]">
-                  <h3 className="text-purple-100 font-medium text-xl sm:text-2xl lg:text-3xl mb-4 tracking-wide">Passion</h3>
+                  <h3 className="text-purple-100 font-medium text-xl sm:text-2xl lg:text-3xl mb-4 tracking-wide">Scholarly</h3>
                   <p className="text-lg sm:text-xl lg:text-2xl text-white/95 leading-relaxed">
-                    Driven by curiosity and a love for learning, exploring the intersection of art and science to create meaningful digital solutions.
+                    I combine my natural hunger for learning with precision and diligence. Whatever I endeavor to do, and in all that I learn, I do it thoroughly and I do it well.
                   </p>
                 </div>
 
                 {/* Third Content Card - Full Width */}
                 <div className="content-card identity-information-3 md:col-span-2 px-6 py-6 sm:px-8 sm:py-8 md:px-10 md:py-8 lg:px-12 lg:py-10 rounded-3xl text-center transform hover:scale-105 transition-all duration-300 min-h-[200px] sm:min-h-[220px] lg:min-h-[260px]">
-                  <h3 className="text-pink-100 font-medium text-xl sm:text-2xl lg:text-3xl mb-4 tracking-wide">Excellence</h3>
+                  <h3 className="text-pink-100 font-medium text-xl sm:text-2xl lg:text-3xl mb-4 tracking-wide">Passion</h3>
                   <p className="text-lg sm:text-xl lg:text-2xl text-white/95 leading-relaxed">
-                    Committed to delivering high-quality solutions with attention to detail and user experience.
+                    Some would say I'm a masochist at how I love putting myself through tough challenges. I see it as exercise (and I love exercise). Problem solving, critical thinking, building, analysis, architecture, anything that'll make my brain melt, I'm here for.
                   </p>
                 </div>
               </div>

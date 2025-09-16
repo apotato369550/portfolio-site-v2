@@ -3,6 +3,17 @@ import "./Navbar.css";
 import "../../App.css";
 
 const Navbar = () => {
+  const handleSmoothScroll = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <header className="w-full">
       <nav id="navbar" className="hidden lg:block w-full">
@@ -10,6 +21,7 @@ const Navbar = () => {
           <li className="navbar-item">
             <a
               href="#hero"
+              onClick={(e) => handleSmoothScroll(e, 'hero')}
               className="text-white no-underline text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
             >
               Home
@@ -18,7 +30,8 @@ const Navbar = () => {
           </li>
           <li className="navbar-item">
             <a
-              href="#about"
+              href="#identity-section"
+              onClick={(e) => handleSmoothScroll(e, 'identity-section')}
               className="text-white no-underline text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
             >
               About Me
@@ -27,7 +40,8 @@ const Navbar = () => {
           </li>
           <li className="navbar-item">
             <a
-              href="#technologies"
+              href="#tech-stack-section"
+              onClick={(e) => handleSmoothScroll(e, 'tech-stack-section')}
               className="text-white no-underline text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
             >
               What I Work With
@@ -36,7 +50,8 @@ const Navbar = () => {
           </li>
           <li className="navbar-item">
             <a
-              href="#projects"
+              href="#projects-section"
+              onClick={(e) => handleSmoothScroll(e, 'projects-section')}
               className="text-white no-underline text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
             >
               What I'm Working On
@@ -45,7 +60,8 @@ const Navbar = () => {
           </li>
           <li className="navbar-item">
             <a
-              href="#contact"
+              href="#contact-section"
+              onClick={(e) => handleSmoothScroll(e, 'contact-section')}
               className="text-white no-underline text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light hover:text-cyan-300 transition-colors duration-300 relative group"
             >
               Reach Out To Me

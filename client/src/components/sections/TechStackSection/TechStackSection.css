@@ -1,7 +1,7 @@
 #tech-stack-section {
   margin: 0px;
   padding: 0px;
-  height: 150vh;
+  height: 180vh;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -70,11 +70,12 @@
   z-index: 10;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 3rem;
+  padding: 4rem 2rem;
   height: 100%;
-  align-items: center;
-  max-width: 1200px;
+  align-items: start;
+  justify-content: center;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -85,9 +86,10 @@
   border: 1px solid rgba(57,217,253,.4);
   box-shadow: 0 20px 60px rgba(0,0,0,.4), 0 0 50px rgba(57,217,253,.3);
   transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
-  padding: 2rem 3rem;
+  padding: 3rem 4rem;
   border-radius: 2rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .tech-stack-title:hover {
@@ -103,7 +105,7 @@
 .tech-categories-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 /* Category Cards */
@@ -113,7 +115,7 @@
   border: 1px solid rgba(255,0,255,.3);
   box-shadow: 0 15px 50px rgba(0,0,0,.4), 0 0 40px rgba(255,0,255,.2);
   transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
-  padding: 3rem 2rem;
+  padding: 4rem 3rem;
   border-radius: 2rem;
   position: relative;
   overflow: hidden;
@@ -143,9 +145,9 @@
 
 .tech-category-title {
   color: white;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 300;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   text-shadow: 0 2px 4px rgba(0,0,0,.5);
   text-align: center;
 }
@@ -185,7 +187,7 @@
 }
 
 .tech-stack-icon {
-  height: 6rem;
+  height: 7rem;
   width: auto;
   filter: brightness(1.1) drop-shadow(0 8px 20px rgba(0,0,0,.3));
   transition: all 0.3s ease;
@@ -268,39 +270,86 @@
   }
 }
 
-/* Split screen adjustments */
+/* Split screen adjustments - IMPROVED */
 @media (max-width: 768px) and (min-width: 641px) {
-  #tech-stack-section { height: 130vh; }
+  #tech-stack-section { height: 180vh; }
+
+  .tech-stack-container {
+    padding: 2.5rem 2rem;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .tech-stack-title {
+    padding: 2rem 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .tech-stack-title h1 {
+    font-size: 2.75rem;
+    margin: 0;
+  }
 
   .tech-categories-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-
-  .tech-ellipse-1 { width: 50vw; height: 12vh; }
-  .tech-ellipse-2 { width: 45vw; height: 11vh; }
-  .tech-ellipse-3 { width: 40vw; height: 9vh; }
-
-  .tech-stack-icon {
-    height: 5rem;
-  }
-
-  .tech-icons-container {
-    gap: 1.5rem;
+    margin-top: 0;
   }
 
   .tech-category-card {
     padding: 2.5rem 2rem;
   }
+
+  .tech-category-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .tech-stack-icon {
+    height: 5.5rem;
+  }
+
+  .tech-icons-container {
+    gap: 1.8rem;
+  }
+
+  .tech-ellipse-1 { width: 50vw; height: 12vh; }
+  .tech-ellipse-2 { width: 45vw; height: 11vh; }
+  .tech-ellipse-3 { width: 40vw; height: 9vh; }
 }
 
 /* Tablet Adjustments */
 @media (max-width: 1024px) and (min-width: 769px) {
-  #tech-stack-section { height: 120vh; }
+  #tech-stack-section { height: 160vh; }
+
+  .tech-stack-container {
+    padding: 3rem 2rem;
+    gap: 2.5rem;
+  }
+
+  .tech-stack-title {
+    padding: 2.5rem 3rem;
+  }
+
+  .tech-stack-title h1 {
+    font-size: 4rem;
+  }
 
   .tech-categories-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+  }
+
+  .tech-category-card {
+    padding: 3.5rem 2.5rem;
+  }
+
+  .tech-category-title {
+    font-size: 2.2rem;
+  }
+
+  .tech-stack-icon {
+    height: 6.5rem;
   }
 
   .tech-ellipse-1 { width: 45vw; height: 11vh; }
@@ -310,17 +359,39 @@
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
-  #tech-stack-section { height: 140vh; }
+  #tech-stack-section { height: 160vh; }
   
   .tech-stack-container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
+    align-items: start;
+    justify-content: start;
+  }
+  
+  .tech-stack-title {
+    padding: 1.5rem 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .tech-stack-title h1 {
+    font-size: 2.25rem;
+    margin: 0;
   }
   
   .tech-categories-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    margin-top: 0;
+  }
+
+  .tech-category-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .tech-category-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
   }
   
   .tech-icons-container {
@@ -328,7 +399,7 @@
   }
   
   .tech-stack-icon {
-    height: 4rem;
+    height: 4.5rem;
   }
   
   .tech-floating-crystals,
@@ -345,14 +416,6 @@
   .tech-orb {
     width: 8px;
     height: 8px;
-  }
-  
-  .tech-stack-title {
-    padding: 1.5rem 2rem;
-  }
-  
-  .tech-category-card {
-    padding: 2rem 1.5rem;
   }
 }
 
