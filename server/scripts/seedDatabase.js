@@ -13,7 +13,7 @@ import LeetCodeSubmissionsModel from '../models/LeetCodeSubmissions.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-dotenv.config({ path: path.resolve(__dirname, '../../.env') });
+dotenv.config({ path: path.join(__dirname, '../.env') });
 
 const mongoUri = process.env.MONGODB_URI;
 if (!mongoUri) {
@@ -34,15 +34,15 @@ async function seedModel(model, filePath) {
 
 async function main() {
     console.log("Mongodb URI: " + mongoUri);
-    await mongoose.connect(mongoUri);
+    await mongoose.connect(mongoUri)
+        .then(() => console.log("✅ Connected to MongoDB"))
+        .catch(err => console.error("❌ Connection error:", err));
 
-    console.log("Connected to MongoDB");
-
-    await seedModel(DataCampCoursesModel, 'data/courses_and_certs.json');
-    await seedModel(DataCampProjectsModel, 'data/datacamp_projects.json');
-    await seedModel(GithubCommitsModel, 'data/github_commits.json');
-    await seedModel(ProjectModel, 'data/projects.json');
-    await seedModel(LeetCodeSubmissionsModel, 'data/leetcode_submissions.json');
+    await seedModel(DataCampCoursesModel, '../data/courses_and_certs.json');
+    await seedModel(DataCampProjectsModel, '../data/datacamp_projects.json');
+    await seedModel(GithubCommitsModel, '../data/github_commits.json');
+    await seedModel(ProjectModel, '../data/projects.json');
+    await seedModel(LeetCodeSubmissionsModel, '../data/leetcode_submissions.json');
 
     mongoose.disconnect();
 }

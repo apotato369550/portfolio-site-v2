@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-dotenv.config({ path: '../.env' });
+dotenv.config({ path: path.join(__dirname, '../.env') });
 
 import fs from "fs";
 import path from "path";
