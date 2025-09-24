@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-dotenv.config({ path: path.join(__dirname, '../.env') });
+dotenv.config();
 
 import GithubCommitsModel from "../models/GitHubCommits.js";
 import fs from "fs";
