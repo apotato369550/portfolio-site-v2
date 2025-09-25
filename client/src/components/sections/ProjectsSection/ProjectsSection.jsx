@@ -21,9 +21,9 @@ const ProjectsSection = () => {
       try {
         setLoading(true);
         const [projectsRes, commitsRes, leetcodeRes] = await Promise.all([
-          fetch('http://localhost:3001/api/recent-projects'),
-          fetch('http://localhost:3001/api/recent-commits'),
-          fetch('http://localhost:3001/api/leetcode-submissions')
+          fetch(`${import.meta.env.VITE_SERVER_URL}/api/recent-projects`),
+          fetch(`${import.meta.env.VITE_SERVER_URL}/api/recent-commits`),
+          fetch(`${import.meta.env.VITE_SERVER_URL}/api/leetcode-submissions`)
         ]);
 
         if (!projectsRes.ok || !commitsRes.ok || !leetcodeRes.ok) {
@@ -100,7 +100,7 @@ const ProjectsSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {projects.map((project, index) => (
                 <div key={index} className="project-card glass-morphism p-6 rounded-xl hover:scale-105 transition-transform duration-300">
-                  <img src={`http://localhost:3001/api/projects/images/${project.image.split('/').pop()}`} alt={project.name} className="w-full h-32 object-cover rounded-lg mb-4" />
+                  <img src={`${import.meta.env.VITE_SERVER_URL}/api/projects/images/${project.image.split('/').pop()}`} alt={project.name} className="w-full h-32 object-cover rounded-lg mb-4" />
                   <h3 className="text-xl text-white mb-2">{project.name}</h3>
                   <p className="text-gray-300 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">

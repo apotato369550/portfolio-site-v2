@@ -26,7 +26,7 @@ const DataCampSection = () => {
         setLoading(true);
 
         // Fetch projects
-        const projectsResponse = await fetch('http://localhost:3001/api/datacamp-projects');
+        const projectsResponse = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/datacamp-projects`);
         if (!projectsResponse.ok) {
           throw new Error('Failed to fetch DataCamp projects');
         }
@@ -34,7 +34,7 @@ const DataCampSection = () => {
         setProjects(projectsData);
 
         // Fetch courses and certificates
-        const coursesResponse = await fetch('http://localhost:3001/api/datacamp-courses');
+        const coursesResponse = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/datacamp-courses`);
         if (!coursesResponse.ok) {
           throw new Error('Failed to fetch DataCamp courses');
         }
@@ -105,11 +105,11 @@ const DataCampSection = () => {
               {projects.map((project, index) => (
                 <div key={index} className="datacamp-card glass-morphism p-6 rounded-xl hover:scale-105 transition-transform duration-300">
                   <img
-                    src={`http://localhost:3001/datacamp-images/${getImageName(project.project_title)}`}
+                    src={`${import.meta.env.VITE_SERVER_URL}/datacamp-images/${getImageName(project.project_title)}`}
                     alt={project.project_title}
                     className="w-full h-32 object-cover rounded-lg mb-4"
                     onError={(e) => {
-                      e.target.src = 'http://localhost:3001/datacamp-images/default.jpg';
+                      e.target.src = `${import.meta.env.VITE_SERVER_URL}/datacamp-images/default.jpg`;
                     }}
                   />
                   <h3 className="text-xl text-white mb-2">{project.project_title}</h3>
@@ -147,7 +147,7 @@ const DataCampSection = () => {
                     </a>
                     {course.image_url && (
                       <a
-                        href={`http://localhost:3001${course.image_url}`}
+                        href={`${import.meta.env.VITE_SERVER_URL}${course.image_url}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-purple-400 hover:text-purple-300 transition-colors"
