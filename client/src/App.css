@@ -23,3 +23,15 @@ body {
 .contact-section + footer {
   margin-top: 0;
 }
+
+/* Loading Screen Fade-in Animation */
+.app-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.app-container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
