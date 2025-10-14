@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './DataCampSection.css';
+import DataSectionLoading from '../LoadingScreen/DataSectionLoading';
 
 // Casual comment: This component rocks the vaporwave vibe for DataCamp projects
 const DataCampSection = () => {
@@ -53,8 +54,10 @@ const DataCampSection = () => {
 
   if (loading) {
     return (
-      <div id="datacamp-section" className="min-h-screen flex items-center justify-center">
-        <div className="text-white text-xl animate-pulse">Loading DataCamp projects...</div>
+      <div id="datacamp-section" className="min-h-screen">
+        <div className="datacamp-gradient-container h-full w-full m-0 p-0 relative">
+          <DataSectionLoading message="Loading DataCamp projects and courses" />
+        </div>
       </div>
     );
   }

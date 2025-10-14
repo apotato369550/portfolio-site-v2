@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ProjectsSection.css';
 import GitHubCalendar from 'react-github-calendar';
+import DataSectionLoading from '../LoadingScreen/DataSectionLoading';
 
 // Import project assets
 
@@ -49,8 +50,10 @@ const ProjectsSection = () => {
 
   if (loading) {
     return (
-      <div id="projects-section" className="min-h-screen flex items-center justify-center">
-        <div className="text-white text-xl">Loading projects...</div>
+      <div id="projects-section" className="min-h-screen">
+        <div className="projects-gradient-container h-full w-full m-0 p-0 relative">
+          <DataSectionLoading message="Loading projects and activity data" />
+        </div>
       </div>
     );
   }

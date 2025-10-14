@@ -28,38 +28,65 @@ function App() {
   }, [isLoading]);
 
   useEffect(() => {
-    // Start the cron job after loading
+    // Start the server keep-alive system after loading
     if (showContent && !cronStartedRef.current) {
       cronStartedRef.current = true;
 
-      const pingServer = async () => {
+      const pingServer = async (retryCount = 0) => {
         const routes = [
           "/api/recent-projects",
           "/api/recent-commits",
           "/api/leetcode-submissions",
           "/api/datacamp-projects",
           "/api/datacamp-courses",
+          "/" // Health check endpoint
         ];
 
         const randomRoute = routes[Math.floor(Math.random() * routes.length)];
         const url = `${import.meta.env.VITE_SERVER_URL}${randomRoute}`;
 
         try {
-          await fetch(url);
-          console.log(`Pinged ${randomRoute} at ${new Date().toISOString()}`);
+          const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+              'Cache-Control': 'no-cache',
+              'Pragma': 'no-cache'
+            }
+          });
+
+          if (response.ok) {
+            console.log(`✅ Server ping successful: ${randomRoute} at ${new Date().toISOString()}`);
+            retryCount = 0; // Reset retry count on success
+          } else {
+            throw new Error(`Server responded with status: ${response.status}`);
+          }
         } catch (error) {
-          console.error("Ping failed:", error);
+          console.error(`❌ Server ping failed (attempt ${retryCount + 1}):`, error.message);
+
+          // Retry logic with exponential backoff
+          if (retryCount < 3) {
+            const retryDelay = Math.min(1000 * Math.pow(2, retryCount), 30000); // Max 30 seconds
+            console.log(`🔄 Retrying in ${retryDelay}ms...`);
+            setTimeout(() => pingServer(retryCount + 1), retryDelay);
+            return;
+          } else {
+            console.error(`💀 Max retries reached. Server might be down.`);
+          }
         }
       };
 
       const scheduleNextPing = () => {
-        const randomDelay = Math.random() * (300000 - 180000) + 180000; // 3-5 minutes in ms
+        // More frequent pings: 2-4 minutes instead of 3-5
+        const randomDelay = Math.random() * (240000 - 120000) + 120000; // 2-4 minutes in ms
         setTimeout(() => {
           pingServer();
           scheduleNextPing(); // Schedule next ping
         }, randomDelay);
       };
 
+      // Initial ping
+      pingServer();
+      // Schedule recurring pings
       scheduleNextPing();
     }
   }, [showContent]);
